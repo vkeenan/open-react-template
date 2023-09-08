@@ -9,7 +9,7 @@ export default function Resources() {
 
       {/* Introduction */}
       <div className="mb-8 text-center">
-        <p className="text-lg font-semibold">
+        <p className="w-1/2 mx-auto text-lg font-semibold">
           Expand your knowledge and stay updated with Vernon Keenan's thought
           leadership across various platforms. Here are some resources you won't
           want to miss.

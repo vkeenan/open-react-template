@@ -1,9 +1,14 @@
+import Image from "next/image";
+import IconLeader from "@/public/images/icon-leader.png";
+import IconPixie from "@/public/images/icon-pixie.png";
+import IconRaceahead from "@/public/images/icon-raceahead.png";
+
 export default function Early() {
   return (
     <div className="py-10">
       {/* Section Title */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold">For the Early Adopters</h1>
+        <h1 className="mx-3 text-3xl font-semibold">For the Early Adopters</h1>
         <hr className="w-1/4 mx-auto my-4 border-t-2" />
       </div>
 
@@ -12,9 +17,10 @@ export default function Early() {
         {/* Card 1: Be Part of the Vanguard */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/vanguard-icon.png"
+            <Image
+              src={IconLeader}
               alt="Be Part of the Vanguard"
+              height={200}
             />
           </div>
           <h2 className="mb-4 text-xl font-semibold">
@@ -30,9 +36,10 @@ export default function Early() {
         {/* Card 2: First Mover Benefits */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/first-mover-icon.png"
+            <Image
+              src={IconRaceahead}
               alt="First Mover Benefits"
+              height={200}
             />
           </div>
           <h2 className="mb-4 text-xl font-semibold">First Mover Benefits</h2>
@@ -46,7 +53,7 @@ export default function Early() {
         {/* Card 3: Influence the Future */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img src="/path/to/influence-icon.png" alt="Influence the Future" />
+            <Image src={IconPixie} alt="First Mover Benefits" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Influence the Future</h2>
           <p>

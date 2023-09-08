@@ -8,7 +8,9 @@ export default function Why() {
     <div className="py-10">
       {/* Section Title */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold">Why Work Different with AI?</h1>
+        <h1 className="mx-3 text-3xl font-semibold">
+          Why Work Different with AI?
+        </h1>
         <hr className="w-1/4 mx-auto my-4 border-t-2" />
       </div>
 

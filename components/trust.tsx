@@ -9,7 +9,7 @@ export default function Trust() {
 
       {/* Introductory Text */}
       <div className="mb-8 text-center">
-        <p className="text-lg font-semibold">
+        <p className="w-1/2 mx-auto text-lg font-semibold">
           From the advent of the PC revolution to the ongoing wave of Enterprise
           AI, Vernon Keenan has been a pioneering force. Here's why you can
           trust in his experience.
@@ -17,7 +17,7 @@ export default function Trust() {
       </div>
 
       {/* Timeline Component */}
-      <div className="container grid grid-cols-1 gap-8 mx-auto mb-8 md:grid-cols-2">
+      <div className="container grid grid-cols-1 gap-8 mx-3 mb-8 md:grid-cols-2">
         {/* Timeline details */}
         <div>
           <h2 className="mb-4 text-xl font-semibold">Career Milestones:</h2>

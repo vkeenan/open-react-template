@@ -1,9 +1,15 @@
+import IconActionable from "@/public/images/icon-actionable.png";
+import IconTraining from "@/public/images/icon-training1.png";
+import IconJustice from "@/public/images/icon-justice.png";
+import IconSupport from "@/public/images/icon-support.png";
+import Image from "next/image";
+
 export default function What() {
   return (
     <div className="py-10">
       {/* Section Title */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold">What You Get</h1>
+        <h1 className="mx-3 text-3xl font-semibold">What You Get</h1>
         <hr className="w-1/4 mx-auto my-4 border-t-2" />
       </div>
 
@@ -12,9 +18,10 @@ export default function What() {
         {/* Card 1: Actionable Intelligence */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/actionable-intelligence-icon.png"
+            <Image
+              src={IconActionable}
               alt="Actionable Intelligence"
+              height={200}
             />
           </div>
           <h2 className="mb-4 text-xl font-semibold">
@@ -30,9 +37,10 @@ export default function What() {
         {/* Card 2: Comprehensive Training */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/comprehensive-training-icon.png"
+            <Image
+              src={IconTraining}
               alt="Comprehensive Training"
+              height={200}
             />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Comprehensive Training</h2>
@@ -46,10 +54,7 @@ export default function What() {
         {/* Card 3: Ethical Compliance */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/ethical-compliance-icon.png"
-              alt="Ethical Compliance"
-            />
+            <Image src={IconJustice} alt="Ethical Compliance" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Ethical Compliance</h2>
           <p>
@@ -62,10 +67,7 @@ export default function What() {
         {/* Card 4: Ongoing Support */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/ongoing-support-icon.png"
-              alt="Ongoing Support"
-            />
+            <Image src={IconSupport} alt="Ongoing Support" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Ongoing Support</h2>
           <p>

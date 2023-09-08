@@ -1,9 +1,15 @@
+import IconWisdom from "@/public/images/icon-wisdom2.png";
+import IconEthics from "@/public/images/icon-ethics.png";
+import IconCustomized from "@/public/images/icon-customized.png";
+import IconTraining from "@/public/images/icon-training.png";
+import Image from "next/image";
+
 export default function How() {
   return (
     <div className="py-10">
       {/* Section Title */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold">How We Guide You</h1>
+        <h1 className="mx-3 text-3xl font-semibold">How We Guide You</h1>
         <hr className="w-1/4 mx-auto my-4 border-t-2" />
       </div>
 
@@ -12,10 +18,7 @@ export default function How() {
         {/* Card 1: Expert Insights */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/expert-insights-icon.png"
-              alt="Expert Insights"
-            />
+            <Image src={IconWisdom} alt="Expert Insights" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Expert Insights</h2>
           <p>
@@ -29,10 +32,7 @@ export default function How() {
         {/* Card 2: Ethical Frameworks */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/ethical-frameworks-icon.png"
-              alt="Ethical Frameworks"
-            />
+            <Image src={IconEthics} alt="Ethical Frameworks" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Ethical Frameworks</h2>
           <p>
@@ -46,9 +46,10 @@ export default function How() {
         {/* Card 3: Tailored Strategies */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/tailored-strategies-icon.png"
+            <Image
+              src={IconCustomized}
               alt="Tailored Strategies"
+              height={200}
             />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Tailored Strategies</h2>
@@ -62,10 +63,7 @@ export default function How() {
         {/* Card 4: Hands-On Training */}
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <div className="flex justify-center mb-4">
-            <img
-              src="/path/to/hands-on-training-icon.png"
-              alt="Hands-On Training"
-            />
+            <Image src={IconTraining} alt="Hands-On Training" height={200} />
           </div>
           <h2 className="mb-4 text-xl font-semibold">Hands-On Training</h2>
           <p>
