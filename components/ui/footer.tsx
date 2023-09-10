@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import WorkDiffLogo from "@/public/images/workdiff-logo.png";
+import WorkDiffLogoHoriz from "@/public/images/workdiff-logo-horiz.png";
 
 export default function Footer() {
   return (
@@ -9,111 +10,61 @@ export default function Footer() {
       <div className="py-12 md:py-16">
         <div className="max-w-6xl px-4 mx-auto sm:px-6">
           {/* Top area: Blocks */}
-          <div className="grid gap-8 mb-8 md:grid-cols-12 lg:gap-20 md:mb-12">
-            {/* 1st block */}
-            <div className="md:col-span-4 lg:col-span-5">
-              <div className="mb-2">
-                {/* Logo */}
-                <Link href="/" className="inline-block" aria-label="Cruip">
-                  <Image src={WorkDiffLogo} alt="WorkDiff Logo" width={50} />
-                </Link>
-              </div>
-              <div className="text-gray-400">
-                Through our training content, workshops, and advisory services,
-                we help teams implement AI responsibly to augment human
-                potential.
-              </div>
+          <div className="grid gap-8 mb-8 md:grid-cols-3 lg:gap-20 md:mb-12">
+            {/* Logo block */}
+            <div className="text-center ali md:text-left">
+              <Link href="/" className="inline-block" aria-label="Cruip">
+                <Image
+                  src={WorkDiffLogoHoriz}
+                  alt="WorkDiff Logo"
+                  width={250}
+                />
+              </Link>
             </div>
 
-            {/* 2nd, 3rd and 4th blocks */}
-            <div className="grid gap-8 md:col-span-8 lg:col-span-7 sm:grid-cols-3">
-              {/* 2nd block */}
-              <div className="text-sm">
-                <h6 className="mb-1 font-medium text-gray-200">Courses</h6>
-                <ul>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Work Different With AI
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Prompt Engineering Platforms
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Evaluation Enterprise AI Adoption
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+            {/* Description block */}
+            <div className="text-center md:text-left">
+              <p className="text-gray-400">
+                Work Different With AI is a community of like-minded people who
+                want to Work Different With AI!{" "}
+              </p>
+              <p className="mt-5 text-gray-400">
+                Come join us as we explore together how to Work Different With
+                AI.
+              </p>
+            </div>
 
-              {/* 3rd block */}
-              <div className="text-sm">
-                <h6 className="mb-1 font-medium text-gray-200">Resources</h6>
-                <ul>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Posts
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Newsletters
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Security Drops
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              {/* 4th block */}
-              <div className="text-sm">
-                <h6 className="mb-1 font-medium text-gray-200">About Us</h6>
-                <ul>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
-                    >
-                      Who We Are
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+            {/* 2nd block */}
+            <div className="text-sm text-center md:text-left">
+              <h6 className="mb-1 font-medium text-gray-200">Workshops</h6>
+              <ul>
+                <li className="mb-1">
+                  <Link
+                    href="/"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    For IT Leaders
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    For Independent Software Vendors
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    For Global System Integrators
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-
           {/* Bottom area */}
           <div className="md:flex md:items-center md:justify-between">
             {/* Social links */}
@@ -121,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="flex items-center justify-center text-purple-600 transition duration-150 ease-in-out bg-gray-800 rounded-full hover:text-gray-100 hover:bg-purple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
                   aria-label="Twitter"
                 >
                   <svg
@@ -136,7 +87,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="/"
-                  className="flex items-center justify-center text-purple-600 transition duration-150 ease-in-out bg-gray-800 rounded-full hover:text-gray-100 hover:bg-purple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
                   aria-label="Github"
                 >
                   <svg
@@ -151,7 +102,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="/"
-                  className="flex items-center justify-center text-purple-600 transition duration-150 ease-in-out bg-gray-800 rounded-full hover:text-gray-100 hover:bg-purple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
                   aria-label="Facebook"
                 >
                   <svg
@@ -166,7 +117,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="/"
-                  className="flex items-center justify-center text-purple-600 transition duration-150 ease-in-out bg-gray-800 rounded-full hover:text-gray-100 hover:bg-purple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
                   aria-label="Instagram"
                 >
                   <svg
@@ -183,7 +134,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="/"
-                  className="flex items-center justify-center text-purple-600 transition duration-150 ease-in-out bg-gray-800 rounded-full hover:text-gray-100 hover:bg-purple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
                   aria-label="Linkedin"
                 >
                   <svg

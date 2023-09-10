@@ -4,7 +4,7 @@ export default function Newsletter() {
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
         {/* CTA box */}
         <div
-          className="relative px-8 py-10 bg-purple-600 md:py-16 md:px-12"
+          className="relative px-8 py-10 bg-bourbon-600 md:py-16 md:px-12"
           data-aos="fade-up"
         >
           {/* Background illustration */}
@@ -43,11 +43,12 @@ export default function Newsletter() {
           <div className="relative flex flex-col items-center justify-between lg:flex-row">
             {/* CTA content */}
             <div className="mb-6 text-center lg:mr-16 lg:mb-0 lg:text-left lg:w-1/2">
-              <h3 className="mb-2 text-white h3">Stay in the loop</h3>
-              <p className="text-lg text-purple-200">
-                Keep up with the latest trends and insights in Enterprise AI.
-                Curated by Vernon Keenan, our bi-weekly newsletter brings you
-                the most relevant headlines right to your inbox.
+              <h3 className="mb-2 text-white h3">
+                Join Work Different With AI
+              </h3>
+              <p className="text-lg text-bourbon-200">
+                Get in on the ground floor of this innovative community of
+                like-minded people who want to Work Different With AI!
               </p>
             </div>
 
@@ -56,29 +57,20 @@ export default function Newsletter() {
               <div className="flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
                 <input
                   type="email"
-                  className="w-full px-4 py-3 mb-2 text-white placeholder-purple-400 bg-purple-700 border border-purple-500 rounded-sm appearance-none focus:border-purple-300 sm:mb-0 sm:mr-2"
+                  className="w-full px-4 py-3 mb-2 text-white border rounded-sm appearance-none placeholder-bourbon-400 bg-bourbon-700 border-bourbon-500 focus:border-bourbon-300 sm:mb-0 sm:mr-2"
                   placeholder="Your best email…"
                   aria-label="Your best email…"
                 />
                 <a
-                  className="text-purple-600 bg-purple-100 shadow btn hover:bg-white"
+                  className="shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
                   href="#0"
                 >
-                  Subscribe
+                  Join
                 </a>
               </div>
               {/* Success message */}
               {/* <p className="mt-2 text-sm text-center opacity-75 lg:text-left lg:absolute">Thanks for subscribing!</p> */}
             </form>
-          </div>
-          <div className="mt-8 text-center">
-            <h2 className="mb-4 text-xl font-semibold">What You'll Get:</h2>
-            <ul className="list-none list-inside">
-              <li>🔍 Curated Enterprise AI news</li>
-              <li>📊 Analysis and commentary by Vernon Keenan</li>
-              <li>📅 Bi-weekly delivery</li>
-              <li>📣 Exclusive updates and offers</li>
-            </ul>
           </div>
         </div>
       </div>

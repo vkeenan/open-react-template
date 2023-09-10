@@ -19,13 +19,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Why />
+      {/*   <Why />
       <How />
       <What />
       <Early />
       <Trust />
       <Resources />
-      {/* <Zigzag />
+      <Zigzag />
       <Testimonials />*/}
       <Newsletter />
     </>
