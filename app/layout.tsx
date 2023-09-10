@@ -1,6 +1,7 @@
 import "@/app/css/style.css";
 import GoogleAnalytics from "@/components/google-analytics";
 import { Inter, Architects_Daughter } from "next/font/google";
+import Script from "next/script";
 
 import Header from "@/components/ui/header";
 
@@ -39,6 +40,16 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
+        <Script
+          async
+          type="text/javascript"
+          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RjGpNx"
+        ></Script>{" "}
+        <Script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/fbdf7bb495cf00f7924309c0/script.js"
+        />
       </body>
     </html>
   );

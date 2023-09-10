@@ -1,4 +1,38 @@
+"use client";
+import { useState } from "react";
+import {
+  NewKlaviyoProfileByEmail,
+  KlaviyoProfileData,
+} from "@/services/klaviyo";
+
 export default function Newsletter() {
+  const [submissionStatus, setSubmissionStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [message, setMessage] = useState<string>("");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    console.log("handleSubmit");
+    event.preventDefault();
+
+    // Extract email from form input
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get("email");
+
+    if (typeof email === "string") {
+      const profileData: KlaviyoProfileData = { email: email };
+
+      const result = await NewKlaviyoProfileByEmail(profileData);
+
+      if (result === "success") {
+        setSubmissionStatus("success");
+        setMessage("Profile created successfully");
+      } else {
+        setSubmissionStatus("error");
+        setMessage("Error creating profile");
+      }
+    }
+  }
   return (
     <section>
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
@@ -53,7 +87,7 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
+            <form className="w-full lg:w-1/2" onSubmit={handleSubmit}>
               <div className="flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
                 <input
                   type="email"
@@ -68,9 +102,13 @@ export default function Newsletter() {
                   Join
                 </a>
               </div>
-              {/* Success message */}
-              {/* <p className="mt-2 text-sm text-center opacity-75 lg:text-left lg:absolute">Thanks for subscribing!</p> */}
             </form>
+            {submissionStatus === "success" && (
+              <p className="mt-4 text-green-500">{message}</p>
+            )}
+            {submissionStatus === "error" && (
+              <p className="mt-4 text-red-500">{message}</p>
+            )}
           </div>
         </div>
       </div>

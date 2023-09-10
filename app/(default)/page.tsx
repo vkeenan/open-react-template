@@ -26,8 +26,8 @@ export default function Home() {
       <Trust />
       <Resources />
       <Zigzag />
-      <Testimonials />*/}
-      <Newsletter />
+      <Testimonials />
+      <Newsletter />*/}
     </>
   );
 }

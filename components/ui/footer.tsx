@@ -17,7 +17,8 @@ export default function Footer() {
                 <Image
                   src={WorkDiffLogoHoriz}
                   alt="WorkDiff Logo"
-                  width={250}
+                  width={300}
+                  height={200}
                 />
               </Link>
             </div>
@@ -26,7 +27,7 @@ export default function Footer() {
             <div className="text-center md:text-left">
               <p className="text-gray-400">
                 Work Different With AI is a community of like-minded people who
-                want to Work Different With AI!{" "}
+                want to Work Different With AI!
               </p>
               <p className="mt-5 text-gray-400">
                 Come join us as we explore together how to Work Different With
