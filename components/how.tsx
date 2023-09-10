@@ -76,7 +76,7 @@ export default function How() {
 
       {/* CTA Button */}
       <div className="mt-10 text-center">
-        <button className="px-8 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+        <button className="px-8 py-2 text-white bg-bourbon-500 rounded-lg hover:bg-bourbon-600">
           Get Started on Your AI Journey
         </button>
       </div>

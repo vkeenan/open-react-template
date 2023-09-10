@@ -1,4 +1,4 @@
-import VideoThumb from "@/public/images/hero-image-01.jpg";
+import VideoThumb from "@/public/images/ResponsibleAIAdoption.png";
 import ModalVideo from "@/components/modal-video";
 
 export default function Hero() {
@@ -29,8 +29,8 @@ export default function Hero() {
                 y2="577.921"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#5D5DFF" stopOpacity=".01" />
-                <stop offset="1" stopColor="#5D5DFF" stopOpacity=".32" />
+                <stop stopColor="#ddb142" stopOpacity=".01" />
+                <stop offset="1" stopColor="#ddb142" stopOpacity=".32" />
               </linearGradient>
             </defs>
             <path
@@ -47,36 +47,16 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl pb-12 mx-auto text-center md:pb-16">
             <h1 className="mb-4 h1" data-aos="fade-up">
-              Transforming Work for the Better with AI
+              Work Different with AI to Transform Work for the Better
             </h1>
-            <p
-              className="mb-8 text-xl text-gray-400"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Expert Guidance to Safely Adopt and Innovate with Artificial
-              Intelligence
-            </p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a
-                  className="w-full mb-4 text-white bg-purple-600 btn hover:bg-purple-700 sm:w-auto sm:mb-0"
-                  href="#0"
-                >
-                  Explore AI Together
-                </a>
-              </div>
-            </div>
           </div>
 
           <ModalVideo
             thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
+            thumbWidth={289}
+            thumbHeight={512}
             thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
+            video="/videos/ResponsibleAIadoption.mp4"
           />
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function Why() {
 
       {/* CTA Button */}
       <div className="mt-10 text-center">
-        <button className="px-8 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+        <button className="px-8 py-2 text-white rounded-lg bg-bourbon-500 hover:bg-bourbon-600">
           Learn How We Can Guide You
         </button>
       </div>

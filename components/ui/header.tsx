@@ -9,21 +9,21 @@ export default function Header() {
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
-          <div className="mr-4 shrink-0">
+          <div className="mt-4 mr-4 shrink-0">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image src={WorkDiffLogo} alt="WorkDiff Logo" width={50} />
+              <Image src={WorkDiffLogo} alt="WorkDiff Logo" width={85} />
             </Link>
           </div>
-
-          {/* Desktop navigation */}
+          {/*
+          Desktop navigation
           <nav className="hidden md:flex md:grow">
-            {/* Desktop sign in links */}
+            Desktop sign in links 
             <ul className="flex flex-wrap items-center justify-end grow">
               <li>
                 <Link
                   href="/signin"
-                  className="flex items-center px-4 py-3 font-medium text-purple-600 transition duration-150 ease-in-out hover:text-gray-200"
+                  className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out text-bourbon-600 hover:text-gray-200"
                 >
                   Sign in
                 </Link>
@@ -31,7 +31,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/signup"
-                  className="ml-3 text-white bg-purple-600 btn-sm hover:bg-purple-700"
+                  className="ml-3 text-white bg-bourbon-600 btn-sm hover:bg-bourbon-700"
                 >
                   Sign up
                 </Link>
@@ -40,6 +40,7 @@ export default function Header() {
           </nav>
 
           <MobileMenu />
+          */}
         </div>
       </div>
     </header>
