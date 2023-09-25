@@ -1,9 +1,6 @@
 "use client";
 import { useState } from "react";
-import {
-  NewKlaviyoProfileByEmail,
-  KlaviyoProfileData,
-} from "@/services/klaviyo";
+import { postUserOnboard } from "@/services/post-user-onboard";
 
 export default function Newsletter() {
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -20,11 +17,9 @@ export default function Newsletter() {
     const email = formData.get("email");
 
     if (typeof email === "string") {
-      const profileData: KlaviyoProfileData = { email: email };
+      const result = await postUserOnboard(email);
 
-      const result = await NewKlaviyoProfileByEmail(profileData);
-
-      if (result === "success") {
+      if (result !== null) {
         setSubmissionStatus("success");
         setMessage("Profile created successfully");
       } else {
