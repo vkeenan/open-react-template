@@ -51,21 +51,29 @@ export default function Hero() {
               Work Different with AI to Transform Work for the Better
             </h1>
           </div>
-          <div className="flex items-center justify-center max-w-3xl mx-auto">
-            <VimeoPlayer videoId="867571528" />
-          </div>
-          <div className="max-w-3xl pb-12 mx-auto text-center md:pb-16">
-            <h1 className="mt-5 h1" data-aos="fade-up">
-              Join the Movement - Let's Work Different with AI
-            </h1>
-          </div>
-          <div className="max-w-3xl pb-12 mx-auto text-center md:pb-16">
-            <p className="text-2xl" data-aos="fade-up">
-              Become a trailblazer - join the Work Different With AI community!
-              Get exclusive access to hands-on training and experts to shape the
-              ethical AI future. <br /> <br /> Enter your email below to help
-              lead the way in driving responsible, compassionate AI innovation.
-            </p>
+          {/* Container for video and text */}
+          <div className="grid items-center grid-cols-1 gap-8 mx-auto max-w-7xl md:grid-cols-2">
+            {/* Video */}
+            <div className="flex justify-center md:justify-end">
+              <VimeoPlayer videoId="867571528" />
+            </div>
+            {/* Right Column */}
+            <div className="space-y-4">
+              <div className="text-center md:text-left">
+                <h1 className="mt-5 h1" data-aos="fade-up">
+                  Join the Movement <br /> Let's Work Different with AI
+                </h1>
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-2xl" data-aos="fade-up">
+                  Become a trailblazer - join the Work Different With AI
+                  community! Get exclusive access to hands-on training and
+                  experts to shape the ethical AI future. <br /> <br /> Enter
+                  your email below to help lead the way in driving responsible,
+                  compassionate AI innovation.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
