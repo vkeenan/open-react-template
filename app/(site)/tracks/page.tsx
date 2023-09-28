@@ -73,8 +73,8 @@ export default function Tracks() {
     },
   ];
   return (
-    <div className="container p-4 mx-auto mt-8">
-      <h1 className="mb-4 text-3xl font-bold">Conference Tracks</h1>
+    <div className="container p-4 mx-auto">
+      <h1 className="mb-4 text-3xl font-diplay">Conference Tracks</h1>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {tracks.map((track, index) => (

@@ -10,7 +10,7 @@ export default async function EventsPage() {
       <div className="px-4 py-8 bg-white shadow-lg rounded-2xl sm:p-10">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-semibold">
-            SalesforceDevops.net Event Calendar
+            Work Different With AI Event Calendar
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

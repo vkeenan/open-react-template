@@ -1,5 +1,3 @@
-import VideoThumb from "@/public/images/ResponsibleAIAdoption.png";
-import ModalVideo from "@/components/modal-video";
 import VimeoPlayer from "@/components/vimeo-player";
 
 export default function Hero() {
@@ -9,9 +7,11 @@ export default function Hero() {
         {/* Hero content */}
         <div className="relative pt-2 pb-4">
           {/* Section header */}
-          <div className="max-w-3xl pb-4 mx-auto text-center">
-            <h1 className="mt-4 mb-2 h1 font-display">
-              Work Different with AI For An Ethical and Humane Future
+          <div className="max-w-3xl pb-4 mx-auto text-center font-display">
+            <h1 className="mt-4 mb-2 h2">
+              Work Different with AI
+              <br />
+              For An Ethical and Humane Future
             </h1>
           </div>
           {/* Container for video and text */}
@@ -22,8 +22,8 @@ export default function Hero() {
             </div>
             {/* Right Column */}
             <div className="space-y-4 ">
-              <div className="text-center align-top md:text-left">
-                <h1 className="mt-5 h1">
+              <div className="text-center align-top md:text-left font-display">
+                <h1 className="mt-5 h3">
                   Join the Movement: <br /> Let&#8217;s Work Different with AI
                 </h1>
               </div>

@@ -2,7 +2,6 @@ import "@/app/css/style.css";
 import GoogleAnalytics from "@/components/google-analytics";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Quicksand, Oswald } from "next/font/google";
-import { Inter, Architects_Daughter } from "next/font/google";
 import Script from "next/script";
 
 const quicksand = Quicksand({
@@ -10,19 +9,6 @@ const quicksand = Quicksand({
   subsets: ["latin"],
 });
 const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"] });
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const architects_daughter = Architects_Daughter({
-  subsets: ["latin"],
-  variable: "--font-architects-daughter",
-  weight: "400",
-  display: "swap",
-});
 
 export const metadata = {
   title: "WorkDifferenetWithAI.com",
@@ -35,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${quicksand.variable} ${oswald.variable}`}>
       <head />
       <ClerkProvider
         appearance={{

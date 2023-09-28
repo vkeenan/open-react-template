@@ -13,7 +13,7 @@ export default function MemberRootLayout({
     <>
       <Header />
       <NavBar />
-      <div className="bg-brand-100">
+      <div className="bg-cocoa_brown-200">
         <div className="container flex flex-wrap mx-auto xl:max-w-7xl">
           <aside className="hidden w-1/4 h-screen p-4 sm:hidden md:block bg-brand-400">
             <MemberNav />
