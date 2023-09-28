@@ -7,7 +7,7 @@ import WorkDiffLogoHoriz from "@/public/images/workdiff-logo-horiz.png";
 export default function Footer() {
   return (
     <footer>
-      <div className="py-12 md:py-16">
+      <div className="py-12 md:py-16 bg-cocoa_brown-800">
         <div className="max-w-6xl px-4 mx-auto sm:px-6">
           {/* Top area: Blocks */}
           <div className="grid gap-8 mb-8 md:grid-cols-3 lg:gap-20 md:mb-12">

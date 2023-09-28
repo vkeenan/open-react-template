@@ -1,5 +1,4 @@
 import { logger } from '@/lib/logger';
-import { auth } from '@clerk/nextjs';
 
 export interface FetchConfig {
   endpoint: string;
@@ -34,7 +33,6 @@ export function createFetchConfig(config: FetchConfig, method: 'GET' | 'POST' | 
 
   return { headers, url };
 }
-
 
 export async function fetchAPI<T>(config: FetchConfig, method: 'GET' | 'POST' | 'PUT' = 'GET', data?: T): Promise<T[]> {
   const { headers, url } = createFetchConfig(config, method);

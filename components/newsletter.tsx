@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { postUserOnboard } from "@/services/post-user-onboard";
+import { userPostEmail } from "@/services/user/post-email";
 
 export default function Newsletter() {
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -17,7 +17,7 @@ export default function Newsletter() {
     const email = formData.get("email");
 
     if (typeof email === "string") {
-      const result = await postUserOnboard(email);
+      const result = await userPostEmail(email);
 
       if (result !== null) {
         setSubmissionStatus("success");
@@ -28,14 +28,12 @@ export default function Newsletter() {
       }
     }
   }
+
   return (
     <section>
-      <div className="max-w-6xl px-4 mx-auto sm:px-6">
+      <div className="max-w-6xl px-4 py-8 mx-auto sm:px-6">
         {/* CTA box */}
-        <div
-          className="relative px-8 py-10 bg-bourbon-600 md:py-16 md:px-12"
-          data-aos="fade-up"
-        >
+        <div className="relative px-8 py-10 bg-bourbon-600 md:py-16 md:px-12">
           {/* Background illustration */}
           <div
             className="absolute top-0 right-0 -ml-40 pointer-events-none"
@@ -69,7 +67,7 @@ export default function Newsletter() {
             </svg>
           </div>
 
-          <div className="relative flex flex-col items-center justify-between lg:flex-row">
+          <div className="relative flex flex-col items-center lg:flex-row">
             {/* CTA content */}
             <div className="mb-6 text-center lg:mr-16 lg:mb-0 lg:text-left lg:w-1/2">
               <h3 className="mb-2 text-white h3">
@@ -82,28 +80,35 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2" onSubmit={handleSubmit}>
-              <div className="flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 mb-2 text-white border rounded-sm appearance-none placeholder-bourbon-400 bg-bourbon-700 border-bourbon-500 focus:border-bourbon-300 sm:mb-0 sm:mr-2"
-                  placeholder="Your best email…"
-                  aria-label="Your best email…"
-                />
-                <a
-                  className="shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
-                  href="#0"
-                >
-                  Join
-                </a>
-              </div>
-            </form>
-            {submissionStatus === "success" && (
-              <p className="mt-4 text-green-500">{message}</p>
-            )}
-            {submissionStatus === "error" && (
-              <p className="mt-4 text-red-500">{message}</p>
-            )}
+            <div className="w-full lg:w-1/2">
+              <form className="mb-4" onSubmit={handleSubmit}>
+                <div className="flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
+                  <input
+                    type="email"
+                    name="email"
+                    className="w-full px-4 py-3 mb-2 text-white border rounded-sm appearance-none placeholder-bourbon-400 bg-bourbon-700 border-bourbon-500 focus:border-bourbon-300 sm:mb-0 sm:mr-2"
+                    placeholder="Your best email…"
+                    aria-label="Your best email…"
+                  />
+                  <button
+                    className="shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
+                    type="submit"
+                  >
+                    Join
+                  </button>
+                </div>
+              </form>
+              {submissionStatus === "success" && (
+                <p className="text-center text-green-500 lg:text-left">
+                  {message}
+                </p>
+              )}
+              {submissionStatus === "error" && (
+                <p className="text-center text-red-500 lg:text-left">
+                  {message}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>

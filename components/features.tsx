@@ -1,11 +1,11 @@
 export default function Features() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">
+          <div className="max-w-3xl pb-12 mx-auto text-center md:pb-20">
+            <h2 className="mb-4 h2">
               The majority our customers do not understand their workflows.
             </h2>
             <p className="text-xl text-gray-400">
@@ -15,16 +15,9 @@ export default function Features() {
           </div>
 
           {/* Items */}
-          <div
-            className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none"
-            data-aos-id-blocks
-          >
+          <div className="grid items-start max-w-sm gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:gap-16 md:max-w-2xl lg:max-w-none">
             {/* 1st item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -51,8 +44,8 @@ export default function Features() {
                   strokeWidth="2"
                 />
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
@@ -60,12 +53,7 @@ export default function Features() {
             </div>
 
             {/* 2nd item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -92,8 +80,8 @@ export default function Features() {
                   strokeLinecap="square"
                 />
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
@@ -101,12 +89,7 @@ export default function Features() {
             </div>
 
             {/* 3rd item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -144,8 +127,8 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
@@ -153,12 +136,7 @@ export default function Features() {
             </div>
 
             {/* 4th item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -189,8 +167,8 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
@@ -198,12 +176,7 @@ export default function Features() {
             </div>
 
             {/* 5th item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -231,8 +204,8 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
@@ -240,12 +213,7 @@ export default function Features() {
             </div>
 
             {/* 6th item */}
-            <div
-              className="relative flex flex-col items-center"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-anchor="[data-aos-id-blocks]"
-            >
+            <div className="relative flex flex-col items-center">
               <svg
                 className="w-16 h-16 mb-4"
                 viewBox="0 0 64 64"
@@ -280,8 +248,8 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
-              <p className="text-lg text-gray-400 text-center">
+              <h4 className="mb-2 h4">Instant Features</h4>
+              <p className="text-lg text-center text-gray-400">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat.
