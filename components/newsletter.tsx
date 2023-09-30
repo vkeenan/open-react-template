@@ -1,8 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { userPostEmail } from "@/services/user/post-email";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Newsletter() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [submissionStatus, setSubmissionStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
@@ -11,13 +15,16 @@ export default function Newsletter() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     console.log("handleSubmit");
     event.preventDefault();
+    setIsSubmitting(true); // Set isSubmitting to true when submission starts
 
-    // Extract email from form input
+    // Extract email and phone number from form input
     const formData = new FormData(event.currentTarget);
     const email = formData.get("email");
+    const phone = formData.get("phone");
 
-    if (typeof email === "string") {
-      const result = await userPostEmail(email);
+    if (typeof email === "string" && typeof phone === "string") {
+      // Assuming userPostEmail is updated to accept both email and phone
+      const result = await userPostEmail(email, phone);
 
       if (result !== null) {
         setSubmissionStatus("success");
@@ -27,8 +34,9 @@ export default function Newsletter() {
         setMessage("Error creating profile");
       }
     }
+    setIsSubmitting(false); // Set isSubmitting back to false when submission ends
+    formRef.current?.reset(); // Reset the form
   }
-
   return (
     <section>
       <div className="max-w-6xl px-4 py-8 mx-auto sm:px-6">
@@ -70,7 +78,7 @@ export default function Newsletter() {
           <div className="relative flex flex-col items-center lg:flex-row">
             {/* CTA content */}
             <div className="mb-6 text-center lg:mr-16 lg:mb-0 lg:text-left lg:w-1/2">
-              <h3 className="mb-2 text-white h3">
+              <h3 className="mb-2 text-white h3 font-display">
                 Join Work Different With AI
               </h3>
               <p className="text-lg text-bourbon-200">
@@ -81,8 +89,8 @@ export default function Newsletter() {
 
             {/* CTA form */}
             <div className="w-full lg:w-1/2">
-              <form className="mb-4" onSubmit={handleSubmit}>
-                <div className="flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
+              <form ref={formRef} className="mb-4" onSubmit={handleSubmit}>
+                <div className="flex flex-col flex-wrap justify-center max-w-xs mx-auto sm:flex-row sm:max-w-md lg:max-w-none">
                   <input
                     type="email"
                     name="email"
@@ -91,22 +99,19 @@ export default function Newsletter() {
                     aria-label="Your best email…"
                   />
                   <button
-                    className="shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
+                    className="mt-5 shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
                     type="submit"
+                    disabled={isSubmitting}
                   >
-                    Join
+                    {isSubmitting ? <ClipLoader /> : "Join"}
                   </button>
                 </div>
               </form>
               {submissionStatus === "success" && (
-                <p className="text-center text-green-500 lg:text-left">
-                  {message}
-                </p>
+                <p className="text-center lg:text-left">{message}</p>
               )}
               {submissionStatus === "error" && (
-                <p className="text-center text-red-500 lg:text-left">
-                  {message}
-                </p>
+                <p className="text-center lg:text-left">{message}</p>
               )}
             </div>
           </div>

@@ -1,57 +1,58 @@
 import IconCommunity from "@/public/images/icon-community.png";
+import IconExclusiveContent from "@/public/images/icon-exclusive-content.png";
 import IconCompass from "@/public/images/icon-compass.png";
 import IconCop from "@/public/images/icon-cop.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Why() {
   return (
     <div className="py-10">
       {/* Section Title */}
       <div className="text-center">
-        <h1 className="mx-3 text-3xl font-semibold">
-          Why Work Different with AI?
-        </h1>
+        <h2 className="mx-3 text-4xl md:text-5xl font-display">
+          Why Join Work Different with AI?
+        </h2>
         <hr className="w-1/4 mx-auto my-4 border-t-2" />
       </div>
 
       {/* Content Cards */}
-      <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-3">
-        {/* Card 1: Innovate Responsibly */}
-        <div className="p-6 rounded-lg shadow-md bg-slate-600">
-          <div className="flex justify-center mb-4">
-            <Image src={IconCop} alt="Innovate Responsibly" height={200} />
-          </div>
-          <h2 className="mb-4 text-xl font-semibold">Innovate Responsibly</h2>
-          <p>
-            AI has the power to revolutionize the way we work, but with great
-            power comes great responsibility. At WorkDifferentWithAI, we believe
-            that innovation shouldn’t come at the expense of ethics or social
-            responsibility.
-          </p>
-        </div>
-
-        {/* Card 2: Positive Change for All */}
-        <div className="p-6 rounded-lg shadow-md bg-slate-600">
+      <div className="container grid grid-cols-1 gap-8 mx-auto lg:grid-cols-3">
+        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
           <div className="flex justify-center mb-4">
             <Image
-              src={IconCommunity}
-              alt="Positive Change for All"
+              src={IconExclusiveContent}
+              alt="Innovate Responsibly"
               height={200}
             />
           </div>
-          <h2 className="mb-4 text-xl font-semibold">
-            Positive Change for All
+          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+            Access to Exclusive Content
           </h2>
-          <p>
-            We are committed to driving positive change that benefits not just
-            businesses but also employees and society at large. Our focus is on
-            human-centric AI solutions that empower rather than replace the
-            workforce.
+          <p className="text-gray-100">
+            Dive deep into curated educational tracks focused on practical AI
+            adoption and ethical considerations.
           </p>
         </div>
 
-        {/* Card 3: Your Compass Through the AI Landscape */}
-        <div className="p-6 rounded-lg shadow-md bg-slate-600">
+        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
+          <div className="flex justify-center mb-4">
+            <Image
+              src={IconCommunity}
+              alt="Community Engagement"
+              height={200}
+            />
+          </div>
+          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+            Community Engagement
+          </h2>
+          <p className="text-gray-100">
+            Connect with like-minded professionals, share insights, and work
+            together to drive positive AI outcomes.
+          </p>
+        </div>
+
+        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
           <div className="flex justify-center mb-4">
             <Image
               src={IconCompass}
@@ -59,22 +60,24 @@ export default function Why() {
               height={200}
             />
           </div>
-          <h2 className="mb-4 text-xl font-semibold">
-            Your Compass Through the AI Landscape
+          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+            Thought Leadership
           </h2>
-          <p>
-            The landscape of AI is vast and often confusing. We serve as your
-            trusted guide, helping you navigate through the hype to find
-            practical, effective solutions tailored for your enterprise needs.
+          <p className="text-gray-100">
+            Learn from industry experts, contribute your knowledge, and
+            establish yourself as a thought leader in the AI space.
           </p>
         </div>
       </div>
 
       {/* CTA Button */}
       <div className="mt-10 text-center">
-        <button className="px-8 py-2 text-white rounded-lg bg-bourbon-500 hover:bg-bourbon-600">
-          Learn How We Can Guide You
-        </button>
+        <Link
+          className="px-4 py-2 text-2xl text-white rounded-lg bg-bourbon-500 hover:bg-bourbon-600"
+          href="/sign-up"
+        >
+          Join the Work Different With AI Community Today
+        </Link>
       </div>
     </div>
   );

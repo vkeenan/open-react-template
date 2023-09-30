@@ -1,0 +1,15 @@
+/* This sets the default color of links */
+a {
+  background-color: #eddb9a; /* This is a light blue color */
+  color: #59403a; /* This is a contrasting dark teal color for the text */
+  text-decoration: none; /* This removes the underline from links */
+  padding: 5px 10px; /* This adds some padding around the text */
+  border-radius: 4px; /* This rounds the corners of the background */
+}
+
+/* This sets the color of links when hovered over */
+a:hover {
+  background-color: #59403a; /* This is a dark teal color */
+  color: #d9e3ea; /* This is a light blue color for the text */
+  text-decoration: none; /* This keeps the underline removed on hover */
+}

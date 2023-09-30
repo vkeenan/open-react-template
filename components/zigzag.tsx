@@ -11,10 +11,12 @@ export default function Zigzag() {
         <div className="py-12 border-t border-cocoa_brown-400 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl pb-12 mx-auto text-center md:pb-16">
-            <div className="inline-flex px-3 py-1 m-2 mb-4 text-sm font-semibold text-gray-200 rounded-full bg-bourbon-800">
+            <div className="inline-flex px-3 py-1 m-2 mb-4 text-sm text-gray-200 rounded-full font-display bg-bourbon-800">
               Work Different With AI Community Resources
             </div>
-            <h1 className="mb-4 h2">Enterprise AI Virtual Conference</h1>
+            <h1 className="mb-4 h2 font-display">
+              Enterprise AI Virtual Conference
+            </h1>
             <p className="text-xl text-gray-800">
               Join a special interest group to present your work, learn from
               others, discover vetted vendor solutions, and network with peers.

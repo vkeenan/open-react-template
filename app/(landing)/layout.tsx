@@ -1,3 +1,4 @@
+import "@/app/css/style.css";
 import Header from "@/components/ui/header";
 import { NavBar } from "@/components/ui/navbar";
 
@@ -13,7 +14,9 @@ export default function DefaultLayout({
     <>
       <Header />
       <NavBar />
-      <div className="bg-cocoa_brown-300">{children}</div>
+      <div className="flex flex-col items-center w-full px-3 mx-auto bg-cocoa_brown-300 md:w-3/4">
+        {children}
+      </div>
       <Footer />
     </>
   );

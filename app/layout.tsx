@@ -33,7 +33,7 @@ export default function RootLayout({
           },
         }}
       >
-        <body className="bg-cocoa_brown-950">
+        <body className="bg-cocoa_brown-300">
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}

@@ -4,15 +4,20 @@ import { UserResponse as UserResponseClass, UserClass } from '@/types/user';
 import { createFetchConfig as createFetchConfigFunction, FetchConfig } from '@/lib/fetch-config';
 import { logger as loggerInstance } from '@/lib/logger';
 
-export async function userPostEmail(email: string): Promise<UserClass | null> {
-  loggerInstance.debug(`userPostEmail: ${email}`);
+export async function userPostEmail(email: string, phone: string): Promise<UserClass | null> {
+  loggerInstance.debug(`userPostEmail: ${email}, ${phone}`);
   const config: FetchConfig = {
     endpoint: 'http://members.work.tnxs.net:8080/v1/users/onboard',
   };
   const { headers, url } = createFetchConfigFunction(config, 'POST');
   const response = await fetch(url.toString(), {
     method: 'POST',
-    body: JSON.stringify({ Data: [{ Email: email }] }),
+    body: JSON.stringify({
+      Data: [{
+        Email: email,
+        Phone: phone,
+      }]
+    }),
     headers: headers,
   });
   if (!response.ok) {

@@ -5,6 +5,7 @@ import { logger } from '@/lib/logger';
 const publicPaths = [
   "/",
   "/about(/.*)?",
+  "/consulting(/.*)?",
   "/contact(/.*)?",
   "/events(/.*)?",
   "/landing(/.*)?",
