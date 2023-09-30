@@ -4,8 +4,8 @@ import styles from "@/app/css/post-body.module.css";
 import { getPageByUri } from "@/services/page/get-page-by-uri";
 import { getSiteMetadata } from "@/services/site/get-site-metadata";
 
-export default async function ContactPage() {
-  const pageResult = await getPageByUri("/contact/");
+export default async function TermsPage() {
+  const pageResult = await getPageByUri("/privacy/");
   if (!pageResult) {
     return {
       props: {},

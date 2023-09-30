@@ -14,6 +14,7 @@ const publicPaths = [
   "/sign-(in|out|up)(/.*)?",
   "/terms(/.*)?",
   "/tracks(/.*)?",
+  "/workshops(/.*)?",
   "/feed",
   "/404",
   "/sitemap.xml",

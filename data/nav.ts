@@ -18,7 +18,7 @@ export const navItems = [
   {
     id: 120,
     name: 'Consulting',
-    href: '/consluting',
+    href: '/consulting',
     current: false,
     protected: false,
     guestonly: false,
