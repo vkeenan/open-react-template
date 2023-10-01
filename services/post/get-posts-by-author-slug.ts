@@ -1,11 +1,11 @@
-import { getApolloClient } from '../lib/apollo-client';
-import { logger } from '../lib/logger';
+import { getApolloClient } from '@/lib/apollo-client';
+import { logger } from '@/lib/logger';
 import {
   QUERY_POSTS_BY_AUTHOR_SLUG,
   QUERY_POSTS_BY_AUTHOR_SLUG_ARCHIVE,
   QUERY_POSTS_BY_AUTHOR_SLUG_INDEX
 } from '@/data/posts';
-import { mapPostData } from '@/services';
+import { mapPostData } from './map-post-data';
 
 const postsByAuthorSlugIncludesTypes = {
   all: QUERY_POSTS_BY_AUTHOR_SLUG,

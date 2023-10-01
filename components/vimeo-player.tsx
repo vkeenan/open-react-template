@@ -29,7 +29,7 @@ const Player: React.FC<Props> = ({ videoId, width = 360, height = 640 }) => {
         player.destroy();
       };
     }
-  }, [videoId, width]);
+  }, [videoId, width, height]);
 
   return <div ref={playerRef} style={{ width: width, height: height }} />;
 };

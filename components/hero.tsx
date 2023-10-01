@@ -10,7 +10,7 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl pb-4 mx-auto text-center font-display">
             <h1 className="mt-4 mb-2 h2">
-              Work Different With AI for an Ethical and Humane Future
+              Work Different With AI for an Ethical and Compassionate Future
             </h1>
           </div>
           {/* Container for video and text */}
@@ -28,8 +28,9 @@ export default function Hero() {
               </div>
               <div className="text-center md:text-center">
                 <p className="text-2xl">
-                  Join a community dedicated to exploring humane and ethical AI
-                  practices. Sign up to engage, learn, and contribute.{" "}
+                  Join a community dedicated to exploring compassionate and
+                  ethical AI practices. Sign up to engage, learn, and
+                  contribute.{" "}
                   <Link
                     className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
                     href="/sign-up"

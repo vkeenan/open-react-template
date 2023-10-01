@@ -11,7 +11,7 @@ export default function Testimonials() {
         <div className="py-12 border-t border-gray-800 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl pb-12 mx-auto text-center md:pb-20">
-            <h2 className="mb-4 h2">Don't take our word for it</h2>
+            <h2 className="mb-4 h2">Don&apos;t take our word for it</h2>
             <p className="text-xl text-gray-400">
               Vitae aliquet nec ullamcorper sit amet risus nullam eget felis
               semper quis lectus nulla at volutpat diam ut venenatis tellus—in
@@ -43,9 +43,9 @@ export default function Testimonials() {
               </div>
               <blockquote className="text-lg text-gray-400 grow">
                 — Open PRO lets me quickly get the insights I care about so that
-                I can focus on my productive work. I've had Open PRO for about
-                24 hours now and I honestly don't know how I functioned without
-                it before.
+                I can focus on my productive work. I&apos;ve had Open PRO for
+                about 24 hours now and I honestly don&apos;t know how I
+                functioned without it before.
               </blockquote>
               <div className="pt-5 mt-6 font-medium text-gray-700 border-t border-gray-700">
                 <cite className="not-italic text-gray-200">Anastasia Dan</cite>{" "}
@@ -81,9 +81,9 @@ export default function Testimonials() {
               </div>
               <blockquote className="text-lg text-gray-400 grow">
                 — Open PRO lets me quickly get the insights I care about so that
-                I can focus on my productive work. I've had Open PRO for about
-                24 hours now and I honestly don't know how I functioned without
-                it before.
+                I can focus on my productive work. I&apos;ve had Open PRO for
+                about 24 hours now and I honestly don&apos;t know how I
+                functioned without it before.
               </blockquote>
               <div className="pt-5 mt-6 font-medium text-gray-700 border-t border-gray-700">
                 <cite className="not-italic text-gray-200">Anastasia Dan</cite>{" "}
@@ -119,9 +119,9 @@ export default function Testimonials() {
               </div>
               <blockquote className="text-lg text-gray-400 grow">
                 — Open PRO lets me quickly get the insights I care about so that
-                I can focus on my productive work. I've had Open PRO for about
-                24 hours now and I honestly don't know how I functioned without
-                it before.
+                I can focus on my productive work. I&apos;ve had Open PRO for
+                about 24 hours now and I honestly don&apos;t know how I
+                functioned without it before.
               </blockquote>
               <div className="pt-5 mt-6 font-medium text-gray-700 border-t border-gray-700">
                 <cite className="not-italic text-gray-200">Anastasia Dan</cite>{" "}

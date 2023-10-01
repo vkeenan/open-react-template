@@ -3,10 +3,8 @@ import Why from "@/components/why";
 import How from "@/components/how";
 import What from "@/components/what";
 import Early from "@/components/early";
-import Trust from "@/components/trust";
 import Resources from "@/components/resources";
 import Newsletter from "@/components/newsletter";
-import Zigzag from "@/components/zigzag";
 import Testimonials from "@/components/testimonials";
 
 export const metadata = {

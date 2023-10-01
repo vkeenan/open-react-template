@@ -10,9 +10,9 @@ export default function Resources() {
       {/* Introduction */}
       <div className="mb-8 text-center">
         <p className="w-1/2 mx-auto text-lg font-semibold">
-          Expand your knowledge and stay updated with Vernon Keenan's thought
-          leadership across various platforms. Here are some resources you won't
-          want to miss.
+          Expand your knowledge and stay updated with Vernon Keenan&apos;s
+          thought leadership across various platforms. Here are some resources
+          you won&apos;t want to miss.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ export default function Resources() {
         <div className="p-6 rounded-lg shadow-md bg-slate-600">
           <h2 className="mb-4 text-xl font-semibold">Instagram</h2>
           <p>
-            Get a behind-the-scenes look at Vernon's research and speaking
+            Get a behind-the-scenes look at Vernon&apos;s research and speaking
             engagements.
           </p>
           <a href="#" className="inline-block mt-4 text-blue-500">

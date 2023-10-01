@@ -1,8 +1,7 @@
-import { getApolloClient } from '../lib/apollo-client';
-import { logger } from '../lib/logger';
-import { mapPostData } from './index';
-
-import { QUERY_POST_BY_SLUG, QUERY_POST_SEO_BY_SLUG } from '../data/posts';
+import { getApolloClient } from '@/lib/apollo-client';
+import { logger } from '@/lib/logger';
+import { mapPostData } from './map-post-data';
+import { QUERY_POST_BY_SLUG, QUERY_POST_SEO_BY_SLUG } from '@/data/posts';
 
 export async function getPostBySlug(slug: string) {
   logger.debug(`👉getPostBySlug: ${slug}`);
