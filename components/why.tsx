@@ -1,7 +1,6 @@
 import IconCommunity from "@/public/images/icon-community.png";
 import IconExclusiveContent from "@/public/images/icon-exclusive-content.png";
 import IconCompass from "@/public/images/icon-compass.png";
-import IconCop from "@/public/images/icon-cop.png";
 import Image from "next/image";
 import Link from "next/link";
 

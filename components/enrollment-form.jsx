@@ -63,7 +63,7 @@ export const EnrollmentForm = ({ initialValues }) => {
   };
 
   return (
-    <div className="flex w-full bg-brand-200">
+    <div className="flex w-full bg-cocoa_brown-200">
       <Dialog
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -77,7 +77,7 @@ export const EnrollmentForm = ({ initialValues }) => {
             </Dialog.Title>
             <div className="flex justify-end space-x-4">
               <button
-                className="px-4 py-2 font-semibold text-white rounded-none bg-brand-200 hover:bg-brand-300"
+                className="px-4 py-2 font-semibold text-white rounded-none bg-cocoa_brown-200 hover:bg-cocoa_brown-300"
                 onClick={() => {
                   setIsModalOpen(false);
                   if (formRef.current) formRef.current.submit();
@@ -87,7 +87,7 @@ export const EnrollmentForm = ({ initialValues }) => {
                 Save
               </button>
               <button
-                className="px-4 py-2 font-semibold text-white rounded-none bg-brand-200 hover:bg-brand-300"
+                className="px-4 py-2 font-semibold text-white rounded-none bg-cocoa_brown-200 hover:bg-cocoa_brown-300"
                 onClick={() => {
                   setIsModalOpen(false);
                   setFormVisible(false);
@@ -108,11 +108,11 @@ export const EnrollmentForm = ({ initialValues }) => {
             setFormVisible(!formVisible);
           }
         }}
-        className="absolute z-10 p-2 hover:bg-brand-300 focus:outline-none"
+        className="absolute z-10 p-2 hover:bg-cocoa_brown-300 focus:outline-none"
       >
         <FaEdit />
       </button>
-      <div className="p-8 rounded-none shadow-md bg-brand-100">
+      <div className="p-8 rounded-none shadow-md bg-cocoa_brown-100">
         {formVisible && (
           <form onSubmit={handleSubmit}>
             <input
@@ -130,7 +130,7 @@ export const EnrollmentForm = ({ initialValues }) => {
                   onClick={() => {
                     /* Implement the edit photo functionality here */
                   }}
-                  className="px-4 py-2 ml-4 font-semibold text-white rounded-none bg-brand-200"
+                  className="px-4 py-2 ml-4 font-semibold text-white rounded-none bg-cocoa_brown-200"
                 >
                   Edit
                 </button>
@@ -270,7 +270,7 @@ export const EnrollmentForm = ({ initialValues }) => {
             <div className="flex justify-between mt-4 space-x-4">
               <button
                 type="submit"
-                className="w-full px-4 py-2 font-semibold text-white rounded-none md:w-2/3 bg-brand-200 hover:bg-brand-300"
+                className="w-full px-4 py-2 font-semibold text-white rounded-none md:w-2/3 bg-cocoa_brown-200 hover:bg-cocoa_brown-300"
               >
                 Submit
               </button>

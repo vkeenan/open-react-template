@@ -5,7 +5,7 @@ import { getPageByUri } from "@/services/page/get-page-by-uri";
 import { getSiteMetadata } from "@/services/site/get-site-metadata";
 
 export default async function TermsPage() {
-  const pageResult = await getPageByUri("/privacy/");
+  const pageResult = await getPageByUri("/terms/");
   if (!pageResult) {
     return {
       props: {},

@@ -1,3 +1,7 @@
+import WorkshopImage from "@/public/images/workshop.png";
+import AILandscapeImage from "@/public/images/ai-landscape.png";
+import Image from "next/image";
+
 export default function WorkshopPage() {
   return (
     <div className="px-4 py-8">
@@ -6,10 +10,11 @@ export default function WorkshopPage() {
       </h2>
       <div className="flex flex-col mb-8 md:flex-row">
         <div className="w-full px-4 md:w-1/2">
-          <img
-            src="/path-to-your-image1.jpg"
-            alt="Illustration 1"
+          <Image
             className="mb-4 md:mb-0"
+            src={WorkshopImage}
+            alt="Workshop Illustration"
+            height={175}
           />
         </div>
         <div className="w-full px-4 md:w-1/2">
@@ -24,10 +29,11 @@ export default function WorkshopPage() {
       </div>
       <div className="flex flex-col mb-8 md:flex-row-reverse">
         <div className="w-full px-4 md:w-1/2">
-          <img
-            src="/path-to-your-image2.jpg"
-            alt="Illustration 2"
+          <Image
             className="mb-4 md:mb-0"
+            src={AILandscapeImage}
+            alt="AI Landscape Illustration"
+            height={175}
           />
         </div>
         <div className="w-full px-4 md:w-1/2">

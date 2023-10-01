@@ -2,6 +2,8 @@ import Header from "@/components/ui/header";
 import { NavBar } from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import { SignupFormWidget } from "@/components/signup-form-widget";
+import { LatestPostsWidget } from "@/components/latest-posts-widget";
+import { CategoryWidget } from "@/components/category-widget";
 
 export default function DefaultLayout({
   children,
@@ -20,6 +22,8 @@ export default function DefaultLayout({
           <aside className="flex flex-col items-center w-full md:w-1/4">
             <div>
               <SignupFormWidget />
+              <LatestPostsWidget />
+              <CategoryWidget />
             </div>
           </aside>
         </div>
