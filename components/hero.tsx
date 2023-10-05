@@ -8,21 +8,21 @@ export default function Hero() {
         {/* Hero content */}
         <div className="relative pt-2 pb-4">
           {/* Section header */}
-          <div className="max-w-3xl pb-4 mx-auto text-center font-display">
-            <h1 className="mt-4 mb-2 h2">
+          <div className="max-w-3xl pb-4 mx-auto ">
+            <h2 className="mt-4 text-4xl text-center lg:text-5xl font-display">
               Work Different With AI for an Ethical and Compassionate Future
-            </h1>
+            </h2>
           </div>
           {/* Container for video and text */}
-          <div className="grid items-start grid-cols-1 gap-8 mx-auto max-w-7xl">
+          <div className="grid items-start grid-cols-1 mx-auto max-w-7xl">
             {/* Video */}
             <div className="flex justify-center">
-              <VimeoPlayer videoId="867571528" />
+              <VimeoPlayer vertVideoId="867571528" horizVideoId="870132959" />
             </div>
             {/* Right Column */}
             <div className="space-y-4 ">
               <div className="text-center md:text-center font-display">
-                <h3 className="mt-5 text-3xl font-display">
+                <h3 className="mt-5 text-4xl lg:text-5xl font-display">
                   Elevate Your Enterprise AI Journey
                 </h3>
               </div>

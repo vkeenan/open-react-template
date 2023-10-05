@@ -37,3 +37,8 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# certificates
+*.key
+*.pem
+*.crt

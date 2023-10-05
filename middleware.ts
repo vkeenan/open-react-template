@@ -2,51 +2,44 @@ import { authMiddleware } from "@clerk/nextjs";
 import { NextResponse, NextRequest } from "next/server";
 import { logger } from '@/lib/logger';
 
-const publicPaths = [
+const publicRoutes = [
   "/",
-  "/about(/.*)?",
-  "/consulting(/.*)?",
-  "/contact(/.*)?",
-  "/events(/.*)?",
-  "/landing(/.*)?",
-  "/posts(/.*)?",
-  "/privacy(/.*)?",
-  "/sign-(in|out|up)(/.*)?",
-  "/terms(/.*)?",
-  "/tracks(/.*)?",
-  "/workshops(/.*)?",
+  "/about",
+  "/consulting",
+  "/contact",
+  "/events",
+  "/landing",
+  "/posts",
+  "/privacy",
+  "/sign-in",
+  "/sign-out",
+  "/sign-up",
+  "/terms",
+  "/tracks",
+  "/workshops",
   "/feed",
   "/404",
   "/sitemap.xml",
 ];
 
-const isPublic = (path: string) => publicPaths.some(publicPath => path.match(new RegExp(`^${publicPath}$`.replace("*$", "($|/)"))));
-
-
-const handleBeforeAuth = (req: NextRequest): NextResponse | void => {
-  logger.info("👉withClerkMiddleware: ", req.nextUrl.pathname);
-
-  if (isPublic(req.nextUrl.pathname)) {
+export default authMiddleware({
+  publicRoutes: publicRoutes,
+  beforeAuth: (req: NextRequest) => {
+    logger.info("👉withClerkMiddleware: ", req.nextUrl.pathname);
+    if (publicRoutes.includes(req.nextUrl.pathname)) {
+      return NextResponse.next();
+    }
+  },
+  afterAuth: (auth: any, req: NextRequest) => {
+    if (!auth.userId && !auth.isPublicRoute) {
+      const signInUrl = new URL("/sign-in", req.url);
+      signInUrl.searchParams.set("redirect_url", req.url);
+      return NextResponse.redirect(signInUrl);
+    }
     return NextResponse.next();
   }
-};
-
-const handleAfterAuth = (auth: any, req: NextRequest): NextResponse | void => {
-  if (!auth.userId && !auth.isPublicRoute) {
-    const signInUrl = new URL("/sign-in", req.url);
-    signInUrl.searchParams.set("redirect_url", req.url);
-    return NextResponse.redirect(signInUrl);
-  }
-
-  return NextResponse.next();
-};
-
-export default authMiddleware({
-  beforeAuth: handleBeforeAuth,
-  afterAuth: handleAfterAuth,
-  publicRoutes: publicPaths,
 });
 
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };

@@ -1,16 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   experimental: {
     serverActions: true,
-  },
-  redirects: async () => {
-    return [
-      {
-        source: "/",
-        destination: "/landing",
-        permanent: false, // Redirect only the first time.
-      },
-    ];
   },
 };
 
