@@ -4,7 +4,6 @@ import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import React, { useState, useMemo } from "react";
 import { FaChevronDown, FaRegUser, FaSearch } from "react-icons/fa";
-import { useAuth, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { navItems } from "@/data/nav";
 
 export function NavBar() {
@@ -53,8 +52,53 @@ function MobileMenu({ toggleMenu }: any) {
   );
 }
 
+export function AuthButton() {
+  return (
+    <div className="mr-2">
+      <div className="flex items-center justify-between">
+        <Menu as="div" className="relative ml-3">
+          <div>
+            <Menu.Button className="flex text-sm no-underline text-brand-200 hover:text-brand-800">
+              <span className="sr-only">Open user menu</span>
+              <FaRegUser size={22} />
+            </Menu.Button>
+          </div>
+          <Transition
+            as={React.Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items className="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Item
+                as="a"
+                href="/sign-in"
+                className="block px-4 py-2 text-sm text-gray-700 bg-gray-100"
+              >
+                Sign In
+              </Menu.Item>
+              <Menu.Item
+                as="a"
+                href="/sign-up"
+                className="block px-4 py-2 text-sm text-gray-700 bg-gray-100"
+              >
+                Sign Up
+              </Menu.Item>
+            </Menu.Items>
+          </Transition>
+        </Menu>
+      </div>
+    </div>
+  );
+}
+
 function MenuBar({ menuOpen, toggleMenu }: any) {
-  const { isLoaded, userId } = useAuth();
+  // const { isLoaded, userId } = useAuth();
+  const isLoaded = true;
+  const userId = false;
 
   const navLinks = useMemo(() => {
     return navItems
@@ -133,47 +177,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
             </button>
           </div>
           <div className="mr-2">
-            <SignedOut>
-              <div className="flex items-center justify-between">
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="flex text-sm no-underline text-brand-200 hover:text-brand-800">
-                      <span className="sr-only">Open user menu</span>
-                      <FaRegUser size={22} />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={React.Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item
-                        as="a"
-                        href="/sign-in"
-                        className="block px-4 py-2 text-sm text-gray-700 bg-gray-100"
-                      >
-                        Sign In
-                      </Menu.Item>
-                      <Menu.Item
-                        as="a"
-                        href="/sign-up"
-                        className="block px-4 py-2 text-sm text-gray-700 bg-gray-100"
-                      >
-                        Sign Up
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-              </div>
-            </SignedOut>
-            <SignedIn>
-              <UserButton userProfileUrl="/user" afterSignOutUrl="/" />
-            </SignedIn>
+            <AuthButton />
           </div>
           <button
             type="button"
