@@ -2,6 +2,8 @@ import "@/app/css/style.css";
 import GoogleAnalytics from "@/components/google-analytics";
 import { Quicksand, Oswald } from "next/font/google";
 import Script from "next/script";
+import { getServerSession } from "next-auth";
+import { SessionProvider } from "next-auth/react";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
