@@ -1,14 +1,20 @@
 import { NavBar } from "@/components/ui/navbar";
+import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth";
 import Header from "@/components/ui/header";
 import { MemberFooter } from "@/components/ui/member-footer";
 import { MemberNav } from "@/components/ui/member-nav";
 import { Suspense } from "react";
 
-export default function MemberRootLayout({
+export default async function MemberRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession();
+  if (!session) {
+    redirect("/api/auth/signin");
+  }
   return (
     <>
       <Header />

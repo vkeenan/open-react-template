@@ -1,9 +1,9 @@
 import "@/app/css/style.css";
-import GoogleAnalytics from "@/components/google-analytics";
-import { Quicksand, Oswald } from "next/font/google";
-import Script from "next/script";
 import { getServerSession } from "next-auth";
-import { SessionProvider } from "next-auth/react";
+import { Quicksand, Oswald } from "next/font/google";
+import GoogleAnalytics from "@/components/google-analytics";
+import Script from "next/script";
+import SessionProvider from "@/components/ui/session-provider";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -16,11 +16,13 @@ export const metadata = {
   description: "Work Differenet With AI",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession();
+
   return (
     <html lang="en" className={`${quicksand.variable} ${oswald.variable}`}>
       <head />
@@ -28,7 +30,7 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
-        {children}
+        <SessionProvider session={session}>{children}</SessionProvider>
         <Script
           id="cookieyes"
           type="text/javascript"
