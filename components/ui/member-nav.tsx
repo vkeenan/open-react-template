@@ -4,7 +4,7 @@ export function MemberNav() {
     <>
       <Link href="/home">
         <h1 className="py-3 mb-4 text-xl lg:text-2xl font-display hover:text-gray-200 hover:bg-gray-800">
-          Member Services
+          Member Dashboard
         </h1>
       </Link>
       <nav>

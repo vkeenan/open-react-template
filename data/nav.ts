@@ -40,6 +40,14 @@ export const navItems = [
     guestonly: false,
     sub: [
       {
+        id: 150,
+        name: 'Member Dashboard',
+        href: '/home',
+        current: false,
+        protected: true,
+        guestonly: false,
+      },
+      {
         id: 160,
         name: 'Favorites',
         href: '/home/favorites',

@@ -1,5 +1,5 @@
 "use client";
-
+import { useSession } from "next-auth/react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import React, { useState, useMemo } from "react";
@@ -54,9 +54,9 @@ function MobileMenu({ toggleMenu }: any) {
 }
 
 function MenuBar({ menuOpen, toggleMenu }: any) {
-  // const { isLoaded, userId } = useAuth();
-  const isLoaded = true;
-  const userId = false;
+  const { data: session, status } = useSession();
+  const isLoaded = status;
+  const userId = session?.user?.email;
 
   const navLinks = useMemo(() => {
     return navItems

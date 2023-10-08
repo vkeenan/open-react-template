@@ -3,11 +3,15 @@ import Form from "@/components/ui/form";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/workdiff-logo-black.png";
-import { getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 export default function SignIn() {
-  const session = getSession();
+  const { data: session, status } = useSession();
 
+  if (status === "authenticated") {
+    redirect("/");
+  }
   return (
     <div className="flex items-center justify-center w-screen h-screen bg-cocoa_brown-300">
       <div className="z-10 w-full max-w-md mx-3 overflow-hidden border border-gray-100 shadow-xl rounded-2xl">

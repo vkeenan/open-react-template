@@ -43,6 +43,9 @@ export const authOptions = {
       },
     }),
   ],
+  pages: {
+    signIn: "/sign-in",
+  },
   theme: {
     logo: '/images/workdiff-logo-horiz.png',
     colorScheme: "dark",

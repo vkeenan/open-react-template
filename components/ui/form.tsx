@@ -1,5 +1,5 @@
 "use client";
-
+import { getSession } from "next-auth/react";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import LoadingDots from "@/components/ui/loading-dots";
@@ -44,6 +44,7 @@ const providers = {
 export default function Form({ type }: { type: "login" | "register" }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const session = getSession();
 
   return (
     <div className="flex flex-col bg-gray-50">
@@ -119,6 +120,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
               body: JSON.stringify({
                 email: e.currentTarget.email.value,
                 password: e.currentTarget.password.value,
+                phone: e.currentTarget.phone.value,
               }),
             }).then(async (res) => {
               setLoading(false);
@@ -202,21 +204,37 @@ export default function Form({ type }: { type: "login" | "register" }) {
           )}
         </button>
         {type === "login" ? (
-          <p className="text-sm text-center text-gray-600">
-            Don&apos;t have an account?{" "}
-            <Link href="/sign-up" className="font-semibold text-gray-800">
-              Sign up
-            </Link>{" "}
-            for free.
-          </p>
+          <>
+            <p className="text-sm text-center text-gray-600">
+              Don&apos;t have an account?{" "}
+              <Link href="/sign-up" className="font-semibold text-gray-800">
+                Sign up
+              </Link>{" "}
+              for free.
+            </p>
+            <p className="text-sm text-center text-gray-600">
+              <Link href="/" className="font-semibold text-gray-800">
+                {" "}
+                Back to home
+              </Link>{" "}
+            </p>
+          </>
         ) : (
-          <p className="text-sm text-center text-gray-600">
-            Already have an account?{" "}
-            <Link href="/sign-in" className="font-semibold text-gray-800">
-              Sign in
-            </Link>{" "}
-            instead.
-          </p>
+          <>
+            <p className="text-sm text-center text-gray-600">
+              Already have an account?{" "}
+              <Link href="/sign-in" className="font-semibold text-gray-800">
+                Sign in
+              </Link>{" "}
+              instead.
+            </p>
+            <p className="text-sm text-center text-gray-600">
+              <Link href="/" className="font-semibold text-gray-800">
+                {" "}
+                Back to home
+              </Link>{" "}
+            </p>
+          </>
         )}
       </form>
     </div>
