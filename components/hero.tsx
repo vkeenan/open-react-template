@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="grid items-start grid-cols-1 mx-auto max-w-7xl">
             {/* Video */}
             <div className="flex justify-center">
-              <VimeoPlayer vertVideoId="867571528" horizVideoId="870132959" />
+              <VimeoPlayer vertVideoId="867571528" />
             </div>
             {/* Right Column */}
             <div className="space-y-4 ">
