@@ -6,7 +6,7 @@ import { logger } from '@/lib/logger';
 async function fetchEvent(queryParams: Record<string, string>): Promise<EventClass | null> {
   logger.debug(`👉fetchEvent: ${queryParams}`);
   const config: FetchConfig = {
-    endpoint: 'http://members.vernonkeenan.com:8080/v1/events',
+    endpoint: 'http://members.work.tnxs.net:8080/v1/events',
     queryParams,
   };
   try {
@@ -41,7 +41,7 @@ export async function getEventBySlug(slug: string): Promise<EventClass | null> {
 export async function getAllEvents(): Promise<{ events: EventClass[] }> {
   logger.debug('👉getAllEvents');
   const config: FetchConfig = {
-    endpoint: 'http://members.vernonkeenan.com:8080/v1/events',
+    endpoint: 'http://members.work.tnxs.net:8080/v1/events',
     queryParams: {
       limit: '200',
     },
@@ -70,7 +70,7 @@ export async function getAllEvents(): Promise<{ events: EventClass[] }> {
 export async function getAllEventSlugs(): Promise<{ slugs: string[] }> {
   logger.debug('👉getAllEventSlugs');
   const config: FetchConfig = {
-    endpoint: 'http://members.vernonkeenan.com:8080/v1/events',
+    endpoint: 'http://members.work.tnxs.net:8080/v1/events',
     queryParams: {
       limit: '200',
     },

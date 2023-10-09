@@ -31,7 +31,7 @@ export interface PostUserOnboardResponse {
 export async function getUserByAuth0UserID(auth0UserID: string): Promise<UserClass | null> {
   logger.debug(`👉getUserByAuth0UserID: ${auth0UserID}`);
   const config: FetchConfig = {
-    endpoint: 'http://members.vernonkeenan.com:8080/v1/users',
+    endpoint: 'http://members.work.tnxs.net:8080/v1/users',
     queryParams: {
       auth0UserId: auth0UserID,
     },
@@ -60,7 +60,7 @@ export async function getUserByAuth0UserID(auth0UserID: string): Promise<UserCla
 export async function getUserByID(userID: string): Promise<UserClass | null> {
   logger.debug(`👉getUserByID: ${userID}`);
   const config: FetchConfig = {
-    endpoint: 'http://members.vernonkeenan.com:8080/v1/users',
+    endpoint: 'http://members.work.tnxs.net:8080/v1/users',
     queryParams: {
       userID: userID,
     },
