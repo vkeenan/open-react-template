@@ -20,6 +20,7 @@ push:
 
 
 build:
+	rm -rf .next
 	docker build -t web -f ./docker/Dockerfile \
 		--tag $(WORK_REGISTRY_PRIV)/work/web/web_$(WORK_BUILD_ENV):$(WORK_VERSION) \
 		--tag $(WORK_REGISTRY_PRIV)/work/web/web_$(WORK_BUILD_ENV):latest \
@@ -28,4 +29,4 @@ build:
 	docker push $(WORK_REGISTRY_PRIV)/work/web/web_$(WORK_BUILD_ENV):latest
 
 run:
-	docker run -d -p $(RUN_PORT):3000 $(WORK_REGISTRY_PRIV)/work/web_$(WORK_BUILD_ENV):$(WORK_VERSION)
+	docker run -d -p $(RUN_PORT):3000 $(WORK_REGISTRY_PRIV)/work/web_$(WORK_BUILD_ENV):latest

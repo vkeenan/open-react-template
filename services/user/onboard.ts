@@ -2,10 +2,10 @@
 
 import { UserResponse as UserResponseClass, UserClass } from '@/types/user';
 import { createFetchConfig as createFetchConfigFunction, FetchConfig } from '@/lib/fetch-config';
-import { logger as loggerInstance } from '@/lib/logger';
+import { logger } from '@/lib/logger';
 
-export async function userPostEmail(email: string, phone: string): Promise<UserClass | null> {
-  loggerInstance.debug(`userPostEmail: ${email}, ${phone}`);
+export async function userOnboard(email: string, phone: string, password?: string): Promise<UserClass | null> {
+  logger.debug(`userOnboardEmailOnly: ${email}, ${phone}`);
   const config: FetchConfig = {
     endpoint: 'http://members.work.tnxs.net:8080/v1/users/onboard',
   };
@@ -16,12 +16,13 @@ export async function userPostEmail(email: string, phone: string): Promise<UserC
       Data: [{
         Email: email,
         Phone: phone,
+        Password: password,
       }]
     }),
     headers: headers,
   });
   if (!response.ok) {
-    loggerInstance.error(`Error posting user onboarding: ${response.statusText}`);
+    logger.error(`Error posting user onboarding: ${response.statusText}`);
     return null;
   }
   const restResponse: UserResponseClass = await response.json();

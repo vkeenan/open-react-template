@@ -1,4 +1,5 @@
 import NextAuth from "next-auth"
+import type { AuthOptions } from "next-auth"
 import { compare } from "bcrypt";
 import GitHubProvider from "next-auth/providers/github"
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -6,7 +7,7 @@ import LinkedInProvider from "next-auth/providers/linkedin";
 import GoogleProvider from "next-auth/providers/google";
 import prisma from "@/lib/prisma";
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID || "",
@@ -25,7 +26,7 @@ export const authOptions = {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" }
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         const { email, password } = credentials ?? {}
         if (!email || !password) {
           throw new Error("Missing username or password");

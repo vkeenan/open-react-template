@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
-import { userPostEmail } from "@/services/user/post-email";
+import { userOnboard } from "@/services/user/onboard";
 import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Newsletter() {
@@ -24,7 +24,7 @@ export default function Newsletter() {
 
     if (typeof email === "string" && typeof phone === "string") {
       // Assuming userPostEmail is updated to accept both email and phone
-      const result = await userPostEmail(email, phone);
+      const result = await userOnboard(email, phone);
 
       if (result !== null) {
         setSubmissionStatus("success");

@@ -1,6 +1,6 @@
 import 'server-only';
-import { createFetchConfig, FetchConfig } from '@/lib/api';
-import { CategoryClass, CategoryResponse } from '@/types';
+import { createFetchConfig, FetchConfig } from '@/lib/fetch-config';
+import { CategoryClass, CategoryResponse } from '@/types/category';
 import { logger } from '@/lib/logger';
 
 export async function getServiceCategoryBySlug(slug: string): Promise<CategoryClass | null> {

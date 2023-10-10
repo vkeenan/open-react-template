@@ -23,12 +23,23 @@ export function NavBar() {
 }
 
 function MobileMenu({ toggleMenu }: any) {
+  const { data: session } = useSession();
+  const userId = session?.user?.email;
+
+  const filteredNavItems = useMemo(() => {
+    return navItems.filter(
+      (item) =>
+        (!item.guestonly || (item.guestonly && !userId)) &&
+        (!item.protected || (item.protected && userId))
+    );
+  }, [userId]);
+
   return (
     <div
       className="flex flex-col p-4 space-y-3 text-sm text-slate-200 hover:text-slate-800 md:hidden "
       onClick={toggleMenu}
     >
-      {navItems.map((item) => (
+      {filteredNavItems.map((item) => (
         <div key={item.id}>
           <button
             key={item.id}
@@ -61,7 +72,9 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
   const navLinks = useMemo(() => {
     return navItems
       .filter(
-        (item) => !item.protected || (item.protected && isLoaded && userId)
+        (item) =>
+          (!item.guestonly || (item.guestonly && !userId)) &&
+          (!item.protected || (item.protected && isLoaded && userId))
       )
       .map((item) => (
         <Menu
