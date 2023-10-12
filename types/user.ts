@@ -79,3 +79,48 @@ export class UserClass {
     this.Address = new AddressClass(data.address);
   }
 }
+
+export class UserAuthClass {
+  ID?: string = '';
+  AccountID?: string = '';
+  AccessToken?: string = '';
+  APIKey?: string = '';
+  CompanyName?: string = '';
+  ContactID?: string = '';
+  Email: string = '';
+  Environment?: string = '';
+  Extension?: string = '';
+  Fax?: string = '';
+  FirstName?: string = '';
+  Image?: string = '';
+  GitHub?: string = '';
+  LastIP?: string = '';
+  LastLogin?: string = '';
+  LastName?: string = '';
+  LinkedIn?: string = '';
+  LoginCount?: number = 0;
+  MobilePhone?: string = '';
+  Name?: string = '';
+  Phone?: string = '';
+  Status?: string = '';
+  TenantID?: string = '';
+  Title?: string = '';
+  Twitter?: string = '';
+
+  constructor(data: any) {
+    if (!data) {
+      return;
+    }
+    for (const key in data) {
+      if (data.hasOwnProperty(key) && key in this) {
+        if (typeof data[key] !== 'object' || data[key] === null) {
+          if (typeof (this as any)[key] === 'boolean' && data[key] === 1) {
+            (this as any)[key] = true;
+          } else {
+            (this as any)[key] = data[key];
+          }
+        }
+      }
+    }
+  }
+}

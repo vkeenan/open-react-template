@@ -1,25 +1,11 @@
-import prisma from "@/lib/prisma";
-import { NextApiRequest, NextApiResponse } from "next";
-import { hash } from "bcrypt";
+import { userOnboard } from "@/services/user/onboard";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { email, password, phone } = await req.json();
-  const exists = await prisma.user.findUnique({
-    where: {
-      email,
-    },
-  });
-  if (exists) {
-    return NextResponse.json({ error: "User already exists" }, { status: 400 });
-  } else {
-    const user = await prisma.user.create({
-      data: {
-        email,
-        password: await hash(password, 10),
-        phone,
-      },
-    });
-    return NextResponse.json(user);
+  const user = await userOnboard(email, phone, password);
+  if (user === null) {
+    return NextResponse.json({ error: "User creation error" }, { status: 400 });
   }
+  return NextResponse.json(user);
 }

@@ -1,13 +1,21 @@
 import NextAuth from "next-auth"
 import type { AuthOptions } from "next-auth"
-import { compare } from "bcrypt";
 import GitHubProvider from "next-auth/providers/github"
 import CredentialsProvider from "next-auth/providers/credentials";
-import LinkedInProvider from "next-auth/providers/linkedin";
 import GoogleProvider from "next-auth/providers/google";
-import prisma from "@/lib/prisma";
+import { userWebAuth } from "@/services/user/auth";
 
 export const authOptions: AuthOptions = {
+  callbacks: {
+    async jwt({ token, user }) {
+      return { ...token, ...user };
+    },
+    async session({ session, token }) {
+      // @ts-ignore
+      session.user = token;
+      return session;
+    },
+  },
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID || "",
@@ -17,36 +25,25 @@ export const authOptions: AuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID || "",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
     }),
-    LinkedInProvider({
-      clientId: process.env.LINKEDIN_CLIENT_ID || "",
-      clientSecret: process.env.LINKEDIN_CLIENT_SECRET || ""
-    }),
     CredentialsProvider({
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" }
+      // @ts-ignore
+      async authorize(credentials) {
+        if (!credentials) {
+          return null;
+        }
+        const user = await userWebAuth(credentials.email, credentials.password);
+        console.log(user);
+        if (user) {
+          return user;
+        }
+        return null;
       },
-      async authorize(credentials, req) {
-        const { email, password } = credentials ?? {}
-        if (!email || !password) {
-          throw new Error("Missing username or password");
-        }
-        const user = await prisma.user.findUnique({
-          where: {
-            email,
-          },
-        });
-        // if user doesn't exist or password doesn't match
-        if (!user || !(await compare(password, user.password))) {
-          throw new Error("Invalid username or password");
-        }
-        return user;
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
       },
     }),
   ],
-  pages: {
-    signIn: "/sign-in",
-  },
   theme: {
     logo: '/images/workdiff-logo-horiz.png',
     colorScheme: "dark",

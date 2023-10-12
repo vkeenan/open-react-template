@@ -25,13 +25,13 @@ const providers = {
     signinUrl: "http://localhost:3000/api/auth/signin/google",
     callbackUrl: "http://localhost:3000/api/auth/callback/google",
   },
-  linkedin: {
-    id: "linkedin",
-    name: "LinkedIn",
-    type: "oauth",
-    signinUrl: "http://localhost:3000/api/auth/signin/linkedin",
-    callbackUrl: "http://localhost:3000/api/auth/callback/linkedin",
-  },
+  // linkedin: {
+  //   id: "linkedin",
+  //   name: "LinkedIn",
+  //   type: "oauth",
+  //   signinUrl: "http://localhost:3000/api/auth/signin/linkedin",
+  //   callbackUrl: "http://localhost:3000/api/auth/callback/linkedin",
+  // },
   credentials: {
     id: "credentials",
     name: "Credentials",
@@ -44,24 +44,10 @@ const providers = {
 export default function Form({ type }: { type: "login" | "register" }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const session = getSession();
 
   return (
     <div className="flex flex-col bg-gray-50">
       <div className="flex flex-row items-center justify-center mt-5">
-        <button
-          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
-          onClick={() =>
-            signIn(providers.linkedin.id, {
-              redirect: true,
-              callbackUrl: "http://localhost:3000/home",
-            })
-          }
-        >
-          <FaLinkedin className="mr-2" />{" "}
-          {/* Add some margin to the right of the icon */}
-          LinkedIn
-        </button>
         <button
           className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
           onClick={() =>
@@ -129,7 +115,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
                   "Account created! Redirecting to sign in page..."
                 );
                 setTimeout(() => {
-                  router.push("/sign-in");
+                  router.push("/api/auth/signin");
                 }, 2000);
               } else {
                 const { error } = await res.json();

@@ -8,10 +8,13 @@ import { redirect } from "next/navigation";
 
 export default function SignIn() {
   const { data: session, status } = useSession();
-
+  console.log(session?.user);
   if (status === "authenticated") {
     redirect("/");
+  } else if (status === "loading") {
+    return <div>Loading...</div>;
   }
+
   return (
     <div className="flex items-center justify-center w-screen h-screen bg-cocoa_brown-300">
       <div className="z-10 w-full max-w-md mx-3 overflow-hidden border border-gray-100 shadow-xl rounded-2xl">
