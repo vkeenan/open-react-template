@@ -50,6 +50,8 @@ export class UserClass {
   MobilePhone: string = '';
   Name: string = '';
   Phone: string = '';
+  PortalRole: string = '';
+  Provider: string = '';
   SenderEmail: string = '';
   SenderName: string = '';
   SmallPhotoURL: string = '';
@@ -102,6 +104,8 @@ export class UserAuthClass {
   MobilePhone?: string = '';
   Name?: string = '';
   Phone?: string = '';
+  PortalRole?: string = '';
+  Provider?: string = '';
   Status?: string = '';
   TenantID?: string = '';
   Title?: string = '';

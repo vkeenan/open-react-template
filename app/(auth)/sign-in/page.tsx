@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 
 export default function SignIn() {
   const { data: session, status } = useSession();
-  console.log(session?.user);
+  // console.log(session?.user);
   if (status === "authenticated") {
     redirect("/");
   } else if (status === "loading") {

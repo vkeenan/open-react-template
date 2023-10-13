@@ -6,7 +6,6 @@ import { FaRegUser } from "react-icons/fa";
 
 export default function LoginButton() {
   const { data: session } = useSession();
-  console.log(session);
   if (session) {
     return (
       <div className="flex gap-2 ml-auto font-serif text-sm">

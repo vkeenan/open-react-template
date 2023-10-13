@@ -4,20 +4,17 @@ import { UserResponse as UserResponseClass, UserClass } from '@/types/user';
 import { createFetchConfig as createFetchConfigFunction, FetchConfig } from '@/lib/fetch-config';
 import { logger } from '@/lib/logger';
 
-export async function userOnboard(email: string, phone: string, password?: string): Promise<UserClass | null> {
-  logger.debug(`userOnboardEmailOnly: ${email}, ${phone}`);
+export async function userOnboard(user: UserClass): Promise<UserClass | null> {
+  logger.debug(`userOnboardEmailOnly: ${user.Email}, ${user.Phone}`);
   const config: FetchConfig = {
     endpoint: 'http://members.work.tnxs.net:8080/v1/users/onboard',
   };
   const { headers, url } = createFetchConfigFunction(config, 'POST');
+  user.PortalRole = 'web';
   const response = await fetch(url.toString(), {
     method: 'POST',
     body: JSON.stringify({
-      Data: [{
-        Email: email,
-        Phone: phone,
-        Password: password,
-      }]
+      Data: [user]
     }),
     headers: headers,
   });

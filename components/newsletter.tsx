@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { userOnboard } from "@/services/user/onboard";
+import { UserClass } from "@/types/user";
 import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Newsletter() {
@@ -13,7 +14,6 @@ export default function Newsletter() {
   const [message, setMessage] = useState<string>("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    console.log("handleSubmit");
     event.preventDefault();
     setIsSubmitting(true); // Set isSubmitting to true when submission starts
 
@@ -23,8 +23,8 @@ export default function Newsletter() {
     const phone = formData.get("phone");
 
     if (typeof email === "string" && typeof phone === "string") {
-      // Assuming userPostEmail is updated to accept both email and phone
-      const result = await userOnboard(email, phone);
+      const newUser = new UserClass({ Email: email, Phone: phone });
+      const result = await userOnboard(newUser);
 
       if (result !== null) {
         setSubmissionStatus("success");
