@@ -26,13 +26,13 @@ export function HeroCard({ heroPost }: any) {
       <div className="flex flex-col justify-start p-6">
         <Link
           href={"/posts/category/" + heroPost.categories[0].slug}
-          className="font-semibold text-brand-900 hover:text-brand-400"
+          className="font-semibold text-cocoa_brown-900 hover:text-cocoa_brown-400"
         >
           {heroPost.categories[0].name}
         </Link>
         <Link
           href={"/posts/" + heroPost.slug}
-          className="py-4 text-3xl font-display text-brand-900 hover:text-brand-400"
+          className="py-4 text-3xl font-display text-cocoa_brown-900 hover:text-cocoa_brown-400"
         >
           {heroPost.title}
         </Link>

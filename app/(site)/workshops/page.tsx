@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WorkshopPage() {
   return (
-    <div className="px-4 py-8">
+    <div className="px-4 py-8 mb-4 bg-cocoa_brown-100">
       <h2 className="mb-8 text-3xl text-center font-display">
         Work Different With AI Workshops
       </h2>
@@ -14,11 +14,11 @@ export default function WorkshopPage() {
             className="mb-4 md:mb-0"
             src={WorkshopImage}
             alt="Workshop Illustration"
-            height={175}
+            height={225}
           />
         </div>
         <div className="w-full px-4 md:w-1/2">
-          <p className="mb-2">
+          <p className="mb-2 indent-2">
             Welcome to our exclusive Workshops page, designed to demystify the
             AI journey for diverse audiences. Our workshops cater to C-suite
             executives, Salesforce ISVs, and Global System Integrators (GSIs),
@@ -33,11 +33,11 @@ export default function WorkshopPage() {
             className="mb-4 md:mb-0"
             src={AILandscapeImage}
             alt="AI Landscape Illustration"
-            height={175}
+            height={225}
           />
         </div>
         <div className="w-full px-4 md:w-1/2">
-          <p className="mb-2">
+          <p className="mb-2 indent-2">
             Our workshops provide a clear framework for AI integration. They
             empower executives to navigate AI hype, offer Salesforce ISVs
             insights into the AI landscape, and equip GSIs with innovative tools
@@ -47,7 +47,7 @@ export default function WorkshopPage() {
         </div>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
-        <div className="px-4 py-6 bg-white rounded-lg shadow-lg">
+        <div className="px-4 py-6 bg-white shadow-lg">
           <h3 className="mb-4 text-xl font-display">
             Rapid Solutions for C-Suite AI Adoption
           </h3>
@@ -60,7 +60,7 @@ export default function WorkshopPage() {
             Learn More
           </button>
         </div>
-        <div className="px-4 py-6 bg-white rounded-lg shadow-lg">
+        <div className="px-4 py-6 bg-white shadow-lg">
           <h3 className="mb-4 text-xl font-display">
             Strategies for Salesforce ISVs
           </h3>
@@ -73,7 +73,7 @@ export default function WorkshopPage() {
             Learn More
           </button>
         </div>
-        <div className="px-4 py-6 bg-white rounded-lg shadow-lg">
+        <div className="px-4 py-6 bg-white shadow-lg">
           <h3 className="mb-4 text-xl font-display">
             Advisory Workshop for GSIs
           </h3>

@@ -59,7 +59,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 transition duration-150 bg-white rounded-full text-brand-600 hover:text-brand-800"
+          className="p-2 transition duration-150 bg-white rounded-full text-cocoa_brown-600 hover:text-cocoa_brown-800"
         >
           <FaFacebookF size={16} />
         </a>
@@ -71,7 +71,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 transition duration-150 bg-white rounded-full text-brand-600 hover:text-brand-800"
+          className="p-2 transition duration-150 bg-white rounded-full text-cocoa_brown-600 hover:text-cocoa_brown-800"
         >
           <FaTwitter size={16} />
         </a>
@@ -83,7 +83,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={linkedInShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 transition duration-150 bg-white rounded-full text-brand-600 hover:text-brand-800"
+          className="p-2 transition duration-150 bg-white rounded-full text-cocoa_brown-600 hover:text-cocoa_brown-800"
         >
           <FaLinkedinIn size={16} />
         </a>
@@ -95,7 +95,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={whatsappShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 transition duration-150 bg-white rounded-full text-brand-600 hover:text-brand-800"
+          className="p-2 transition duration-150 bg-white rounded-full text-cocoa_brown-600 hover:text-cocoa_brown-800"
         >
           <FaWhatsapp size={16} />
         </a>
@@ -107,7 +107,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={emailShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 transition duration-150 bg-white rounded-full text-brand-600 hover:text-brand-800"
+          className="p-2 transition duration-150 bg-white rounded-full text-cocoa_brown-600 hover:text-cocoa_brown-800"
         >
           <FaEnvelope size={16} />
         </a>

@@ -1,10 +1,10 @@
 export default function ConsultingPage() {
   return (
-    <div>
+    <div className="px-4 py-8 mb-4 bg-cocoa_brown-100">
       <h2 className="text-3xl font-display">
         Work Different With AI Consultants
       </h2>
-      <p className="mb-2">
+      <p className="mb-2 indent-2">
         Welcome to our esteemed Consultants page, a curated gallery spotlighting
         preferred AI consultants adept at navigating the nuanced landscape of
         Artificial Intelligence (AI). At Work Different With AI, we believe in
@@ -14,7 +14,7 @@ export default function ConsultingPage() {
         compassionate AI, dedicated to empowering workers and aligning with
         corporate stakeholders for a well-rounded, ethical AI adoption.
       </p>
-      <p className="mb-2">
+      <p className="mb-2 indent-2">
         Embarking on the AI journey can often feel like venturing into the
         unknown. The right guidance is imperative to traverse this path with
         informed confidence. Our consultants bring to the table a wealth of

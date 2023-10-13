@@ -1,15 +1,15 @@
-import Link from 'next/link';
+import Link from "next/link";
 import {
   BiSkipNextCircle as NextIcon,
   BiSkipPreviousCircle as PreviousIcon,
-} from 'react-icons/bi';
-import { TbDots as Dots } from 'react-icons/tb';
+} from "react-icons/bi";
+import { TbDots as Dots } from "react-icons/tb";
 
-import config from '../../package.json';
+import config from "../../package.json";
 
 const MAX_NUM_PAGES = 9;
 
-const { homepage = '' } = config;
+const { homepage = "" } = config;
 
 interface PaginationProps {
   pagesCount: any;
@@ -71,24 +71,24 @@ export const Pagination = ({
         )}
       </Head> */}
 
-      <div className='flex items-center justify-between px-4 py-3 border-t border-gray-200 bg-brand-100 font-display sm:px-6'>
+      <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 bg-brand-100 font-display sm:px-6">
         {hasPreviousPage && (
           <Link
             href={`${path}${currentPage - 1}`}
-            className='relative inline-flex items-center justify-center px-2 py-2 text-sm font-medium align-middle bg-white border border-gray-300 rounded-r-md text-brand-900 hover:bg-gray-50'
-            aria-label='Goto Previous Page'
+            className="relative inline-flex items-center justify-center px-2 py-2 text-sm font-medium align-middle bg-white border border-gray-300 rounded-r-md text-cocoa_brown-900 hover:bg-gray-50"
+            aria-label="Goto Previous Page"
           >
             <PreviousIcon />
           </Link>
         )}
         <nav
-          className='relative z-0 inline-flex -space-x-px rounded-md shadow-sm'
-          role='navigation'
-          aria-label='Pagination Navigation'
+          className="relative z-0 inline-flex -space-x-px rounded-md shadow-sm"
+          role="navigation"
+          aria-label="Pagination Navigation"
         >
-          <ul className='flex flex-row'>
+          <ul className="flex flex-row">
             {hasPrevDots && (
-              <li className='relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-brand-900 hover:bg-gray-50'>
+              <li className="relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-cocoa_brown-900 hover:bg-gray-50">
                 <Dots
                   aria-label={`Navigation to pages 1-${pages[0] - 1} hidden`}
                 />
@@ -99,11 +99,11 @@ export const Pagination = ({
               return active ? (
                 <li
                   key={page}
-                  className='relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 hover:bg-gray-50'
+                  className="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 hover:bg-gray-50"
                 >
                   <span
                     aria-label={`Current Page, Page ${page}`}
-                    aria-current='true'
+                    aria-current="true"
                   >
                     {page}
                   </span>
@@ -111,7 +111,7 @@ export const Pagination = ({
               ) : (
                 <li
                   key={page}
-                  className='relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-brand-900 hover:bg-gray-50'
+                  className="relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-cocoa_brown-900 hover:bg-gray-50"
                 >
                   <Link
                     href={`${path}${page}`}
@@ -123,7 +123,7 @@ export const Pagination = ({
               );
             })}
             {hasNextDots && (
-              <li className='relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-brand-900 hover:bg-gray-50'>
+              <li className="relative inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 text-cocoa_brown-900 hover:bg-gray-50">
                 <Dots
                   aria-label={`Navigation to pages ${
                     pages[pages.length - 1] + 1
@@ -136,8 +136,8 @@ export const Pagination = ({
         {hasNextPage && (
           <Link
             href={`${path}${currentPage + 1}`}
-            aria-label='Goto Next Page'
-            className='relative inline-flex items-center justify-center px-2 py-2 text-sm font-medium align-middle bg-white border border-gray-300 rounded-r-md text-brand-900 hover:bg-gray-50'
+            aria-label="Goto Next Page"
+            className="relative inline-flex items-center justify-center px-2 py-2 text-sm font-medium align-middle bg-white border border-gray-300 rounded-r-md text-cocoa_brown-900 hover:bg-gray-50"
           >
             <NextIcon />
           </Link>

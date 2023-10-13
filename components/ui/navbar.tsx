@@ -82,7 +82,10 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
           as="div"
           className="relative inline-block p-1 m-1 text-left"
         >
-          <Menu.Button key={item.id} className="no-underline text-brand-100">
+          <Menu.Button
+            key={item.id}
+            className="no-underline text-cocoa_brown-100"
+          >
             <div className="flex hover:bg-slate-600">
               {item.sub && (
                 <>
@@ -132,7 +135,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
     <div className="justify-around xl:container xl:mx-auto xl:flex xl:max-w-7xl ">
       <div className="flex items-center justify-between p-2 font-display sm:text-xs md:text-sm xl:container xl:text-xl">
         <div className="items-left" onClick={toggleMenu}>
-          <span className="no-underline text-brand-100 hover:bg-slate-600 sm:text-sm md:text-base xl:text-2xl">
+          <span className="no-underline text-cocoa_brown-100 hover:bg-slate-600 sm:text-sm md:text-base xl:text-2xl">
             <Link href="/">Work Different With AI</Link>
           </span>
         </div>
@@ -140,7 +143,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
         <div className="flex items-center">
           <div className="mr-2">
             <button
-              className="flex text-sm no-underline text-brand-200 hover:text-brand-800"
+              className="flex text-sm no-underline text-cocoa_brown-200 hover:text-cocoa_brown-800"
               type="button"
             >
               <span className="sr-only">Search</span>
