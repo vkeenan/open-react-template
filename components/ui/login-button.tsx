@@ -3,7 +3,18 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Menu, Transition } from "@headlessui/react";
 import React from "react";
 import Image from "next/image";
-import { FaRegUser, FaRegUserCircle } from "react-icons/fa";
+import {
+  FaRegUser,
+  FaRegUserCircle,
+  FaTools,
+  FaLightbulb,
+  FaLock,
+  FaBalanceScale,
+  FaHandsHelping,
+  FaExclamationTriangle,
+  FaChartLine,
+  FaIndustry,
+} from "react-icons/fa";
 
 export default function LoginButton() {
   const { data: session } = useSession();

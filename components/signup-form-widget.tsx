@@ -17,6 +17,7 @@ export function SignupFormWidget() {
           name="EMAIL"
           placeholder="Email Address"
           required
+          autoComplete="email"
         />
         <input
           className="p-2 mb-4 border rounded email border-cocoa_brown-500"
@@ -24,6 +25,7 @@ export function SignupFormWidget() {
           type="text"
           name="PHONE"
           placeholder="Phone Number"
+          autoComplete="tel"
         />
         <button
           className="p-2 text-white rounded bg-cocoa_brown-500 hover:bg-cocoa_brown-800"

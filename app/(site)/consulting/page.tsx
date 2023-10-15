@@ -19,11 +19,11 @@ export default function ConsultingPage() {
         unknown. The right guidance is imperative to traverse this path with
         informed confidence. Our consultants bring to the table a wealth of
         experience, pragmatic solutions, and a vendor-independent perspective
-        that’s priceless in today’s dynamic AI landscape. Explore our consultant
-        listings to find the expertise that resonates with your
-        enterprise&apos;s unique needs and aspirations. Together, let’s work
-        different with AI, fostering a future where technology is a catalyst for
-        positive change and corporate excellence.
+        that&apos;s priceless in today&apos;s dynamic AI landscape. Explore our
+        consultant listings to find the expertise that resonates with your
+        enterprise&apos;s unique needs and aspirations. Together, let&apos;s
+        work different with AI, fostering a future where technology is a
+        catalyst for positive change and corporate excellence.
       </p>
     </div>
   );

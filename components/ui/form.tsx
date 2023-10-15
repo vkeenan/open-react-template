@@ -154,7 +154,8 @@ export default function Form({ type }: { type: "login" | "register" }) {
             <input
               id="phone"
               name="phone"
-              type="text"
+              type="tel"
+              autoComplete="tel"
               placeholder="+1 (555) 555-5555"
               className="block w-full px-3 py-2 mt-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             />

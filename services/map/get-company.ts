@@ -42,7 +42,7 @@ export async function getCompanyBySlug(slug: string): Promise<CompanyClass | nul
 export async function getAllCompanies(): Promise<CompanyClass[]> {
   logger.debug('👉getAllCompanies');
   const config: FetchConfig = {
-    endpoint: 'http://plex.work.tnxs.net:8080/v1/companies',
+    endpoint: 'http://plex.work.tnxs.net:8080/v1/companies?limit=1000',
   };
 
   try {
