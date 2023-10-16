@@ -1,3 +1,4 @@
+'use server';
 import { TrackClass, TrackResponse } from '@/types/track';
 import { logger } from '@/lib/logger';
 import { createFetchConfig, FetchConfig } from '@/lib/fetch-config';

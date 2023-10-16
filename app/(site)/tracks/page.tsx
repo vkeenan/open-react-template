@@ -1,5 +1,6 @@
-import { getAllTracks } from "@/services/track/get-tracks";
+import { getAllTracks } from "@/services/track/get-track";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Tracks() {
   const tracks = await getAllTracks();
@@ -28,6 +29,13 @@ export default async function Tracks() {
                 <h2 className="text-xl font-display">{track.Title}</h2>
                 <hr className="w-full my-2 border-t-2 border-gray-200" />
                 <p className="text-base">{track.Description}</p>
+                <Link
+                  as="button"
+                  href={`/tracks/${track.Slug}`}
+                  className="inline-block px-4 py-2 mt-4 text-gray-800 hover:text-gray-100 bg-cocoa_brown-200 hover:bg-cocoa_brown-900"
+                >
+                  Get More Info
+                </Link>
               </div>
             </div>
           </div>

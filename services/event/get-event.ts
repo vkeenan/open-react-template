@@ -1,4 +1,4 @@
-import 'server-only';
+'use server';
 import { EventClass, EventResponse } from '@/types/event';
 import { createFetchConfig, FetchConfig } from '@/lib/fetch-config';
 import { logger } from '@/lib/logger';
