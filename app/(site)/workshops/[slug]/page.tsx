@@ -61,7 +61,6 @@ export default async function WorkshopDetailRenderPage({ params }: any) {
     logger.info("❌WorkshopDetailRenderPage: course is null");
     return null;
   }
-  console.log(course.FullDescription);
   if (!course.FullDescription) {
     logger.info("❌WorkshopDetailRenderPage: full description is null");
     return null;
@@ -72,7 +71,7 @@ export default async function WorkshopDetailRenderPage({ params }: any) {
     allowedStyles: {}, // Ensure no styles are carried over
   });
   console.log(clean);
-  logger.info("👈WorkshopDetailRenderPage: workshops");
+  logger.info(`👈WorkshopDetailRenderPage: ${course.Name} `);
   return (
     <div className="container p-4 mx-auto bg-cocoa_brown-100">
       <h1 className="mb-4 text-4xl text-center font-display">

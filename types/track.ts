@@ -6,6 +6,7 @@ export class TrackClass {
   ID: string = '';
   Description?: string = '';
   DisplayOrder: number = 0;
+  FullDescription?: string = '';
   ImageAltText: string = '';
   ImageURL: string = '';
   Icon: string = '';
