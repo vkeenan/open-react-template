@@ -9,7 +9,7 @@ export function PostCardSm({ title, date, slug, categories }: any) {
       <div className="flex flex-col justify-center info">
         <div className="cat">
           <Link
-            href={"/posts/category" + categories[0].slug}
+            href={"/posts/category/" + categories[0].slug}
             className="text-cocoa_brown-500 hover:text-cocoa_brown-900"
           >
             {categories[0].name}

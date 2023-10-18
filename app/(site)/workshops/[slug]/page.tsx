@@ -4,6 +4,7 @@ import { getAllCourses, getCourseBySlug } from "@/services/course/get-course";
 import Image from "next/image";
 import styles from "@/app/css/post-body.module.css";
 import sanitizeHtml from "sanitize-html";
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
   logger.info("👉generateStaticParams: workshops");
@@ -70,7 +71,6 @@ export default async function WorkshopDetailRenderPage({ params }: any) {
     allowedAttributes: {}, // Strip all attributes to remove styles
     allowedStyles: {}, // Ensure no styles are carried over
   });
-  console.log(clean);
   logger.info(`👈WorkshopDetailRenderPage: ${course.Name} `);
   return (
     <div className="container p-4 mx-auto bg-cocoa_brown-100">

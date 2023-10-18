@@ -14,7 +14,6 @@ export async function getAllTracks(): Promise<TrackClass[]> {
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: headers,
-      cache: 'no-store', //! debug only
     });
     if (!response.ok) {
       throw new Error(`⛔getAllTracks: Error fetching tracks: ${response.statusText}`);
@@ -38,7 +37,6 @@ export async function getTrackBySlug(slug: string): Promise<TrackClass | null> {
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: headers,
-      cache: 'no-store', //! debug only
     });
     if (!response.ok) {
       throw new Error(`⛔getTrackBySlug: Error fetching tracks: ${response.statusText}`);

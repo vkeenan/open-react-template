@@ -14,7 +14,7 @@ export default async function WorkshopPage() {
       <h1 className="mb-4 text-3xl text-center font-display">
         Work Different With AI Workshops
       </h1>
-      <div className="flex flex-col mb-8 md:flex-row">
+      <div className="flex flex-col items-center mb-8 md:flex-row">
         <div className="w-full px-4 md:w-1/2">
           <Image
             className="mb-4 md:mb-0"
@@ -33,7 +33,7 @@ export default async function WorkshopPage() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col mb-8 md:flex-row-reverse">
+      <div className="flex flex-col items-center mb-8 md:flex-row-reverse">
         <div className="w-full px-4 md:w-1/2">
           <Image
             className="mb-4 md:mb-0"

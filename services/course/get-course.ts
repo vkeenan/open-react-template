@@ -14,7 +14,6 @@ export async function getAllCourses(): Promise<CourseClass[] | null> {
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: headers,
-      cache: 'no-store', //! debug only
     });
     if (!response.ok) {
       throw new Error(`⛔getAllCourses: Error fetching courses: ${response.statusText}`);
@@ -38,7 +37,6 @@ export async function getCourseBySlug(slug: string): Promise<CourseClass | null>
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: headers,
-      cache: 'no-store', //! debug only
     });
     if (!response.ok) {
       throw new Error(`⛔getAllCourses: Error fetching courses: ${response.statusText}`);
