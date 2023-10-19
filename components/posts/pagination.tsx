@@ -9,8 +9,6 @@ import config from "../../package.json";
 
 const MAX_NUM_PAGES = 9;
 
-const { homepage = "" } = config;
-
 interface PaginationProps {
   pagesCount: any;
   currentPage: any;

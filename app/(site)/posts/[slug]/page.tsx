@@ -17,8 +17,6 @@ import {
   getAllPosts,
 } from "@/services/post";
 import { getJsonSchema, getSiteMetadata } from "@/services/site";
-import slugMappingData from "@/data/slug-mapping.json";
-const slugMapping: { [key: string]: string } = slugMappingData;
 
 export const dynamic = "force-static";
 
@@ -92,7 +90,6 @@ export default async function RenderPostPage({ params }: any) {
     };
   }
 
-  const postURI = slugMapping[post.slug] || post.slug;
   const siteSettings = await getSiteMetadata();
   const jsonSchema = getJsonSchema(post, siteSettings);
   const { categories, databaseId: postId } = post;
@@ -140,7 +137,7 @@ export default async function RenderPostPage({ params }: any) {
             </div>
             <SocialShare
               title={post.title}
-              url={siteSettings.siteUrl + postURI}
+              url={siteSettings.siteUrl + post.slug}
             />
             <div className="content">
               <div className="w-full mx-2 lg:pr-10 lg:mx-5">

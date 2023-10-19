@@ -25,7 +25,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${quicksand.variable} ${oswald.variable}`}>
-      <head />
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="bg-cocoa_brown-300">
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />

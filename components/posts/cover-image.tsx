@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import Skeleton from "react-loading-skeleton";
 import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,11 +8,11 @@ export function CoverImage({ coverImage, slug = null }: any) {
     return <></>;
   }
   const image = (
-    <Suspense fallback={<Skeleton height={"100%"} />}>
+    <Suspense>
       <Image
         width={coverImage.mediaDetails.width}
         height={coverImage.mediaDetails.height}
-        alt={coverImage.mediaDetails.altText}
+        alt={coverImage.altText}
         src={coverImage?.sourceUrl}
         className={cn(
           "shadow-small",

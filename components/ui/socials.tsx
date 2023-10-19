@@ -1,4 +1,4 @@
-import { FaLinkedin, FaRss } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaRss } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { SiSalesforce } from "react-icons/si";
 
@@ -8,7 +8,7 @@ export function Socials() {
       <span className="-mt-1">Follow Work Different With AI!</span>
       <a
         className="transition hover:opacity-75"
-        href="https://linkedin.com/in/vernonkeenan"
+        href="https://www.linkedin.com/company/work-different-with-ai"
         target="_blank"
         rel="noreferrer"
       >
@@ -16,16 +16,16 @@ export function Socials() {
           <FaLinkedin />
         </span>
       </a>
-      {/* <a
-        className='transition hover:opacity-75'
-        href='https://twitter.com/salesforcedevop'
-        target='_blank'
-        rel='noreferrer'
+      <a
+        className="transition hover:opacity-75"
+        href="https://twitter.com/workdiffwithai"
+        target="_blank"
+        rel="noreferrer"
       >
-        <span className='w-6 h-6'>
+        <span className="w-6 h-6">
           <FaTwitter />
         </span>
-      </a> */}
+      </a>
       <a
         className="transition hover:opacity-75"
         href="mailto:info@workdifferentwithai.com"

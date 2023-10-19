@@ -17,7 +17,7 @@ export default async function AdditionalPosts({ params }: any) {
   const { posts, pagination } = await getPaginatedPosts({
     currentPage: params?.pageNum,
   });
-  const basePath = "posts";
+  const basePath = "/posts";
   const heroPost = posts[0];
   const morePosts = posts.slice(1, posts.length);
 
