@@ -1,4 +1,5 @@
 import { logger } from "@/lib/logger";
+import cn from "classnames";
 import { Metadata } from "@/types/metadata";
 import { getAllCourses, getCourseBySlug } from "@/services/course/get-course";
 import Image from "next/image";
@@ -73,20 +74,29 @@ export default async function WorkshopDetailRenderPage({ params }: any) {
   });
   logger.info(`👈WorkshopDetailRenderPage: ${course.Name} `);
   return (
-    <div className="container p-4 mx-auto bg-cocoa_brown-100">
+    <div className="container p-4 mx-auto bg-cocoa_brown-50">
       <h1 className="mb-4 text-4xl text-center font-display">
         Work Different With AI Workshops
       </h1>
-      <h2 className="mb-4 text-xl text-center font-display">{course.Title}</h2>
+      <h2 className="mb-4 text-3xl text-center font-display">{course.Title}</h2>
       <p className="mb-2 text-center font-display">{course.Description}</p>
       <hr className="mb-4 border-0 border-t-2 border-cocoa_brown-500" />
-      {course.ImageURL && (
+      {course.ImageURL && course.ImageAltText && (
         <div className="flex flex-col mb-8">
-          <div className="w-full px-4">
+          <div className="w-full px-4 mb-4 md:mb-0">
             <Image
-              className="mb-4 md:mb-0"
               src={course.ImageURL}
-              alt="Workshop Illustration"
+              alt={course.ImageAltText}
+              width={850}
+              height={486}
+              className={cn(
+                "shadow-small",
+                {
+                  "hover:shadow-medium transition-shadow duration-200":
+                    course.Slug,
+                },
+                "object-cover object-center"
+              )} // Added Tailwind classes for responsive layout
             />
           </div>
         </div>

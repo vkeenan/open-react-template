@@ -1,6 +1,6 @@
 export function SignupFormWidget() {
   return (
-    <div className="flex flex-col w-full p-6 mb-3 shadow bg-cocoa_brown-50">
+    <div className="flex flex-col w-full p-6 mb-3 shadow bg-cocoa_brown-100">
       <h3 className="pb-5 text-xl font-display">Email Sign Up</h3>
       <p className="pb-5 text-base font-body">
         Sign up for free news and updates.

@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="py-12 md:py-16 bg-cocoa_brown-800">
         <div className="max-w-6xl px-4 mx-auto sm:px-6">
           {/* Top area: Blocks */}
-          <div className="grid gap-8 mb-8 md:grid-cols-3 lg:gap-20 md:mb-12">
+          <div className="grid gap-8 mb-8 md:grid-cols-4 lg:gap-20 md:mb-12">
             {/* Logo block */}
             <div className="text-center ali md:text-left">
               <Link href="/" className="inline-block" aria-label="Cruip">
@@ -41,15 +41,15 @@ export default function Footer() {
               <ul>
                 <li className="mb-1">
                   <Link
-                    href="/"
+                    href="/workshops/ceo-ai-workshop"
                     className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
                   >
-                    For IT Leaders
+                    For Corporate Leaders
                   </Link>
                 </li>
                 <li className="mb-1">
                   <Link
-                    href="/"
+                    href="/workshops/isv-ai-workshop"
                     className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
                   >
                     For Independent Software Vendors
@@ -57,10 +57,83 @@ export default function Footer() {
                 </li>
                 <li className="mb-1">
                   <Link
-                    href="/"
+                    href="/workshops/consultant-ai-workshop"
                     className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
                   >
-                    For Global System Integrators
+                    For Enterprise Consultancies
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3rd block */}
+            <div className="text-sm text-center md:text-left">
+              <h6 className="mb-1 font-medium text-gray-200">
+                Conference Tracks
+              </h6>
+              <ul>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/unlocking-value-with-peps"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    Prompt Engineering Platforms
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/the-power-of-etps"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    Executive Thinking Partners
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/ai-data-safety"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    AI Data Safety
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/ethical-ai"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    Ethical AI
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/compassionate-ai"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    Compassionate AI
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/ai-risk-management"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    AI Risk Management
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/scaling-ai"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    Scaling AI
+                  </Link>
+                </li>
+                <li className="mb-1">
+                  <Link
+                    href="/tracks/industry-specific-ai"
+                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                  >
+                    AI for Industry
                   </Link>
                 </li>
               </ul>

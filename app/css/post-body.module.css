@@ -36,19 +36,19 @@
 }
 
 .content h1 {
-  @apply mt-4 mb-2 text-4xl leading-snug font-display;
+  @apply mt-4 mb-2 text-4xl font-display;
 }
 
 .content h2 {
-  @apply mt-4 mb-2 text-3xl leading-snug font-display;
+  @apply mt-4 mb-2 text-3xl font-display;
 }
 
 .content h3 {
-  @apply mt-2 mb-2 text-2xl leading-snug font-display;
+  @apply mt-2 mb-2 text-2xl font-display;
 }
 
 .content h4 {
-  @apply mt-2 mb-2 text-xl leading-snug font-display;
+  @apply mt-2 mb-2 text-xl font-display;
 }
 
 .content pre {
