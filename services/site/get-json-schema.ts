@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { defaultMetadata, siteSettings } from "@/data/site-metadata";
 export type JsonSchemaDataParams = {
   articleId?: string;
   articleSection?: string[];
@@ -46,32 +48,32 @@ export type JsonSchemaDataParams = {
   wordCount?: number;
 };
 
-export function getJsonSchema(post: any, siteSettings: any) {
+export function getJsonSchema(post: any) {
   const jsonData: JsonSchemaDataParams = {
-    articleId: `#${post.databaseId}`,
+    articleId: `${siteSettings.siteUrl}/posts/${post.slug}`,
     articleSection: post.openAiArticleSection,
     authorDescription: post.author?.description,
-    authorId: post.author?.id,
+    authorId: post.author?.url,
     authorImageCaption: "", // If the author's image caption is not available, you can leave it as an empty string.
     authorImageId: post.author?.avatar.id,
     authorImageUrl: post.author?.avatar.url,
     authorName: post.author?.name,
     authorSocialProfiles: post.author?.socialProfiles,
     authorUrl: post.author?.url,
-    commentActionTarget: `${siteSettings.siteUrl}/${post.slug}#comments`,
+    commentActionTarget: '', // You need to fetch the comment action target, or set it to an empty string if comments are not supported.
     commentCount: 0, // You need to fetch the comment count, or set it to 0 if comments are not supported.
     copyrightYear: new Date(post.date).getFullYear().toString(),
-    dateModified: post.modified,
-    datePublished: post.date,
+    dateModified: post.modifiedGmt + 'Z',
+    datePublished: post.dateGmt + 'Z',
     headline: post.title,
     inLanguage: "en", // You can replace this with the actual language of the content, if available.
     keywords: post.openAiKeywords,
     logoCaption: siteSettings.logoCaption,
     logoHeight: siteSettings.logoHeight,
     logoWidth: siteSettings.logoWidth,
-    pageId: `${siteSettings.siteUrl}/${post.slug}`,
-    primaryImageId: post.featuredImage?.id,
-    publisherId: siteSettings.siteId,
+    pageId: `${siteSettings.siteUrl}/posts/${post.slug}`,
+    primaryImageId: post.featuredImage?.sourceUrl,
+    publisherId: siteSettings.siteUrl,
     publisherLogoId: siteSettings.publisherLogoId,
     publisherLogoUrl: siteSettings.publisherLogoUrl,
     publisherName: siteSettings.publisherName,
@@ -80,7 +82,7 @@ export function getJsonSchema(post: any, siteSettings: any) {
     searchUrlTemplate: `${siteSettings.siteUrl}/search?q={search_term_string}`,
     thumbnailUrl: post.featuredImage?.sourceUrl,
     websiteDescription: siteSettings.description,
-    websiteName: siteSettings.siteName,
+    websiteName: siteSettings.title,
     websiteId: siteSettings.siteId,
     websiteUrl: siteSettings.siteUrl,
     wordCount: post.content?.split(' ').length,

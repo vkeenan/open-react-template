@@ -24,6 +24,9 @@ export const POST_FIELDS = gql`
     }
     databaseId
     date
+    dateGmt
+    modified
+    modifiedGmt
     isSticky
     openAiDescription
     openAiKeywords

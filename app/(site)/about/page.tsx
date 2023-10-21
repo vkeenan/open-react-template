@@ -1,10 +1,16 @@
 import styles from "@/app/css/post-body.module.css";
 import Link from "next/link";
 import { CoverImage, PostTitle, PostMetadata } from "@/components/posts";
-import { postPathBySlug } from "@/services/post";
-import { getJsonSchema, getSiteMetadata } from "@/services/site";
-
+import { getJsonSchema } from "@/services/site";
+import { defaultMetadata } from "@/data/site-metadata";
 import { getPageByUri } from "@/services/page/get-page-by-uri";
+
+let siteSettings = defaultMetadata;
+siteSettings.title = siteSettings.title + " - About";
+
+export async function generateMetadata() {
+  return siteSettings;
+}
 
 export default async function TermsPage() {
   const pageResult = await getPageByUri("/about/");
@@ -20,8 +26,7 @@ export default async function TermsPage() {
       notFound: true,
     };
   }
-  const siteSettings = await getSiteMetadata();
-  const jsonSchema = getJsonSchema(pageResult, siteSettings);
+  const jsonSchema = getJsonSchema(pageResult);
   const {
     author,
     categories,
@@ -89,7 +94,7 @@ export default async function TermsPage() {
                         <ul>
                           {relatedPostsList.map((relatedPost: any) => (
                             <li key={relatedPost.title}>
-                              <Link href={postPathBySlug(relatedPost.slug)}>
+                              <Link href={"/posts/" + relatedPost.slug}>
                                 {relatedPost.title}
                               </Link>
                             </li>

@@ -21,7 +21,7 @@ export function mapPostData(post = {}) {
     (data as any).author.avatar = updateUserAvatar((data as any).author.avatar);
   }
 
-  // Clean up the categories to make them more easy to access
+  // Clean up the categories/tags to make them more easy to access
 
   if ((data as any).categories) {
     (data as any).categories = (data as any).categories.edges.map(
@@ -32,13 +32,15 @@ export function mapPostData(post = {}) {
       }
     );
   }
-  // if ((data as any).tags) {
-  //   (data as any).tags = (data as any).tags.nodes.map(({ tag }) => {
-  //     return {
-  //       ...tag,
-  //     };
-  //   });
-  // }
+
+  if ((data as any).tags) {
+    (data as any).tags = (data as any).tags.nodes.map(
+      ({ tag }: any) => {
+        return {
+          ...tag,
+        };
+      });
+  }
 
   // Clean up the featured image to make them more easy to access
 

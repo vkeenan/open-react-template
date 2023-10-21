@@ -19,7 +19,6 @@ export async function generateStaticParams() {
   logger.info("❌generateStaticParams: workshops");
   return [];
 }
-
 // export async function generateMetadata({ params }: any) {
 //   logger.info("👉generateMetadata: workshops");
 //   const { course }: any = await getCourseBySlug(params?.slug);

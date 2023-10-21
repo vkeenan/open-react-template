@@ -65,7 +65,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
             {/* 3rd block */}
             <div className="text-sm text-center md:text-left">
               <h6 className="mb-1 font-medium text-gray-200">

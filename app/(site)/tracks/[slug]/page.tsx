@@ -44,7 +44,7 @@ export default async function TrackDetailRenderPage({ params }: any) {
       <h1 className="mb-4 text-4xl text-center font-display">
         Work Different With AI Conference Track
       </h1>
-      <h2 className="mb-4 text-xl text-center font-display">{track.Title}</h2>
+      <h2 className="mb-4 text-3xl text-center font-display">{track.Title}</h2>
       <p className="mb-2 text-center font-display">{track.Description}</p>
       <hr className="mb-4 border-0 border-t-2 border-cocoa_brown-500" />
       {track.ImageURL && (

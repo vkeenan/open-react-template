@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { JSDOM } from "jsdom";
-import { Metadata } from "@/types/metadata";
 import styles from "@/app/css/post-body.module.css";
 import { formatDate } from "@/lib/datetime";
 import {
@@ -13,10 +11,10 @@ import {
   categoryPathBySlug,
   getPostBySlug,
   getRelatedPosts,
-  postPathBySlug,
   getAllPosts,
 } from "@/services/post";
-import { getJsonSchema, getSiteMetadata } from "@/services/site";
+import { defaultMetadata, siteSettings } from "@/data/site-metadata";
+import { getJsonSchema } from "@/services/site";
 
 export const dynamic = "force-static";
 
@@ -36,7 +34,6 @@ export async function generateMetadata({ params }: any) {
   if (!post) {
     return {};
   }
-  const siteSettings = await getSiteMetadata();
   const title = post.metaTitle || `${post.title} - ${siteSettings.title}`;
   const postDescription =
     post.openAiDescription || post.metaDescription || post.excerpt;
@@ -45,38 +42,35 @@ export async function generateMetadata({ params }: any) {
   const keywords = post.openAiKeywords ? post.openAiKeywords.split(",") : [];
 
   // Use SEO metadata if available, otherwise fall back to the original data
-  const theMetadata: Metadata = {
-    title: post.metaTitle || `${post.title} - ${siteSettings.title}`,
-    keywords: post.metaKeywords || keywords,
-    description: postDescription,
-    openGraph: {
-      title: post.og.title || title,
-      description: postDescription,
-      type: post.og.type,
-      url: `${siteSettings.siteUrl}/${post.slug}`,
-      images: [
-        {
-          url: image,
-          alt: altText,
-          width: post.og.image?.mediaDetails?.width,
-          height: post.og.image?.mediaDetails?.height,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      creator: "@salesforcedevop",
-      title: post.twitter.title || title,
-      description: postDescription,
-      images: [
-        {
-          url: image,
-          alt: altText,
-        },
-      ],
-    },
-  };
-
+  let theMetadata = defaultMetadata;
+  theMetadata.title = post.metaTitle || `${post.title} - ${siteSettings.title}`;
+  theMetadata.keywords = post.metaKeywords || keywords;
+  theMetadata.description = postDescription;
+  if (theMetadata.openGraph) {
+    theMetadata.openGraph.title = post.og.title || title;
+    theMetadata.openGraph.description = postDescription;
+    theMetadata.openGraph.url = `${siteSettings.siteUrl}/posts/${post.slug}`;
+    theMetadata.openGraph.images = [
+      {
+        url: image,
+        alt: altText,
+        width: post.og.image?.mediaDetails?.width,
+        height: post.og.image?.mediaDetails?.height,
+      },
+    ];
+  }
+  if (theMetadata.twitter) {
+    theMetadata.twitter.title = post.twitter.title || title;
+    theMetadata.twitter.description = postDescription;
+    theMetadata.twitter.images = [
+      {
+        url: image,
+        alt: altText,
+        width: post.og.image?.mediaDetails?.width,
+        height: post.og.image?.mediaDetails?.height,
+      },
+    ];
+  }
   return theMetadata;
 }
 
@@ -90,10 +84,8 @@ export default async function RenderPostPage({ params }: any) {
     };
   }
 
-  const siteSettings = await getSiteMetadata();
-  const jsonSchema = getJsonSchema(post, siteSettings);
+  const jsonSchema = getJsonSchema(post);
   const { categories, databaseId: postId } = post;
-
   const props = {
     post,
     socialImage: `${process.env.OG_IMAGE_DIRECTORY}/${params?.slug}.png`,
@@ -137,7 +129,7 @@ export default async function RenderPostPage({ params }: any) {
             </div>
             <SocialShare
               title={post.title}
-              url={siteSettings.siteUrl + post.slug}
+              url={siteSettings.siteUrl + "/posts/" + post.slug}
             />
             <div className="content">
               <div className="w-full mx-2 lg:pr-10 lg:mx-5">
@@ -172,7 +164,7 @@ export default async function RenderPostPage({ params }: any) {
                       <ul>
                         {post.relatedPostsList.map((relatedPost: any) => (
                           <li key={relatedPost.title}>
-                            <Link href={postPathBySlug(relatedPost.slug)}>
+                            <Link href={"/posts/" + relatedPost.slug}>
                               {relatedPost.title}
                             </Link>
                           </li>
@@ -187,35 +179,4 @@ export default async function RenderPostPage({ params }: any) {
       </div>
     </section>
   );
-}
-
-async function fixToc(rawHtml: string, slug: string): Promise<string> {
-  // Get site settings
-  const siteSettings = await getSiteMetadata();
-
-  // Create a DOM from the raw HTML
-  const dom = new JSDOM(rawHtml);
-  const document = dom.window.document;
-
-  // Get all anchor elements in the document
-  const anchors = document.querySelectorAll("a");
-
-  // Iterate over each anchor and fix the href
-  anchors.forEach(
-    (anchor: {
-      getAttribute: (arg0: string) => any;
-      setAttribute: (arg0: string, arg1: string) => void;
-    }) => {
-      const href = anchor.getAttribute("href");
-      if (href && href.startsWith("#")) {
-        // Construct new URL
-        const newUrl = `${siteSettings.siteUrl}/posts/${slug}${href}`;
-        // Set new URL
-        anchor.setAttribute("href", newUrl);
-      }
-    }
-  );
-
-  // Return the modified HTML
-  return document.documentElement.outerHTML;
 }

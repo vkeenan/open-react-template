@@ -1,103 +1,102 @@
-import { getApolloClient } from '@/lib/apollo-client';
-import { decodeHtmlEntities } from '@/lib/util';
-import config from '../../package.json';
 import { logger } from '@/lib/logger';
-const { homepage = '' }: any = config;
-
-import { QUERY_SEO_DATA, QUERY_SITE_DATA } from '@/data/site';
 
 export async function getSiteMetadata() {
   logger.debug(`👉getSiteMetadata`);
-  const apolloClient = getApolloClient();
+  let siteData: any = {
+    type: 'website',
+    category: 'News',
+    siteId: "workdifferentwithai-com",
+    siteTitle: "Work Different with AI",
+    siteUrl: "https://workdifferentwithai.com",
+    language: "en",
+    title: 'Work Different with AI',
+    description: 'Work Different with AI',
+    applicationName: 'workdifferentwithai-com',
+    referrer: 'no-referrer',
+    keywords: [
+      'AI ethics',
+      'Responsible AI',
+      'AI risks',
+      'AI security',
+      'Uplifting workforces',
+      'Humane AI',
+      'Enterprise AI adoption',
+      'AI frameworks',
+      'AI influencers',
+      'AI community',
+      'IT strategy',
+    ],
+    creator: 'Vernon Keenan',
+    publisher: 'WorkDifferentWithAI.com',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false
+    },
+    openGraph: {
+      title: 'Work Different with AI',
+      description: 'Work Different with AI',
+      url: 'https://workdifferentwithai.com',
+      siteName: 'Work Different with AI',
+      article: {
+        publishedTime: '2023-02-28T17:35:20Z',
+        modifiedTime: '2023-02-28T18:30:00Z',
+        expirationTime: '2023-03-31T17:35:20Z',
+        section: 'Technology',
+        tag: 'Programming',
+        authors: ['John Doe', 'Jane Smith'],
+        publisher: 'ACME Publishing'
+      },
+      images: [
+        {
+          url: 'https://res.cloudinary.com/dwtnhsbyn/images/f_auto,q_auto/v1697828764/opengraph-image/opengraph-image.png?_i=AA',
+          width: 1200,
+          height: 630
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
 
-  let siteData;
-  let seoData;
+    icons: {
+      icon: '/images/favicon.ico',
+      apple: '/images/apple-touch-icon.png',
+      shortcut: '/images/shortcut-icon.png'
+    },
 
-  try {
-    siteData = await apolloClient.query({
-      query: QUERY_SITE_DATA,
-    });
-  } catch (e: any) {
-    logger.error(
-      `💣getSiteMetadata: Failed to query site data: ${e.message}`
-    );
-    throw e;
-  }
+    twitter: {
+      card: 'summary_large_image',
+      siteId: 'workdifferentwithai-com',
+      creator: '@workdiffwithai',
+      title: 'Work Different with AI',
+      images: ['/images/opengraph-image.png']
+    },
 
-  const { generalSettings } = siteData?.data || {};
-  const { title, description, language } = generalSettings;
-  const siteId = 'salesforcedevops-net'
-  const settings = {
-    title,
-    siteId,
-    siteTitle: title,
-    description,
-    siteUrl: homepage,
+    viewport: {
+      width: 'device-width',
+      initialScale: 1
+    },
+
+    verification: {
+      google: '1234',
+      yandex: '5678'
+    },
+    robots: {
+      index: false,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+
   };
 
-  // It looks like the value of `language` when US English is set
-  // in WordPress is empty or "", meaning, we have to infer that
-  // if there's no value, it's English. On the other hand, if there
-  // is a code, we need to grab the 2char version of it to use ofr
-  // the HTML lang attribute
-
-  if (!language || language === '') {
-    (settings as any).language = 'en';
-  } else {
-    (settings as any).language = language.split('_')[0];
-  }
-
-  // If the SEO plugin is enabled, look up the data
-  // and apply it to the default settings
-
-  try {
-    seoData = await apolloClient.query({
-      query: QUERY_SEO_DATA,
-    });
-  } catch (e: any) {
-    logger.error(
-      `💣getSiteMetadata: Failed to query SEO plugin: ${e.message}`
-    );
-    logger.error(
-      '💣getSiteMetadata: Is the SEO Plugin installed?'
-    );
-    throw e;
-  }
-
-  const { webmaster, social } = seoData?.data?.seo || {};
-
-  if (social) {
-    (settings as any).social = {};
-
-    Object.keys(social).forEach((key) => {
-      const { url } = social[key];
-      if (!url || key === '__typename') return;
-      (settings as any).social[key] = url;
-    });
-  }
-
-  if (webmaster) {
-    (settings as any).webmaster = {};
-
-    Object.keys(webmaster).forEach((key) => {
-      if (!webmaster[key] || key === '__typename') return;
-      (settings as any).webmaster[key] = webmaster[key];
-    });
-  }
-
-  if (social.twitter) {
-    (settings as any).twitter = {
-      username: social.twitter.username,
-      cardType: social.twitter.cardType,
-    };
-
-    (settings as any).social.twitter = {
-      url: `https://twitter.com/${(settings as any).twitter.username}`,
-    };
-  }
-
-  (settings as any).title = decodeHtmlEntities((settings as any).title);
   logger.debug(`👈getSiteMetadata`);
-
-  return settings;
+  return siteData;
 }
