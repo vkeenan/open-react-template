@@ -31,6 +31,8 @@ export const defaultMetadata: Metadata = {
   title: siteSettings.title,
   description: siteSettings.description,
   referrer: 'no-referrer',
+  authors: [{ name: 'Vernon Keenan', url: 'https://linkedin.com/a/vernonkeenan' }],
+  generator: 'Next.js',
   keywords: [
     'AI community',
     'AI ethics',
@@ -93,7 +95,6 @@ export const defaultMetadata: Metadata = {
     index: true,
     follow: true,
     nocache: true,
-
     googleBot: {
       index: true,
       follow: false,
