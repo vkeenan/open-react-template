@@ -65,6 +65,7 @@ export function getJsonSchema(post: any) {
     copyrightYear: new Date(post.date).getFullYear().toString(),
     dateModified: post.modifiedGmt + 'Z',
     datePublished: post.dateGmt + 'Z',
+    description: post.openAISummary,
     headline: post.title,
     inLanguage: "en", // You can replace this with the actual language of the content, if available.
     keywords: post.openAiKeywords,
@@ -105,6 +106,7 @@ export function getJsonSchema(post: any) {
         "inLanguage": jsonData.inLanguage,
         "isPartOf": { "@id": jsonData.pageId },
         "keywords": jsonData.keywords,
+        "description:": jsonData.description,
         "mainEntityOfPage": { "@id": jsonData.pageId },
         "publisher": { "@id": jsonData.publisherId },
         "thumbnailUrl": jsonData.thumbnailUrl,

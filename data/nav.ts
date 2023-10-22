@@ -5,6 +5,7 @@ export const navItems = [
     href: '/sign-up',
     current: false,
     protected: false,
+    sitemap: true,
     guestonly: true,
   },
   {
@@ -13,6 +14,7 @@ export const navItems = [
     href: '/tracks',
     current: false,
     protected: false,
+    sitemap: true,
     guestonly: false,
   },
   {
@@ -21,6 +23,7 @@ export const navItems = [
     href: '/consulting',
     current: false,
     protected: false,
+    sitemap: true,
     guestonly: false,
   },
   {
@@ -29,6 +32,7 @@ export const navItems = [
     href: '/workshops',
     current: false,
     protected: false,
+    sitemap: true,
     guestonly: false,
   },
   {
@@ -37,6 +41,7 @@ export const navItems = [
     href: '/home',
     protected: true,
     current: false,
+    sitemap: false,
     guestonly: false,
     sub: [
       {
@@ -45,6 +50,7 @@ export const navItems = [
         href: '/home',
         current: false,
         protected: true,
+        sitemap: false,
         guestonly: false,
       },
       {
@@ -53,6 +59,7 @@ export const navItems = [
         href: '/home/favorites',
         current: false,
         protected: true,
+        sitemap: false,
         guestonly: false,
       },
       {
@@ -61,6 +68,7 @@ export const navItems = [
         href: '/home/content',
         current: false,
         protected: true,
+        sitemap: false,
         guestonly: false,
       },
       {
@@ -69,6 +77,7 @@ export const navItems = [
         href: '/home/help',
         current: false,
         protected: true,
+        sitemap: false,
         guestonly: false,
       },
     ],
@@ -79,6 +88,7 @@ export const navItems = [
     href: '/posts/page/1',
     current: false,
     protected: false,
+    sitemap: false,
     guestonly: false,
     sub: [
       {
@@ -87,6 +97,7 @@ export const navItems = [
         href: '/posts/page/1',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
       {
@@ -95,6 +106,7 @@ export const navItems = [
         href: '/posts/category',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
       {
@@ -103,6 +115,7 @@ export const navItems = [
         href: '/posts/author',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
     ],
@@ -113,6 +126,7 @@ export const navItems = [
     href: '/about',
     current: false,
     protected: false,
+    sitemap: false,
     guestonly: false,
     sub: [
       {
@@ -121,6 +135,7 @@ export const navItems = [
         href: '/contact',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
       {
@@ -129,6 +144,7 @@ export const navItems = [
         href: '/community-guidelines',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
       {
@@ -137,6 +153,7 @@ export const navItems = [
         href: '/privacy',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
       {
@@ -145,6 +162,7 @@ export const navItems = [
         href: '/terms',
         current: false,
         protected: false,
+        sitemap: true,
         guestonly: false,
       },
     ],

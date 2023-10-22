@@ -1,8 +1,7 @@
 import styles from "@/app/css/post-body.module.css";
 import Link from "next/link";
 import { CoverImage, PostTitle, PostMetadata } from "@/components/posts";
-import { getJsonSchema, getSiteMetadata } from "@/services/site";
-
+import { getJsonSchema } from "@/services/site/get-json-schema";
 import { getPageByUri } from "@/services/page/get-page-by-uri";
 
 export default async function TermsPage() {
@@ -19,7 +18,6 @@ export default async function TermsPage() {
       notFound: true,
     };
   }
-  const siteSettings = await getSiteMetadata();
   const jsonSchema = getJsonSchema(pageResult);
   const {
     author,

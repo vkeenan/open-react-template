@@ -15,7 +15,7 @@ export function NavBar() {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-cocoa_brown-500 ">
+    <div className="sticky top-0 z-50 bg-cocoa_brown-600">
       <MenuBar menuOpen={menuOpen} toggleMenu={toggleMenu} />
       {menuOpen && <MobileMenu toggleMenu={toggleMenu} />}
     </div>
@@ -84,14 +84,14 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
         >
           <Menu.Button
             key={item.id}
-            className="no-underline text-cocoa_brown-100"
+            className="no-underline text-cocoa_brown-50"
           >
             <div className="flex hover:bg-slate-600">
               {item.sub && (
                 <>
                   <span>{item.name}</span>
                   <FaChevronDown
-                    className="w-3 h-3 mt-3 ml-1 -mr-1 text-slate-100 hover:text-slate-600 md:mt-1 lg:mt-2 xl:mt-3"
+                    className="w-3 h-3 mt-3 ml-1 -mr-1 text-cocoa_brown-50 hover:text-slate-600 md:mt-1 lg:mt-2 xl:mt-3"
                     aria-hidden="true"
                   />
                 </>
@@ -116,7 +116,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
                       <Menu.Item key={sub.id}>
                         <Link
                           href={sub.href}
-                          className="block px-4 py-2 text-sm text-slate-100 hover:bg-slate-900"
+                          className="block px-4 py-2 text-sm text-cocoa_brown-50 hover:bg-slate-900"
                         >
                           {sub.name}
                         </Link>
@@ -141,7 +141,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
         </div>
         <nav className="hidden space-x-6 md:block">{navLinks}</nav>
         <div className="flex items-center">
-          <div className="mr-2">
+          {/* <div className="mr-2">
             <button
               className="flex text-sm no-underline text-cocoa_brown-200 hover:text-cocoa_brown-800"
               type="button"
@@ -149,7 +149,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
               <span className="sr-only">Search</span>
               <FaSearch size={22} />
             </button>
-          </div>
+          </div> */}
           <div className="mr-2">
             <LoginButton />
           </div>

@@ -6,7 +6,7 @@
 .content ul,
 .content ol,
 .content blockquote {
-  @apply mt-0 mb-2 text-lg;
+  @apply mt-0 mb-2 text-base;
 }
 
 .content a {
@@ -36,19 +36,19 @@
 }
 
 .content h1 {
-  @apply mt-4 mb-2 text-4xl font-display;
-}
-
-.content h2 {
   @apply mt-4 mb-2 text-3xl font-display;
 }
 
+.content h2 {
+  @apply mt-4 mb-2 text-2xl font-display;
+}
+
 .content h3 {
-  @apply mt-2 mb-2 text-2xl font-display;
+  @apply mt-2 mb-2 text-xl font-display;
 }
 
 .content h4 {
-  @apply mt-2 mb-2 text-xl font-display;
+  @apply mt-2 mb-2 text-base font-display;
 }
 
 .content pre {

@@ -37,7 +37,7 @@ export default function How() {
             className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
             href="/tracks"
           >
-            Learn More
+            See Tracks
           </Link>
         </div>
         <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
@@ -56,7 +56,7 @@ export default function How() {
             className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
             href="/consulting"
           >
-            Learn More
+            See Consulting
           </Link>
         </div>
         <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
@@ -75,7 +75,7 @@ export default function How() {
             className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
             href="/workshops"
           >
-            Learn More
+            See Workshops
           </Link>
         </div>
       </div>

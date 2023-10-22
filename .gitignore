@@ -42,3 +42,4 @@ next-env.d.ts
 *.key
 *.pem
 *.crt
+__pycache__/

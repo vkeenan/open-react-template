@@ -14,7 +14,7 @@ import {
   getAllPosts,
 } from "@/services/post";
 import { defaultMetadata, siteSettings } from "@/data/site-metadata";
-import { getJsonSchema } from "@/services/site";
+import { getJsonSchema } from "@/services/site/get-json-schema";
 
 export const dynamic = "force-static";
 

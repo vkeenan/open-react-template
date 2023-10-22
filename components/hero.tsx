@@ -35,7 +35,7 @@ export default function Hero() {
                     className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
                     href="/sign-up"
                   >
-                    Click Here
+                    Sign Up
                   </Link>{" "}
                   to begin your journey.
                 </p>

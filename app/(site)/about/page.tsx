@@ -1,7 +1,7 @@
 import styles from "@/app/css/post-body.module.css";
 import Link from "next/link";
 import { CoverImage, PostTitle, PostMetadata } from "@/components/posts";
-import { getJsonSchema } from "@/services/site";
+import { getJsonSchema } from "@/services/site/get-json-schema";
 import { defaultMetadata } from "@/data/site-metadata";
 import { getPageByUri } from "@/services/page/get-page-by-uri";
 
