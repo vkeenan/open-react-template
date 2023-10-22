@@ -33,7 +33,7 @@ export const PostMetadata = ({
         <div className="mx-2">
           <address>
             By{" "}
-            <Link href={authorPathByName(author.name)} rel="author">
+            <Link href={"/posts/author/" + author.slug} rel="author">
               {author.name}
             </Link>
           </address>

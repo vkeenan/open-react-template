@@ -1,3 +1,5 @@
+// sitemap.xml/route.js
+
 import { navItems } from "@/data/nav";
 import { getAllTracks } from "@/services/track/get-track";
 import { getAllCourses } from "@/services/course/get-course";
@@ -66,7 +68,7 @@ export async function getAllBlogCategories() {
   return categories;
 }
 
-const URL = "https://workdifferentwiai.com";
+const URL = "https://workdifferentwithai.com";
 
 function generateSiteMap(
   posts,

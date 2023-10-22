@@ -22,6 +22,7 @@ push:
 build:
 	rm -rf .next
 	docker build -t web -f ./docker/Dockerfile \
+		--network work_work-net \
 		--tag $(WORK_REGISTRY_PRIV)/work/web/web_$(WORK_BUILD_ENV):$(WORK_VERSION) \
 		--tag $(WORK_REGISTRY_PRIV)/work/web/web_$(WORK_BUILD_ENV):latest \
 		.
