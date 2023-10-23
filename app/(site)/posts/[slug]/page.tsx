@@ -83,7 +83,6 @@ export default async function RenderPostPage({ params }: any) {
       notFound: true,
     };
   }
-
   const jsonSchema = getJsonSchema(post);
   const { categories, databaseId: postId } = post;
   const props = {

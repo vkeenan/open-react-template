@@ -19,7 +19,15 @@ export const siteSettings: SiteSettings = {
   siteUrl: "https://workdifferentwithai.com",
   title: "Work Different with AI",
   description:
-    'Our goal is empowering professionals across industries to Work Different With AI. Through our training content, workshops, and advisory services, we help teams implement AI responsibly to augment human potential. We believe AI should be developed ethically to benefit society.',
+    'Our goal is empowering professionals across industries to Work Different With AI. Through our training content, workshops, and advisory services, we help teams implement AI responsibly to augment human potential.',
+  publisherName: 'Work Different with AI',
+  publisherUrl: 'https://workdifferentwithai.com',
+  publisherLogoId: 'https://res.cloudinary.com/dwtnhsbyn/images/f_auto,q_auto/v1697828764/opengraph-image/opengraph-image.png?_i=AA',
+  publisherLogoUrl: 'https://res.cloudinary.com/dwtnhsbyn/images/f_auto,q_auto/v1697828764/opengraph-image/opengraph-image.png?_i=AA',
+  logoCaption: 'Work Different with AI',
+  logoHeight: 630,
+  logoWidth: 1200,
+  siteId: 'https://workdifferentwithai.com',
 }
 
 export const defaultMetadata: Metadata = {

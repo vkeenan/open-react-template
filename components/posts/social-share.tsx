@@ -53,7 +53,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
   )}&body=Check out this link: ${encodeURIComponent(url)}`;
 
   return (
-    <div className="z-10 flex flex-wrap items-center justify-around p-2 mt-2 shadow-md bg-cocoa_brown-200">
+    <div className="z-10 flex flex-wrap items-center justify-around p-2 drop-shadow-2xl bg-cocoa_brown-200">
       <div className="flex items-center justify-center w-1/6">
         <a
           href={facebookShareUrl}

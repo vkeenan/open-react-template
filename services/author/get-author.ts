@@ -27,11 +27,3 @@ export async function getAuthorBySlug(slug: string) {
   logger.debug(`👈getAuthorBySlug: ${_author?.name}`);
   return { author: _author };
 }
-
-export function authorPathByName(name: string) {
-  return `/posts/author/${name}`;
-}
-
-export function authorPathBySlug(slug: string) {
-  return `/posts/author/${slug}`;
-}

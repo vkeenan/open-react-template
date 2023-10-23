@@ -10,11 +10,11 @@ export async function userOnboard(user: UserClass): Promise<UserClass | null> {
     endpoint: 'http://members.work.tnxs.net:8080/v1/users/onboard',
   };
   const { headers, url } = createFetchConfigFunction(config, 'POST');
-  user.PortalRole = 'web';
+  const postUser = { Email: user.Email, Phone: user.Phone, Password: user.Password, PortalRole: user.PortalRole };
   const response = await fetch(url.toString(), {
     method: 'POST',
     body: JSON.stringify({
-      Data: [user]
+      Data: [postUser]
     }),
     headers: headers,
   });

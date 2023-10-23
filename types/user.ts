@@ -49,6 +49,7 @@ export class UserClass {
   LoginCount: number = 0;
   MobilePhone: string = '';
   Name: string = '';
+  Password: string = '';
   Phone: string = '';
   PortalRole: string = '';
   Provider: string = '';

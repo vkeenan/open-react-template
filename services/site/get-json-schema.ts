@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { defaultMetadata, siteSettings } from "@/data/site-metadata";
+import { siteSettings } from "@/data/site-metadata";
 export type JsonSchemaDataParams = {
   articleId?: string;
   articleSection?: string[];
