@@ -40,90 +40,113 @@ const providers = {
     callbackUrl: "http://localhost:3000/api/auth/callback/credentials",
   },
 };
+interface FormParams {
+  type: "login" | "register"; // 'type' is required
+  email?: string; // 'email' is optional
+  phone?: string; // 'phone' is optional
+}
 
-export default function Form({ type }: { type: "login" | "register" }) {
+export default function Form({ type, email, phone }: FormParams) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  const handleOAuthClick = (providerId: string) => {
+    signIn(providerId, {
+      redirect: true,
+      callbackUrl: "http://localhost:3000/home",
+    });
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+    const phone = formData.get("phone") as string;
+
+    if (type === "login") {
+      await handleSignIn(email, password);
+    } else {
+      await handleRegister(email, password, phone);
+    }
+  };
+
+  const handleSignIn = async (email: string, password: string) => {
+    const result = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+
+    if (result?.error) {
+      setLoading(false);
+      toast.error(result.error);
+    } else {
+      router.refresh();
+      router.push("/home");
+    }
+  };
+
+  const handleRegister = async (
+    email: string,
+    password: string,
+    phone: string
+  ) => {
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+        phone,
+      }),
+    });
+
+    setLoading(false);
+
+    if (res.status === 200) {
+      toast.success("Account created! Redirecting to sign in page...");
+      setTimeout(() => {
+        router.push("/api/auth/signin");
+      }, 2000);
+    } else {
+      const { error } = await res.json();
+      toast.error(error);
+    }
+  };
+
+  // Extracting the OAuth buttons to a separate function for better readability
+  const renderOAuthButtons = () => (
+    <div className="flex flex-row items-center justify-center mt-5">
+      <button
+        className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
+        onClick={() => handleOAuthClick("google")}
+      >
+        <FaGoogle className="mr-2" />
+        Google
+      </button>
+      <button
+        className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
+        onClick={() => handleOAuthClick("github")}
+      >
+        <FaGithub className="mr-2" />
+        GitHub
+      </button>
+    </div>
+  );
+
   return (
     <div className="flex flex-col bg-gray-50">
-      <div className="flex flex-row items-center justify-center mt-5">
-        <button
-          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
-          onClick={() =>
-            signIn(providers.google.id, {
-              redirect: true,
-              callbackUrl: "http://localhost:3000/home",
-            })
-          }
-        >
-          <FaGoogle className="mr-2" />{" "}
-          {/* Add some margin to the right of the icon */}
-          Google
-        </button>
-        <button
-          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
-          onClick={() =>
-            signIn(providers.github.id, {
-              redirect: true,
-              callbackUrl: "http://localhost:3000/home",
-            })
-          }
-        >
-          <FaGithub className="mr-2" />{" "}
-          {/* Add some margin to the right of the icon */}
-          GitHub
-        </button>
-      </div>
+      {renderOAuthButtons()}
       <div className="flex items-center justify-center mt-5">
         <p className="mx-3 text-sm text-gray-600 uppercase">or</p>
       </div>
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          setLoading(true);
-          if (type === "login") {
-            signIn("credentials", {
-              redirect: false,
-              email: e.currentTarget.email.value,
-              password: e.currentTarget.password.value,
-              // @ts-ignore
-            }).then(({ error }) => {
-              if (error) {
-                setLoading(false);
-                toast.error(error);
-              } else {
-                router.refresh();
-                router.push("/home");
-              }
-            });
-          } else {
-            fetch("/api/auth/register", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: e.currentTarget.email.value,
-                password: e.currentTarget.password.value,
-                phone: e.currentTarget.phone.value,
-              }),
-            }).then(async (res) => {
-              setLoading(false);
-              if (res.status === 200) {
-                toast.success(
-                  "Account created! Redirecting to sign in page..."
-                );
-                setTimeout(() => {
-                  router.push("/api/auth/signin");
-                }, 2000);
-              } else {
-                const { error } = await res.json();
-                toast.error(error);
-              }
-            });
-          }
-        }}
+        onSubmit={handleFormSubmit}
         className="flex flex-col px-4 py-4 space-y-4 bg-gray-50 sm:px-16"
       >
         <div>

@@ -116,7 +116,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
                       <Menu.Item key={sub.id}>
                         <Link
                           href={sub.href}
-                          className="block px-4 py-2 text-sm text-cocoa_brown-50 hover:bg-slate-900"
+                          className="block px-4 py-2 text-cocoa_brown-50 hover:bg-slate-900"
                         >
                           {sub.name}
                         </Link>
