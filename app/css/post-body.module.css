@@ -6,7 +6,7 @@
 .content ul,
 .content ol,
 .content blockquote {
-  @apply mt-0 mb-2 text-base;
+  @apply mt-0 mb-2 text-base mr-4;
 }
 
 .content a {

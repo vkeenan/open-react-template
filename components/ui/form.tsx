@@ -53,7 +53,7 @@ export default function Form({ type, email, phone }: FormParams) {
   const handleOAuthClick = (providerId: string) => {
     signIn(providerId, {
       redirect: true,
-      callbackUrl: "http://localhost:3000/home",
+      callbackUrl: process.env.NEXTAUTH_URL + "/home",
     });
   };
 
