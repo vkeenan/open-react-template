@@ -1,7 +1,10 @@
 import Header from "@/components/ui/header";
 import { NavBar } from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import { SignupFormWidget } from "@/components/signup-form-widget";
+import {
+  SignupFormWidget,
+  HorizontalSignupWidget,
+} from "@/components/signup-form-widget";
 import { LatestPostsWidget } from "@/components/latest-posts-widget";
 import { CategoryWidget } from "@/components/category-widget";
 
@@ -18,6 +21,7 @@ export default function DefaultLayout({
         <div className="container flex flex-wrap py-3 mx-auto xl:max-w-7xl">
           <div className="flex flex-col items-center w-full pl-3 pr-3 md:pr-7 md:w-3/4">
             {children}
+            <HorizontalSignupWidget />
           </div>
           <aside className="flex flex-col items-center w-full md:w-1/4">
             <div>
