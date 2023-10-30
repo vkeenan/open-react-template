@@ -1,7 +1,8 @@
-import 'server-only';
-import { MapCategoryCard, Pagination } from '@/components';
+import "server-only";
+import { ProductCategoryCard } from "@/components/map/product-category-card";
+import { Pagination } from "@/components/posts/pagination";
 
-import { getPaginatedProductCategories } from '@/services';
+import { getPaginatedProductCategories } from "@/services";
 
 export async function generateStaticParams() {
   const params = [];
@@ -14,7 +15,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export default async function MapIndustryAdditionalPage({ params }: any) {
   const { categories: data, pagination } = await getPaginatedProductCategories({
@@ -23,13 +24,13 @@ export default async function MapIndustryAdditionalPage({ params }: any) {
   const categories = data.slice(0, data.length);
   return (
     <>
-      <h2 className='mt-6 text-3xl font-display xl:text-6xl'>
+      <h2 className="mt-6 text-3xl font-display xl:text-6xl">
         Additional Software Product Categories, Page {params.page}
       </h2>
-      <div className='container px-4 mx-auto my-6 md:px-12'>
-        <div className='flex flex-wrap -mx-1 lg:-mx-4'>
+      <div className="container px-4 mx-auto my-6 md:px-12">
+        <div className="flex flex-wrap -mx-1 lg:-mx-4">
           {categories.map((item: any, index: number) => (
-            <MapCategoryCard key={index} {...item} />
+            <ProductCategoryCard key={index} {...item} />
           ))}
         </div>
       </div>
@@ -38,7 +39,7 @@ export default async function MapIndustryAdditionalPage({ params }: any) {
           addCanonical={false}
           currentPage={pagination?.currentPage}
           pagesCount={pagination?.pagesCount}
-          basePath='/map/product/category'
+          basePath="/map/product/category"
         />
       )}
     </>

@@ -74,7 +74,7 @@ export function CompanySearch({ value, onCompanySelect }: any) {
         <ul className="bg-white">
           {suggestions.map((suggestion: any) => (
             <li
-              className="cursor-pointer hover:bg-gray-600 hover:text-white"
+              className="cursor-pointer hover:bg-outer_space-600 hover:text-white"
               key={suggestion.AccountID}
               onClick={() => handleSuggestionClick(suggestion)}
             >

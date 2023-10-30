@@ -7,7 +7,7 @@ import TechConference from "@/public/images/tech-conference.png";
 export default async function Tracks() {
   const tracks = await getAllTracks();
   return (
-    <div className="container p-4 mx-auto bg-cocoa_brown-100">
+    <div className="container p-4 mx-auto bg-azure_radiance-100">
       <h1 className="mb-4 text-3xl text-center font-display">
         Work Different With AI Conference Tracks
       </h1>
@@ -60,7 +60,7 @@ export default async function Tracks() {
         {tracks.map((track, index) => (
           <div
             key={index}
-            className="p-4 space-y-4 text-gray-100 bg-cocoa_brown-600"
+            className="p-4 space-y-4 text-outer_space-100 bg-azure_radiance-600"
           >
             <h2 className="text-xl text-center font-display">{track.Title}</h2>
             <div className="flex flex-col items-center mx-auto">
@@ -72,10 +72,10 @@ export default async function Tracks() {
                 className="mb-2"
               />
               <div>
-                <hr className="w-full my-2 border-t-2 border-gray-200" />
+                <hr className="w-full my-2 border-t-2 border-outer_space-200" />
                 <Link
                   href={`/tracks/${track.Slug}`}
-                  className="inline-block px-4 py-2 mt-4 text-gray-800 hover:text-gray-100 bg-cocoa_brown-200 hover:bg-cocoa_brown-900"
+                  className="inline-block px-4 py-2 mt-4 text-outer_space-800 hover:text-outer_space-100 bg-azure_radiance-200 hover:bg-azure_radiance-900"
                 >
                   Get More Info
                 </Link>

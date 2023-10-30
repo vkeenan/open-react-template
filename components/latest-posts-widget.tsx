@@ -10,7 +10,7 @@ export async function LatestPostsWidget() {
     queryIncludes: "index",
   });
   return (
-    <div className="flex flex-col w-full p-6 pb-20 mb-3 shadow bg-cocoa_brown-100">
+    <div className="flex flex-col w-full p-6 pb-20 mb-3 shadow bg-azure_radiance-100">
       <h3 className="mt-2 mb-4 text-2xl font-display">Latest Posts</h3>
       {recentPosts.map((post: any, index: number) => (
         <PostCardSm

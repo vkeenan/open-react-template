@@ -106,14 +106,14 @@ export default async function ProductMapDetailPage({ params }: any) {
         <div className="flex-col mt-8 md:flex-row items-fill">
           {product.SalesforceSpecific && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 {"Salesforce Specific"}
               </h3>
             </div>
           )}
           {product.Tagline && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Product Tagline
               </h3>
               <p className="text-base">{product.Tagline}</p>
@@ -121,7 +121,7 @@ export default async function ProductMapDetailPage({ params }: any) {
           )}
           {product.Description && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Full Description
               </h3>
               <p className="text-base">{product.FullDescription}</p>

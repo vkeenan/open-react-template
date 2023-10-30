@@ -5,7 +5,7 @@ export async function CategoryWidget() {
   const { categories = [] } = await getAllBlogCategories();
   return (
     <>
-      <div className="flex flex-col w-full p-6 mb-3 shadow bg-cocoa_brown-100">
+      <div className="flex flex-col w-full p-6 mb-3 shadow bg-azure_radiance-100">
         <span className="pb-5 text-xl font-display">Post Categories</span>
         <ul className="flex flex-col">
           {categories.map((item: any, index: number) => (

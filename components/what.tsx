@@ -80,7 +80,7 @@ export default function What() {
 
       {/* CTA Button */}
       <div className="mt-10 text-center">
-        <button className="px-8 py-2 text-white bg-bourbon-500 rounded-lg hover:bg-bourbon-600">
+        <button className="px-8 py-2 text-white bg-apple-500 rounded-lg hover:bg-apple-600">
           Explore Our Offerings
         </button>
       </div>

@@ -73,13 +73,13 @@ export default async function WorkshopDetailRenderPage({ params }: any) {
   });
   logger.info(`👈WorkshopDetailRenderPage: ${course.Name} `);
   return (
-    <div className="container p-4 mx-auto bg-cocoa_brown-50">
+    <div className="container p-4 mx-auto bg-azure_radiance-50">
       <h1 className="mb-4 text-4xl text-center font-display">
         Work Different With AI Workshops
       </h1>
       <h2 className="mb-4 text-3xl text-center font-display">{course.Title}</h2>
       <p className="mb-2 text-center font-display">{course.Description}</p>
-      <hr className="mb-4 border-0 border-t-2 border-cocoa_brown-500" />
+      <hr className="mb-4 border-0 border-t-2 border-azure_radiance-500" />
       {course.ImageURL && course.ImageAltText && (
         <div className="flex flex-col mb-8">
           <div className="w-full px-4 mb-4 md:mb-0">

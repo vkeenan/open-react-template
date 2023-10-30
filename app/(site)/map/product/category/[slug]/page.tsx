@@ -85,7 +85,7 @@ export default async function ProductCategoryItemPage({ params }: any) {
         <div className="flex-col mt-8 md:flex-row items-fill">
           {category.Tagline && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Company Tagline
               </h3>
               <p className="text-base">{category.Tagline}</p>
@@ -93,7 +93,7 @@ export default async function ProductCategoryItemPage({ params }: any) {
           )}
           {category.Description && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Company Description
               </h3>
               <p className="text-base">{category.Description}</p>

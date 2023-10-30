@@ -1,7 +1,7 @@
 import Link from "next/link";
 export function SignupFormWidget() {
   return (
-    <div className="flex flex-col w-full p-6 mb-3 shadow bg-cocoa_brown-100">
+    <div className="flex flex-col w-full p-6 mb-3 shadow bg-azure_radiance-100">
       <h3 className="pb-5 text-2xl font-display">Join Us Today</h3>
       <p className="pb-5 text-base font-body">
         Become a member to enjoy exclusive benefits or sign up for free news and
@@ -9,11 +9,11 @@ export function SignupFormWidget() {
       </p>
       <Link
         href="/sign-up"
-        className="block p-2 mb-4 font-bold text-center text-white rounded bg-cocoa_brown-500 hover:bg-cocoa_brown-800"
+        className="block p-2 mb-4 font-bold text-center text-white rounded bg-azure_radiance-500 hover:bg-azure_radiance-800"
       >
         Become a Member
       </Link>
-      <p className="mb-2 text-sm text-gray-600">
+      <p className="mb-2 text-sm text-outer_space-600">
         Just curious? Sign up for our newsletter:
       </p>
       <form
@@ -22,7 +22,7 @@ export function SignupFormWidget() {
         className="flex flex-col"
       >
         <input
-          className="p-2 mb-4 border rounded email border-cocoa_brown-500"
+          className="p-2 mb-4 border rounded email border-azure_radiance-500"
           id="mce-EMAIL"
           type="email"
           name="EMAIL"
@@ -31,7 +31,7 @@ export function SignupFormWidget() {
           autoComplete="email"
         />
         <input
-          className="p-2 mb-4 border rounded email border-cocoa_brown-500"
+          className="p-2 mb-4 border rounded email border-azure_radiance-500"
           id="mce-PHONE"
           type="text"
           name="PHONE"
@@ -39,7 +39,7 @@ export function SignupFormWidget() {
           autoComplete="tel"
         />
         <button
-          className="p-2 text-white rounded bg-cocoa_brown-500 hover:bg-cocoa_brown-800"
+          className="p-2 text-white rounded bg-azure_radiance-500 hover:bg-azure_radiance-800"
           type="submit"
           data-element="submit"
         >
@@ -52,7 +52,7 @@ export function SignupFormWidget() {
 
 export function HorizontalSignupWidget() {
   return (
-    <div className="items-center justify-between hidden w-full p-6 mx-auto my-10 shadow-lg bg-cocoa_brown-100 lg:space-x-20 lg:flex">
+    <div className="items-center justify-between hidden w-full p-6 mx-auto my-10 shadow-lg bg-azure_radiance-100 lg:space-x-20 lg:flex">
       <div className="flex flex-col items-center justify-center text-center lg:flex-1 lg:flex-row lg:text-left lg:items-start">
         <div className="lg:mr-10">
           <h3 className="pb-5 text-xl font-display">Join Us Today</h3>
@@ -61,17 +61,17 @@ export function HorizontalSignupWidget() {
           </p>
           <a
             href="/sign-up"
-            className="block p-2 mb-4 text-lg font-bold text-center text-white rounded bg-cocoa_brown-500 hover:bg-cocoa_brown-800 lg:text-left"
+            className="block p-2 mb-4 text-lg font-bold text-center text-white rounded bg-azure_radiance-500 hover:bg-azure_radiance-800 lg:text-left"
           >
             Become a Member
           </a>
         </div>
-        <p className="mb-2 text-sm text-gray-600 lg:hidden">
+        <p className="mb-2 text-sm text-outer_space-600 lg:hidden">
           Just curious? Sign up for our newsletter:
         </p>
       </div>
       <div className="flex flex-col lg:flex-1">
-        <p className="hidden mb-2 text-sm text-gray-600 lg:block">
+        <p className="hidden mb-2 text-sm text-outer_space-600 lg:block">
           Just curious? Sign up for our newsletter:
         </p>
         <form
@@ -80,7 +80,7 @@ export function HorizontalSignupWidget() {
           className="flex flex-col"
         >
           <input
-            className="p-2 mb-4 border rounded email border-cocoa_brown-500"
+            className="p-2 mb-4 border rounded email border-azure_radiance-500"
             id="mce-EMAIL"
             type="email"
             name="EMAIL"
@@ -89,7 +89,7 @@ export function HorizontalSignupWidget() {
             autoComplete="email"
           />
           <input
-            className="p-2 mb-4 border rounded email border-cocoa_brown-500"
+            className="p-2 mb-4 border rounded email border-azure_radiance-500"
             id="mce-PHONE"
             type="text"
             name="PHONE"
@@ -97,7 +97,7 @@ export function HorizontalSignupWidget() {
             autoComplete="tel"
           />
           <button
-            className="p-2 text-white rounded bg-cocoa_brown-500 hover:bg-cocoa_brown-800"
+            className="p-2 text-white rounded bg-azure_radiance-500 hover:bg-azure_radiance-800"
             type="submit"
             data-element="submit"
           >

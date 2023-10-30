@@ -46,10 +46,10 @@ export default function Form({ type }: { type: "login" | "register" }) {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col bg-gray-50">
+    <div className="flex flex-col bg-outer_space-50">
       <div className="flex flex-row items-center justify-center mt-5">
         <button
-          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
+          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-azure_radiance-800"
           onClick={() =>
             signIn(providers.google.id, {
               redirect: true,
@@ -62,7 +62,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           Google
         </button>
         <button
-          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-cocoa_brown-800"
+          className="flex items-center px-4 py-2 mx-1 text-white rounded bg-azure_radiance-800"
           onClick={() =>
             signIn(providers.github.id, {
               redirect: true,
@@ -76,7 +76,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
         </button>
       </div>
       <div className="flex items-center justify-center mt-5">
-        <p className="mx-3 text-sm text-gray-600 uppercase">or</p>
+        <p className="mx-3 text-sm text-outer_space-600 uppercase">or</p>
       </div>
       <form
         onSubmit={(e) => {
@@ -124,12 +124,12 @@ export default function Form({ type }: { type: "login" | "register" }) {
             });
           }
         }}
-        className="flex flex-col px-4 py-4 space-y-4 bg-gray-50 sm:px-16"
+        className="flex flex-col px-4 py-4 space-y-4 bg-outer_space-50 sm:px-16"
       >
         <div>
           <label
             htmlFor="email"
-            className="block text-xs text-gray-600 uppercase"
+            className="block text-xs text-outer_space-600 uppercase"
           >
             Email Address
           </label>
@@ -140,14 +140,14 @@ export default function Form({ type }: { type: "login" | "register" }) {
             placeholder="panic@thedis.co"
             autoComplete="email"
             required
-            className="block w-full px-3 py-2 mt-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="block w-full px-3 py-2 mt-1 placeholder-outer_space-400 border border-outer_space-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           />
         </div>
         {type !== "login" ? (
           <div>
             <label
               htmlFor="phone"
-              className="block text-xs text-gray-600 uppercase"
+              className="block text-xs text-outer_space-600 uppercase"
             >
               Phone Number
             </label>
@@ -157,14 +157,14 @@ export default function Form({ type }: { type: "login" | "register" }) {
               type="tel"
               autoComplete="tel"
               placeholder="+1 (555) 555-5555"
-              className="block w-full px-3 py-2 mt-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+              className="block w-full px-3 py-2 mt-1 placeholder-outer_space-400 border border-outer_space-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             />
           </div>
         ) : null}
         <div>
           <label
             htmlFor="password"
-            className="block text-xs text-gray-600 uppercase"
+            className="block text-xs text-outer_space-600 uppercase"
           >
             Password
           </label>
@@ -173,15 +173,15 @@ export default function Form({ type }: { type: "login" | "register" }) {
             name="password"
             type="password"
             required
-            className="block w-full px-3 py-2 mt-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="block w-full px-3 py-2 mt-1 placeholder-outer_space-400 border border-outer_space-300 rounded-md shadow-sm appearance-none focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           />
         </div>
         <button
           disabled={loading}
           className={`${
             loading
-              ? "cursor-not-allowed border-gray-200 bg-gray-100"
-              : "border-black bg-cocoa_brown-800 text-white hover:bg-cocoa_brown-50 hover:text-cocoa_brown-800"
+              ? "cursor-not-allowed border-outer_space-200 bg-outer_space-100"
+              : "border-black bg-azure_radiance-800 text-white hover:bg-azure_radiance-50 hover:text-azure_radiance-800"
           } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
         >
           {loading ? (
@@ -192,15 +192,18 @@ export default function Form({ type }: { type: "login" | "register" }) {
         </button>
         {type === "login" ? (
           <>
-            <p className="text-sm text-center text-gray-600">
+            <p className="text-sm text-center text-outer_space-600">
               Don&apos;t have an account?{" "}
-              <Link href="/sign-up" className="font-semibold text-gray-800">
+              <Link
+                href="/sign-up"
+                className="font-semibold text-outer_space-800"
+              >
                 Sign up
               </Link>{" "}
               for free.
             </p>
-            <p className="text-sm text-center text-gray-600">
-              <Link href="/" className="font-semibold text-gray-800">
+            <p className="text-sm text-center text-outer_space-600">
+              <Link href="/" className="font-semibold text-outer_space-800">
                 {" "}
                 Back to home
               </Link>{" "}
@@ -208,15 +211,18 @@ export default function Form({ type }: { type: "login" | "register" }) {
           </>
         ) : (
           <>
-            <p className="text-sm text-center text-gray-600">
+            <p className="text-sm text-center text-outer_space-600">
               Already have an account?{" "}
-              <Link href="/sign-in" className="font-semibold text-gray-800">
+              <Link
+                href="/sign-in"
+                className="font-semibold text-outer_space-800"
+              >
                 Sign in
               </Link>{" "}
               instead.
             </p>
-            <p className="text-sm text-center text-gray-600">
-              <Link href="/" className="font-semibold text-gray-800">
+            <p className="text-sm text-center text-outer_space-600">
+              <Link href="/" className="font-semibold text-outer_space-800">
                 {" "}
                 Back to home
               </Link>{" "}

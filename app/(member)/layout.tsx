@@ -13,12 +13,12 @@ export default function MemberRootLayout({
     <>
       <Header />
       <NavBar />
-      <div className="bg-cocoa_brown-200">
+      <div className="bg-azure_radiance-200">
         <div className="container flex flex-wrap mx-auto xl:max-w-7xl">
-          <aside className="hidden w-1/4 h-screen p-4 sm:hidden md:block bg-cocoa_brown-200">
+          <aside className="hidden w-1/4 h-screen p-4 sm:hidden md:block bg-azure_radiance-200">
             <MemberNav />
           </aside>
-          <main className="w-full p-4 md:w-3/4 bg-cocoa_brown-200">
+          <main className="w-full p-4 md:w-3/4 bg-azure_radiance-200">
             <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           </main>
         </div>

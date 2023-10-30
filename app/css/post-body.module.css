@@ -52,7 +52,7 @@
 }
 
 .content pre {
-  @apply overflow-x-auto whitespace-pre border border-gray-400 bg-gray-100 p-4 text-sm leading-tight;
+  @apply overflow-x-auto whitespace-pre border border-outer_space-400 bg-outer_space-100 p-4 text-sm leading-tight;
 }
 
 .content code {
@@ -64,7 +64,7 @@
 }
 
 .content blockquote {
-  @apply ml-0 border-l-4 border-gray-500 bg-gray-200 py-4 px-6 italic;
+  @apply ml-0 border-l-4 border-outer_space-500 bg-outer_space-200 py-4 px-6 italic;
 }
 
 .content blockquote p {

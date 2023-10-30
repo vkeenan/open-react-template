@@ -1,5 +1,6 @@
 import VimeoPlayer from "@/components/vimeo-player";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Hero() {
   return (
@@ -17,7 +18,9 @@ export default function Hero() {
           <div className="grid items-start grid-cols-1 mx-auto max-w-7xl">
             {/* Video */}
             <div className="flex justify-center">
-              <VimeoPlayer vertVideoId="867571528" />
+              <Suspense fallback={<div>Loading...</div>}>
+                <VimeoPlayer vertVideoId="867571528" />{" "}
+              </Suspense>
             </div>
             {/* Right Column */}
             <div className="space-y-4 ">
@@ -32,7 +35,7 @@ export default function Hero() {
                   ethical AI practices. Sign up to engage, learn, and
                   contribute.{" "}
                   <Link
-                    className="px-2 text-gray-700 bg-bourbon-200 hover:bg-cocoa_brown-800 hover:text-white"
+                    className="px-2 text-outer_space-700 bg-gold-500 hover:bg-azure_radiance-800 hover:text-white"
                     href="/sign-up"
                   >
                     Sign Up

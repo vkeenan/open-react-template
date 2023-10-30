@@ -41,7 +41,7 @@ export default function Newsletter() {
     <section>
       <div className="max-w-6xl px-4 py-8 mx-auto sm:px-6">
         {/* CTA box */}
-        <div className="relative px-8 py-10 bg-bourbon-600 md:py-16 md:px-12">
+        <div className="relative px-8 py-10 bg-apple-600 md:py-16 md:px-12">
           {/* Background illustration */}
           <div
             className="absolute top-0 right-0 -ml-40 pointer-events-none"
@@ -81,7 +81,7 @@ export default function Newsletter() {
               <h3 className="mb-2 text-white h3 font-display">
                 Join Work Different With AI
               </h3>
-              <p className="text-lg text-bourbon-200">
+              <p className="text-lg text-apple-200">
                 Get in on the ground floor of this innovative community of
                 like-minded people who want to Work Different With AI!
               </p>
@@ -94,12 +94,12 @@ export default function Newsletter() {
                   <input
                     type="email"
                     name="email"
-                    className="w-full px-4 py-3 mb-2 text-white border rounded-sm appearance-none placeholder-bourbon-400 bg-bourbon-700 border-bourbon-500 focus:border-bourbon-300 sm:mb-0 sm:mr-2"
+                    className="w-full px-4 py-3 mb-2 text-white border rounded-sm appearance-none placeholder-apple-400 bg-apple-700 border-apple-500 focus:border-apple-300 sm:mb-0 sm:mr-2"
                     placeholder="Your best email…"
                     aria-label="Your best email…"
                   />
                   <button
-                    className="mt-5 shadow text-bourbon-600 bg-bourbon-100 btn hover:bg-white"
+                    className="mt-5 shadow text-apple-600 bg-apple-100 btn hover:bg-white"
                     type="submit"
                     disabled={isSubmitting}
                   >

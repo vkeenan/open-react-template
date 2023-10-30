@@ -1,0 +1,312 @@
+You are going to help me classify the software products, software as a service, and professional services offered by a private company. When given a private company name you will first determine if you need any information to clarify the subject company. Next you will create a list of products and services offered by the company. THen you will classify the products using this system. Let  me know when you are ready.
+
+Enterprise Software and Services Taxonomy Standard Model
+
+1 Applications
+  1.1 Collaborative Applications
+    1.1.1 Conferencing and Virtual Event Applications
+        1.1.1.1 Web Conferencing Applications
+        1.1.1.2 Virtual Event Applications
+1.1.2 Email Applications
+    1.1.3 Enterprise Community Applications
+    1.1.4 Team Collaboration Applications
+1.2 Content Workflow and Management Applications
+    1.2.1 Enterprise Content Management Applications
+    1.2.2 Capture Applications
+    1.2.3 Document Applications
+    1.2.4 Persuasive Content Management Applications
+        1.2.4.1 Website Software
+        1.2.4.2 Digital Asset Management Applications
+        1.2.4.3 Product Information Management Applications
+        1.2.4.4 Content Marketing Applications
+        1.2.4.5 Video Platforms
+        1.2.4.6 Digital Adoption Platform
+    1.2 5 Creative Applications
+    1.2.6 eDiscovery and Forensics Applications
+    1.2.7 Enterprise Portals
+    1.2.8 Content Sharing and Collaboration Applications
+1.3 Enterprise Resource Management Applications
+  1.3.1 Financial Applications
+    1.3.1.1 Financial and Accounting Applications
+    1.3.1.2 Accounts Payable Applications
+    1.3.1.3 Accounts Receivable Applications
+    1.3.1.4 Treasury and Risk Management Applications
+    1.3.1.5 Travel and Expense Management Applications
+    1.3.1.6 Corporate Tax Management Applications
+  1.3.2 Human Capital Management Applications
+    1.3.2.1 Core Human Resources Applications
+    1.3.2.2 Recruiting/Talent Acquisition Applications
+    1.3.2.3 Compensation Management Applications
+    1.3.2.4 Employee Performance Management Applications
+    1.3.2.5 Learning Management Systems
+    1.3.2.6 Workforce Management Applications
+  1.3.3 Payroll Management Applications
+  1.3.4 Procurement Applications
+  1.3.5 Order Management Applications
+  1.3.6 Enterprise Performance Management Applications
+  1.3.7 Project and Portfolio Management Applications
+  1.3.8 Asset Life-Cycle Management Applications
+1.4 Supply Chain Management Applications
+  1.4.1 Logistics and Transportation Management Applications
+  1.4.2 Supply Chain Planning Applications
+  1.4.3 Warehousing and Inventory Management Applications
+1.5 Production and Operations Applications
+  1.5.1 Production and Grid Management Applications
+  1.5.2 Service Industry and Public Sector Operations Applications
+  1.5.3 Other Operations Applications
+1.6 Engineering Applications
+  1.6.1 Computer-Aided Design Applications
+  1.6.2 Computer-Aided Engineering Applications
+  1.6.3 Computer-Aided Manufacturing Applications
+  1.6.4 Collaborative Product Data Management Applications
+  1.6.5 Other Engineering Applications
+1.7 Customer Relationship Management Applications
+  1.7.1 Advertising Applications
+    1.7.1.1 Programmatic Advertising Platforms
+    1.7.1.2 Data Management Platforms
+    1.7.1.3 Advertising Attribution
+  1.7.2 Marketing Campaign Management Applications
+  1.7.3 Digital Commerce Applications
+  1.7.4 Sales Force Productivity and Management Applications
+  1.7.5 Customer Service Applications
+  1.7.6 Contact Center Applications
+2 Application Development and Deployment
+  2.1 Analytics and Business Intelligence Software
+    2.1.1 End-User Query, Reporting, and Analysis Software
+    2.1.2 Advanced and Predictive Analytics Software
+    2.1.3 Location and Geospatial Data Management and Analytics Software
+    2.1.4 Data Science and Machine Learning Platforms
+    2.1.5 Data Visualization Tools
+    2.1.6 Business Intelligence Platforms
+    2.1.7 Data Mining and Exploration Software
+  2.2 Artificial Intelligence Platforms
+    2.2.1 AI Life-Cycle Software
+      2.2.1.1 Data Labeling Software
+      2.2.1.2 AI Build Software
+      2.2.1.3 ML Ops Software
+      2.2.1.4 Trustworthy AI Software
+    2.2.2 AI Software Services
+      2.2.2.1 Conversational AI Software
+      2.2.2.2 Computer Vision AI Software
+      2.2.2.3 Document AI Software
+      2.2.2.4 Anomaly Detection AI Software
+      2.2.2.5 Personalize AI Software
+      2.2.2.6 Forecast AI Software
+    2.2.3 Intelligent Knowledge Discovery Software
+  2.3 Data Management Software
+    2.3.1 Database Management Systems
+      2.3.1.1 Relational Database Management Systems
+      2.3.1.2 Low-Code Database Management Systems
+      2.3.1.3 Navigational Database Management Systems
+      2.3.1.4 Non-Schematic Database Management Systems
+      2.3.1.5 In-Memory Shared Data Managers
+      2.3.1.6 Data Lake Management Systems
+    2.3.2 Database Administration and Development Tools
+      2.3.2.1 Database Administration
+      2.3.2.2 Database Replication
+      2.3.2.3 Data Modeling
+      2.3.2.4 Database Development and Optimization
+    2.3.3 Data Integration and Intelligence Software
+      2.3.3.1 Bulk Data Movement Software
+      2.3.3.2 Dynamic Data Movement Software
+      2.3.3.3 Data Quality Software
+      2.3.3.4 Data Access Infrastructure Software
+      2.3.3.5 Composite Data Framework Software
+      2.3.3.6 Master Data Intelligence Software
+      2.3.3.7 Metadata Management Software
+      2.3.3.8 Self-Service Data Preparation Software
+      2.3.3.9 Data Archiving and Information Life-Cycle Management
+  2.4 Integration and Orchestration Software
+    2.4.1 Business-to-Business Middleware
+      2.4.1.1 B2B Gateway Middleware
+      2.4.1.2 B2B Networks and B2B Managed Services
+    2.4.2 Enterprise Application Development
+      2.4.2.1 Low-Code Application Development Platforms
+      2.4.2.2 DevOps-Based Application Platforms
+      2.4.2.3 SaaS DevOps-Based Application Platforms
+      2.4.2.4 Mobile Application Development Platforms
+      2.4.2.5 API Management Software
+      2.4.2.6 API Gateway Software
+      2.4.2.7 Connectivity Adapters and Plug-In Software
+    2.4.3 Event Stream Processing Software
+      2.4.3.1 Messaging Middleware
+      2.4.3.2 Stream Processing Software
+      2.4.3.3 Functions Software
+      2.4.3.4 IoT Application Platforms
+      2.4.3.5 Process Mining and Insights Software
+  2.5 Application Development Software
+    2.5.1 Development Environments and Tools
+    2.5.2 Software Construction Components
+    2.5.3 Business Rules Management Systems
+    2.5.4 Modeling and Architecture Tools
+      2.5.4.1 Object Modeling Tools
+      2.5.4.2 Business Process Modeling Tools
+      2.5.4.3 Enterprise Architecture Tools
+    2.5.5 Software Quality and Life-Cycle Tools
+      2.5.5.1 Automated Software Quality Tools
+      2.5.5.2 Software Change, Configuration, and Process Management Software
+    2.5.6 Application Platforms
+      2.5.6.1 Deployment-Centric Application Platforms
+        2.5.6.1.1 Application Server Software Platforms
+        2.5.6.1.2 Cloud Deployment-Centric Application Platforms
+      2.5.6.2 Model-Driven Application Platforms
+      2.5.6.3 Transaction Processing Monitors
+      2.5.6.4 Robotic Process Automation Software
+3 Systems Infrastructure Software
+  3.1 System and Service Management Software
+    3.1.1 IT Operations Management
+      3.1.1.1 IT Service Management (ITSM)
+      3.1.1.2 Network Performance Monitoring and Diagnostics
+      3.1.1.3 IT Asset Management (ITAM)
+      3.1.1.4 Event and Incident Management
+      3.1.1.5 Problem Management
+      3.1.1.6 Change and Release Management
+    3.1.2 IT Automation and Configuration Management
+      3.1.2.1 Workload Management
+      3.1.2.2 Datacenter System and Application Control
+        3.1.2.2.1 Datacenter Infrastructure Management (DCIM)
+        3.1.2.2.2 Server Management Software
+        3.1.2.2.3 Network Management Software
+        3.1.2.2.4 Storage Management Software
+        3.1.2.2.5 Virtualization Management Software
+        3.1.2.2.6 Application Performance Management (APM)
+      3.1.2.3 DevOps Software
+        3.1.2.3.1 Continuous Integration/Continuous Delivery (CI/CD) Tools
+        3.1.2.3.2 Infrastructure as Code (IaC) Tools
+        3.1.2.3.3 Monitoring and Observability Tools
+        3.1.2.3.4 Container Orchestration Tools
+        3.1.2.3.5 Service Mesh Tools
+        3.1.2.3.6 Cloud Native Storage Tools
+        3.1.2.3.7 Security, Compliance, and Governance Tools
+        3.1.2.3.8 Cloud Native Networking Tools
+        3.1.2.3.9 Serverless Frameworks
+    3.1.3 IT Service Management
+  3.2 Network Software
+    3.2.1 Network Infrastructure Software
+      3.2.1.1 Application Delivery Controller Software
+      3.2.1.2 Software-Defined Networking Software
+    3.2.2 Network Management Software
+      3.2.2.1 Network Performance Management
+      3.2.2.2 Network Operations Management
+    3.2.3 Software Defined Networking
+      3.2.3.1 SDN Controllers
+      3.2.3.2 SDN Switches/Routers
+      3.2.3.3 SDN Network Operating Systems
+      3.2.3.4 SDN Applications
+    3.2.4 Network Automation Frameworks
+      3.2.4.1 Network Configuration and Orchestration Frameworks
+      3.2.4.2 Network Provisioning and Deployment Frameworks
+      3.2.4.3 Network Policy and Security Frameworks
+  3.3 Security Software
+    3.3.1 Identity and Digital Trust Software
+    3.3.2 Endpoint Security Software
+    3.3.3 Network Security Software
+    3.3.4 Cybersecurity Analytics, Intelligence, Response, and Orchestration Software
+    3.3.5 Information and Data Security Software
+      3.3.5.1 Information Security
+      3.3.5.2 Data Security Software
+      3.3.5.3 Database Security
+    3.3.6 Governance, Risk, and Compliance Software
+  3.4 Storage Software
+    3.4.1 Data Replication and Protection Software
+      3.4.1.1 Data Protection Software
+      3.4.1.2 Backup and Recovery Reporting Software
+      3.4.1.3 Storage Replication Software
+      3.4.1.4 Host or Hypervisor-Based Replication Software
+      3.4.1.5 Systems and Data Migration Software
+      3.4.1.6 Fabric and Appliance-Based Replication Software
+      3.4.1.7 Array-Based Replication Software
+      3.4.1.8 Replication Management Software
+    3.4.2 Archiving Software
+      3.4.2.1 Email Archiving Software
+      3.4.2.2 File and Other Archiving Software
+    3.4.3 Storage Infrastructure and Device Management Software
+      3.4.3.1 Storage Resource Management and Heterogeneous SAN Management Software
+      3.4.3.2 Storage Resource Management and Homogeneous SAN Management Software
+      3.4.3.3 Storage Device Management Software
+      3.4.3.4 Virtualization and Federation Software
+      3.4.3.5 Host-Based File Systems and Volume Management Software
+      3.4.3.6 Storage Access and Path Management Software
+      3.4.3.7 Automated Storage Tiering Software
+      3.4.3.8 Storage Acceleration Software
+      3.4.3.9 Other Storage Management and Infrastructure Software
+    3.4.4 Software-Defined Storage Controller Software
+      3.4.4.1 Block-Based Software-Defined Storage Controller Software
+      3.4.4.2 File-Based Software-Defined Storage Controller Software
+      3.4.4.3 Object-Based Software-Defined Storage Controller Software
+      3.4.4.4 Hyperconverged Software-Defined Storage Controller Software
+  3.5 Endpoint Management
+    3.5.1 Output Management Tools
+      3.5.1.1 Device Management
+      3.5.1.2 Print Management
+      3.5.1.3 Enterprise Output Management
+    3.5.2 Client Endpoint Management
+      3.5.2.1 Unified Endpoint Management
+      3.5.2.2 IoT Device Management Software
+      3.5.2.3 PC Life-Cycle Management
+  3.6 Physical and Virtual Computing Software
+    3.6.1 Operating Systems and Subsystems
+      3.6.1.1 Core Operating Systems
+      3.6.1.2 Client Operating Systems
+      3.6.1.3 Embedded/Industrial Operating Systems
+    3.6.2 Software-Defined Compute
+      3.6.2.1 Virtual Machine Software
+      3.6.2.2 Container Infrastructure Software
+      3.6.2.3 Cloud System Software
+    3.6.3 Virtual Client Computing
+    3.6.4 Other Computing Software
+4 Information Technology Services
+  4.1 Business Consulting
+    4.1.1 Strategy Development
+    4.1.2 Business Model Analysis
+    4.1.3 Process Optimization
+    4.1.4 Change Management
+    4.1.5 Organizational Design
+  4.2 IT Consulting
+    4.2.1 IT Strategy and Architecture Design
+    4.2.2 Technology Selection
+    4.2.3 IT Cost Optimization
+    4.2.4 IT Governance
+    4.2.5 IT Risk Management
+    4.2.6 DevOps Consulting
+    4.2.7 AI/ML, Data Analytics Consulting
+  4.3 Application Services
+    4.3.1 Custom Application Development
+    4.3.2 Application Modernization
+    4.3.3 Application Management
+    4.3.4 Application Testing
+    4.3.5 Training Services
+  4.4 Systems Integration
+    4.4.1 Enterprise Application Integration
+    4.4.2 Data Integration and Data Quality Tools
+    4.4.3 Cloud Integration
+    4.4.4 IoT Integration
+    4.4.5 API Management
+  4.5 Digital Transformation Services
+    4.5.1 Cloud Computing Services
+    4.5.2 AI and ML Services
+    4.5.3 IoT Services
+    4.5.4 Data and Analytics Services
+  4.6 Managed Services
+    4.6.1 IT Infrastructure Management
+    4.6.2 Application Management
+    4.6.3 Security Management
+    4.6.4 Business Process Outsourcing
+  4.7 Cybersecurity Services
+    4.7.1 Risk Assessment and Management
+    4.7.2 Identity and Access Management
+    4.7.3 Security Architecture and Design
+    4.7.4 Incident Response, Forensics, and Investigation
+    4.7.5 Compliance Management
+  4.8 Industry-Specific Services
+    4.8.1 Banking and Securities
+    4.8.2 Communications, Media, and Services
+    4.8.3 Education
+    4.8.4 Government
+    4.8.5 Healthcare
+    4.8.6 Insurance
+    4.8.7 Manufacturing and Natural Resources
+    4.8.8 Retail and Wholesale Trade
+    4.8.9 Transportation
+    4.8.10 Utilities
+    4.8.11 Other Industries

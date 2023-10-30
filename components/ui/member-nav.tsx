@@ -3,7 +3,7 @@ export function MemberNav() {
   return (
     <>
       <Link href="/home">
-        <h1 className="py-3 mb-4 text-xl lg:text-2xl font-display hover:text-gray-200 hover:bg-gray-800">
+        <h1 className="py-3 mb-4 text-xl lg:text-2xl font-display hover:text-outer_space-200 hover:bg-outer_space-800">
           Member Dashboard
         </h1>
       </Link>
@@ -12,7 +12,7 @@ export function MemberNav() {
           <li>
             <Link
               href="/home/favorites"
-              className="flex items-center px-4 pt-2 pb-4 -my-2 text-gray-700 bg-gray-300 hover:text-gray-200 hover:bg-gray-800"
+              className="flex items-center px-4 pt-2 pb-4 -my-2 text-outer_space-700 bg-outer_space-300 hover:text-outer_space-200 hover:bg-outer_space-800"
             >
               Favorites
             </Link>
@@ -20,7 +20,7 @@ export function MemberNav() {
           <li>
             <Link
               href="/home/content"
-              className="flex items-center px-4 pt-2 pb-4 -my-2 text-gray-700 bg-gray-300 hover:text-gray-200 hover:bg-gray-800"
+              className="flex items-center px-4 pt-2 pb-4 -my-2 text-outer_space-700 bg-outer_space-300 hover:text-outer_space-200 hover:bg-outer_space-800"
             >
               My Content
             </Link>
@@ -28,7 +28,7 @@ export function MemberNav() {
           <li>
             <Link
               href="/home/help"
-              className="flex items-center px-4 pt-2 pb-4 -my-2 text-gray-700 bg-gray-300 hover:text-gray-200 hover:bg-gray-800"
+              className="flex items-center px-4 pt-2 pb-4 -my-2 text-outer_space-700 bg-outer_space-300 hover:text-outer_space-200 hover:bg-outer_space-800"
             >
               Help and Support
             </Link>

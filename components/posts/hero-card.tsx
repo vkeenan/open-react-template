@@ -26,19 +26,19 @@ export function HeroCard({ heroPost }: any) {
       <div className="flex flex-col justify-start p-6">
         <Link
           href={"/posts/category/" + heroPost.categories[0].slug}
-          className="font-semibold text-cocoa_brown-900 hover:text-cocoa_brown-400"
+          className="font-semibold text-azure_radiance-900 hover:text-azure_radiance-400"
         >
           {heroPost.categories[0].name}
         </Link>
         <Link
           href={"/posts/" + heroPost.slug}
-          className="py-4 text-3xl font-display text-cocoa_brown-900 hover:text-cocoa_brown-400"
+          className="py-4 text-3xl font-display text-azure_radiance-900 hover:text-azure_radiance-400"
         >
           {heroPost.title}
         </Link>
         <div className="pt-3 pb-3 text-sm">
           By{" "}
-          <span className="font-semibold hover:text-gray-800">
+          <span className="font-semibold hover:text-outer_space-800">
             {heroPost.author.name}
           </span>
           {",  "} <Date dateString={heroPost.date} />
@@ -48,7 +48,7 @@ export function HeroCard({ heroPost }: any) {
         </a>
         <Link
           href={"/posts/" + heroPost.slug}
-          className="text-gray-800 uppercase hover:text-black"
+          className="text-outer_space-800 uppercase hover:text-black"
         >
           Continue Reading
         </Link>

@@ -17,13 +17,13 @@ export default async function EventsPage() {
           {events.map((event: EventClass, index: number) => (
             <div key={index} className="p-4 bg-white rounded-lg shadow-md">
               <h2 className="mb-2 text-xl font-semibold">{event.Title}</h2>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-outer_space-600">
                 <strong>Start Date:</strong> {event.StartDate}
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-outer_space-600">
                 <strong>End Date:</strong> {event.EndDate}
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-outer_space-600">
                 <strong>Location:</strong> {event.Location}
               </p>
               <Link href={`/events/${event.Slug}`}>

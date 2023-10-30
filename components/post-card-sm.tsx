@@ -10,14 +10,14 @@ export function PostCardSm({ title, date, slug, categories }: any) {
         <div className="cat">
           <Link
             href={"/posts/category/" + categories[0].slug}
-            className="text-cocoa_brown-500 hover:text-cocoa_brown-900"
+            className="text-azure_radiance-500 hover:text-azure_radiance-900"
           >
             {categories[0].name}
           </Link>
         </div>
         <div className="title">
           <a
-            className="no-underline font-display text-cocoa_brown-900 hover:text-cocoa_brown-400 hover:underline"
+            className="no-underline font-display text-azure_radiance-900 hover:text-azure_radiance-400 hover:underline"
             href={"/posts/" + slug}
           >
             {title}

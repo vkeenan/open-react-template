@@ -7,7 +7,7 @@ import WorkDiffLogoHoriz from "@/public/images/workdiff-logo-horiz.png";
 export default function Footer() {
   return (
     <footer>
-      <div className="py-12 md:py-16 bg-cocoa_brown-800">
+      <div className="py-12 md:py-16 bg-azure_radiance-800">
         <div className="max-w-6xl px-4 mx-auto sm:px-6">
           {/* Top area: Blocks */}
           <div className="grid gap-8 mb-8 md:grid-cols-4 lg:gap-20 md:mb-12">
@@ -25,11 +25,11 @@ export default function Footer() {
 
             {/* Description block */}
             <div className="text-center md:text-left">
-              <p className="text-gray-400">
+              <p className="text-outer_space-400">
                 Work Different With AI is a community of like-minded people who
                 want to Work Different With AI!
               </p>
-              <p className="mt-5 text-gray-400">
+              <p className="mt-5 text-outer_space-400">
                 Come join us as we explore together how to Work Different With
                 AI.
               </p>
@@ -37,12 +37,14 @@ export default function Footer() {
 
             {/* 2nd block */}
             <div className="text-sm text-center md:text-left">
-              <h6 className="mb-1 font-medium text-gray-200">Workshops</h6>
+              <h6 className="mb-1 font-medium text-outer_space-200">
+                Workshops
+              </h6>
               <ul>
                 <li className="mb-1">
                   <Link
                     href="/workshops/ceo-ai-workshop"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     For Corporate Leaders
                   </Link>
@@ -50,7 +52,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/workshops/isv-ai-workshop"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     For Independent Software Vendors
                   </Link>
@@ -58,7 +60,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/workshops/consultant-ai-workshop"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     For Enterprise Consultancies
                   </Link>
@@ -67,14 +69,14 @@ export default function Footer() {
             </div>
             {/* 3rd block */}
             <div className="text-sm text-center md:text-left">
-              <h6 className="mb-1 font-medium text-gray-200">
+              <h6 className="mb-1 font-medium text-outer_space-200">
                 Conference Tracks
               </h6>
               <ul>
                 <li className="mb-1">
                   <Link
                     href="/tracks/unlocking-value-with-peps"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     Prompt Engineering Platforms
                   </Link>
@@ -82,7 +84,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/the-power-of-etps"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     Executive Thinking Partners
                   </Link>
@@ -90,7 +92,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ai-data-safety"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     AI Data Safety
                   </Link>
@@ -98,7 +100,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ethical-ai"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     Ethical AI
                   </Link>
@@ -106,7 +108,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/compassionate-ai"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     Compassionate AI
                   </Link>
@@ -114,7 +116,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ai-risk-management"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     AI Risk Management
                   </Link>
@@ -122,7 +124,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/scaling-ai"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     Scaling AI
                   </Link>
@@ -130,7 +132,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/industry-specific-ai"
-                    className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-100"
+                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
                   >
                     AI for Industry
                   </Link>
@@ -145,7 +147,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://twitter.com/workdiffwithai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
                   aria-label="Twitter"
                 >
                   <svg
@@ -160,7 +162,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="https://github.com/workdifferentwithai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
                   aria-label="Github"
                 >
                   <svg
@@ -175,7 +177,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="https://www.linkedin.com/company/work-different-with-ai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-gray-800 rounded-full text-bourbon-600 hover:text-gray-100 hover:bg-bourbon-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
                   aria-label="Linkedin"
                 >
                   <svg
@@ -190,7 +192,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="mr-4 text-sm text-gray-400">
+            <div className="mr-4 text-sm text-outer_space-400">
               &copy; {new Date().getFullYear()} by Vernon Keenan. All rights
               reserved.
             </div>

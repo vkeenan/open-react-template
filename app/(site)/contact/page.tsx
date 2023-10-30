@@ -68,7 +68,7 @@ export default async function TermsPage() {
               </div>
               <div className="w-full p-2 m-3 text-center">
                 <div className="container">
-                  <p className="mb-3 font-bold text-gray-400">
+                  <p className="mb-3 font-bold text-outer_space-400">
                     {/* Last updated on {formatDate(modified)}. */}
                   </p>
                   {Array.isArray(relatedPostsList) &&

@@ -15,7 +15,7 @@ export function NavBar() {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-cocoa_brown-600">
+    <div className="sticky top-0 z-50 bg-azure_radiance-600">
       <MenuBar menuOpen={menuOpen} toggleMenu={toggleMenu} />
       {menuOpen && <MobileMenu toggleMenu={toggleMenu} />}
     </div>
@@ -84,14 +84,14 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
         >
           <Menu.Button
             key={item.id}
-            className="no-underline text-cocoa_brown-50"
+            className="no-underline text-azure_radiance-50"
           >
             <div className="flex hover:bg-slate-600">
               {item.sub && (
                 <>
                   <span>{item.name}</span>
                   <FaChevronDown
-                    className="w-3 h-3 mt-3 ml-1 -mr-1 text-cocoa_brown-50 hover:text-slate-600 md:mt-1 lg:mt-2 xl:mt-3"
+                    className="w-3 h-3 mt-3 ml-1 -mr-1 text-azure_radiance-50 hover:text-slate-600 md:mt-1 lg:mt-2 xl:mt-3"
                     aria-hidden="true"
                   />
                 </>
@@ -109,14 +109,14 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 flex flex-col w-56 mt-2 space-y-3 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg bg-cocoa_brown-600 bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute right-0 flex flex-col w-56 mt-2 space-y-3 origin-top-right divide-y divide-outer_space-100 rounded-md shadow-lg bg-azure_radiance-600 bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="px-1 py-1 ">
                   {item.sub.map((sub) => {
                     return (
                       <Menu.Item key={sub.id}>
                         <Link
                           href={sub.href}
-                          className="block px-4 py-2 text-sm text-cocoa_brown-50 hover:bg-slate-900"
+                          className="block px-4 py-2 text-sm text-azure_radiance-50 hover:bg-slate-900"
                         >
                           {sub.name}
                         </Link>
@@ -135,7 +135,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
     <div className="justify-around xl:container xl:mx-auto xl:flex xl:max-w-7xl ">
       <div className="flex items-center justify-between p-2 font-display sm:text-xs md:text-sm xl:container xl:text-xl">
         <div className="items-left" onClick={toggleMenu}>
-          <span className="no-underline text-cocoa_brown-100 hover:bg-slate-600 sm:text-sm md:text-base xl:text-2xl">
+          <span className="no-underline text-azure_radiance-100 hover:bg-slate-600 sm:text-sm md:text-base xl:text-2xl">
             <Link href="/">Work Different With AI</Link>
           </span>
         </div>
@@ -143,7 +143,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
         <div className="flex items-center">
           {/* <div className="mr-2">
             <button
-              className="flex text-sm no-underline text-cocoa_brown-200 hover:text-cocoa_brown-800"
+              className="flex text-sm no-underline text-azure_radiance-200 hover:text-azure_radiance-800"
               type="button"
             >
               <span className="sr-only">Search</span>
@@ -157,7 +157,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
             type="button"
             onClick={toggleMenu}
             aria-label="Toggle mobile menu"
-            className="text-white rounded focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50 md:hidden"
+            className="text-white rounded focus:outline-none focus:ring focus:ring-outer_space-500 focus:ring-opacity-50 md:hidden"
           >
             <MenuAlt4Svg menuOpen={menuOpen} />
           </button>

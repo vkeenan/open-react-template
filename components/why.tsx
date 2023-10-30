@@ -17,7 +17,7 @@ export default function Why() {
 
       {/* Content Cards */}
       <div className="container grid grid-cols-1 gap-8 mx-auto lg:grid-cols-3">
-        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
+        <div className="p-6 m-2 shadow-md bg-azure_radiance-700">
           <div className="flex justify-center mb-4">
             <Image
               src={IconExclusiveContent}
@@ -25,16 +25,16 @@ export default function Why() {
               height={200}
             />
           </div>
-          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+          <h2 className="mb-4 text-3xl text-outer_space-50 font-display">
             Access to Exclusive Content
           </h2>
-          <p className="text-gray-100">
+          <p className="text-outer_space-100">
             Dive deep into curated educational tracks focused on practical AI
             adoption and ethical considerations.
           </p>
         </div>
 
-        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
+        <div className="p-6 m-2 shadow-md bg-azure_radiance-700">
           <div className="flex justify-center mb-4">
             <Image
               src={IconCommunity}
@@ -42,16 +42,16 @@ export default function Why() {
               height={200}
             />
           </div>
-          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+          <h2 className="mb-4 text-3xl text-outer_space-50 font-display">
             Community Engagement
           </h2>
-          <p className="text-gray-100">
+          <p className="text-outer_space-100">
             Connect with like-minded professionals, share insights, and work
             together to drive positive AI outcomes.
           </p>
         </div>
 
-        <div className="p-6 m-2 rounded-lg shadow-md bg-cocoa_brown-700">
+        <div className="p-6 m-2 shadow-md bg-azure_radiance-700">
           <div className="flex justify-center mb-4">
             <Image
               src={IconCompass}
@@ -59,10 +59,10 @@ export default function Why() {
               height={200}
             />
           </div>
-          <h2 className="mb-4 text-3xl text-gray-200 font-display">
+          <h2 className="mb-4 text-3xl text-outer_space-50 font-display">
             Thought Leadership
           </h2>
-          <p className="text-gray-100">
+          <p className="text-outer_space-100">
             Learn from industry experts, contribute your knowledge, and
             establish yourself as a thought leader in the AI space.
           </p>
@@ -72,7 +72,7 @@ export default function Why() {
       {/* CTA Button */}
       <div className="mt-10 text-center">
         <Link
-          className="px-4 py-2 text-2xl text-white rounded-lg bg-bourbon-500 hover:bg-bourbon-600"
+          className="px-8 py-2 text-2xl font-semibold text-outer_space-700 bg-gold-500 hover:text-white hover:bg-azure_radiance-800"
           href="/sign-up"
         >
           Join the Work Different With AI Community Today

@@ -19,7 +19,7 @@
 }
 
 .form-switch input[type="checkbox"]:checked + label {
-  @apply bg-bourbon-600;
+  @apply bg-apple-600;
 }
 
 .form-switch input[type="checkbox"]:checked + label > span:first-child {

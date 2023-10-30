@@ -1,6 +1,6 @@
 export default function ConsultingPage() {
   return (
-    <div className="px-4 py-8 mb-4 bg-cocoa_brown-100">
+    <div className="px-4 py-8 mb-4 bg-azure_radiance-100">
       <h2 className="text-3xl font-display">
         Work Different With AI Consultants
       </h2>

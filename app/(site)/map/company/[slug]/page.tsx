@@ -158,7 +158,7 @@ export default async function CompanyMapDetailPage({ params }: any) {
         <div className="flex-col mt-8 md:flex-row items-fill">
           {company.Location && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Headquarters Location
               </h3>
               <p className="text-base">{company.Location}</p>
@@ -166,7 +166,7 @@ export default async function CompanyMapDetailPage({ params }: any) {
           )}
           {company.TagLine && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Company Tagline
               </h3>
               <p className="text-base">{company.TagLine}</p>
@@ -174,7 +174,7 @@ export default async function CompanyMapDetailPage({ params }: any) {
           )}
           {company.Description && (
             <div className="flex-1 py-2">
-              <h3 className="text-lg font-bold text-gray-700">
+              <h3 className="text-lg font-bold text-outer_space-700">
                 Company Description
               </h3>
               <p className="text-base">{company.Description}</p>

@@ -53,13 +53,13 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
   )}&body=Check out this link: ${encodeURIComponent(url)}`;
 
   return (
-    <div className="z-10 flex flex-wrap items-center justify-around p-2 drop-shadow-2xl bg-cocoa_brown-200">
+    <div className="z-10 flex flex-wrap items-center justify-around p-2 drop-shadow-2xl bg-azure_radiance-200">
       <div className="flex items-center justify-center w-1/6">
         <a
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-900 transition duration-150 rounded-full hover:text-gray-100 hover:bg-cocoa_brown-800 bg-cocoa_brown-100"
+          className="p-2 text-outer_space-900 transition duration-150 rounded-full hover:text-outer_space-100 hover:bg-azure_radiance-800 bg-azure_radiance-100"
         >
           <FaFacebookF size={16} />
         </a>
@@ -71,7 +71,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-900 transition duration-150 rounded-full hover:text-gray-100 hover:bg-cocoa_brown-800 bg-cocoa_brown-100"
+          className="p-2 text-outer_space-900 transition duration-150 rounded-full hover:text-outer_space-100 hover:bg-azure_radiance-800 bg-azure_radiance-100"
         >
           <FaTwitter size={16} />
         </a>
@@ -83,7 +83,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={linkedInShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-900 transition duration-150 rounded-full hover:text-gray-100 hover:bg-cocoa_brown-800 bg-cocoa_brown-100"
+          className="p-2 text-outer_space-900 transition duration-150 rounded-full hover:text-outer_space-100 hover:bg-azure_radiance-800 bg-azure_radiance-100"
         >
           <FaLinkedinIn size={16} />
         </a>
@@ -95,7 +95,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={whatsappShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-900 transition duration-150 rounded-full hover:text-gray-100 hover:bg-cocoa_brown-800 bg-cocoa_brown-100"
+          className="p-2 text-outer_space-900 transition duration-150 rounded-full hover:text-outer_space-100 hover:bg-azure_radiance-800 bg-azure_radiance-100"
         >
           <FaWhatsapp size={16} />
         </a>
@@ -107,7 +107,7 @@ export const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
           href={emailShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-900 transition duration-150 rounded-full hover:text-gray-100 hover:bg-cocoa_brown-800 bg-cocoa_brown-100"
+          className="p-2 text-outer_space-900 transition duration-150 rounded-full hover:text-outer_space-100 hover:bg-azure_radiance-800 bg-azure_radiance-100"
         >
           <FaEnvelope size={16} />
         </a>

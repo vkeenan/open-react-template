@@ -1,7 +1,8 @@
-import { CompanyCard, Pagination } from '@/components';
-import 'server-only';
-import { getPaginatedCompanies } from '@/services';
-export const dynamic = 'force-static';
+import { CompanyCard } from "@/components/map/company-card";
+import { Pagination } from "@/components/posts/pagination";
+import "server-only";
+import { getPaginatedCompanies } from "@/services";
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
   const params = [];
@@ -21,11 +22,11 @@ export default async function CompanyMapAdditionalPage({ params }: any) {
   const companies = accounts.slice(0, accounts.length);
   return (
     <>
-      <h2 className='mt-6 text-3xl font-display xl:text-6xl'>
+      <h2 className="mt-6 text-3xl font-display xl:text-6xl">
         Companies Tracked Page {params.page}
       </h2>
-      <div className='container px-4 mx-auto my-6 md:px-12'>
-        <div className='flex flex-wrap -mx-1 lg:-mx-4'>
+      <div className="container px-4 mx-auto my-6 md:px-12">
+        <div className="flex flex-wrap -mx-1 lg:-mx-4">
           {companies.map((item: any, index: number) => (
             <CompanyCard key={index} {...item} />
           ))}
@@ -36,7 +37,7 @@ export default async function CompanyMapAdditionalPage({ params }: any) {
           addCanonical={false}
           currentPage={pagination?.currentPage}
           pagesCount={pagination?.pagesCount}
-          basePath='/map/company'
+          basePath="/map/company"
         />
       )}
     </>

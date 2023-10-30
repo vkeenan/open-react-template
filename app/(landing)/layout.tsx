@@ -14,7 +14,7 @@ export default function DefaultLayout({
     <>
       <Header />
       <NavBar />
-      <div className="flex flex-col items-center w-full px-3 mx-auto bg-cocoa_brown-300 md:w-3/4">
+      <div className="flex flex-col items-center w-full px-3 mx-auto bg-azure_radiance-300 md:w-3/4">
         {children}
       </div>
       <Footer />

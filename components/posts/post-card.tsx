@@ -30,7 +30,7 @@ export function PostCard({
             />
           </Suspense>
         </Link>
-        <header className="flex items-center justify-between p-2 font-semibold leading-none bg-brand-50 text-cocoa_brown-900 hover:bg-brand-900 hover:text-cocoa_brown-50 md:p-4">
+        <header className="flex items-center justify-between p-2 font-semibold leading-none bg-brand-50 text-azure_radiance-900 hover:bg-brand-900 hover:text-azure_radiance-50 md:p-4">
           <Link href={"/posts/category/" + categories[0].slug}>
             {categories[0].name}
           </Link>

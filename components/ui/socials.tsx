@@ -4,7 +4,7 @@ import { SiSalesforce } from "react-icons/si";
 
 export function Socials() {
   return (
-    <div className="flex justify-center gap-4 pt-1 mr-2 text-gray-100 align-middle lg:justify-end">
+    <div className="flex justify-center gap-4 pt-1 mr-2 text-outer_space-100 align-middle lg:justify-end">
       <span className="-mt-1">Follow Work Different With AI!</span>
       <a
         className="transition hover:opacity-75"

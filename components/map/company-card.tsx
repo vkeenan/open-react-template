@@ -29,8 +29,10 @@ export function CompanyCard(company: CompanyClass) {
           <Link href={`/map/company/${company.Slug}`}>{company.Name}</Link>
         </header>
         <footer className="items-center justify-between p-2 leading-tight md:p-4">
-          <p className="mb-2 text-base text-gray-700">{company.CloudType}</p>
-          <p className="text-sm text-gray-500">{company.TagLine}</p>
+          <p className="mb-2 text-base text-outer_space-700">
+            {company.CloudType}
+          </p>
+          <p className="text-sm text-outer_space-500">{company.TagLine}</p>
         </footer>
       </article>
     </div>

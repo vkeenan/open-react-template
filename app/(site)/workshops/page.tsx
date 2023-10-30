@@ -10,7 +10,7 @@ export default async function WorkshopPage() {
     return null;
   }
   return (
-    <div className="container p-4 mx-auto bg-cocoa_brown-100">
+    <div className="container p-4 mx-auto bg-azure_radiance-100">
       <h1 className="mb-4 text-3xl text-center font-display">
         Work Different With AI Workshops
       </h1>
@@ -56,7 +56,7 @@ export default async function WorkshopPage() {
         {courses.map((course, index) => (
           <div
             key={index}
-            className="p-4 space-y-4 text-gray-100 bg-cocoa_brown-600"
+            className="p-4 space-y-4 text-outer_space-100 bg-azure_radiance-600"
           >
             <div className="flex flex-col items-center mx-auto sm:flex-col md:flex-row md:space-x-4">
               {course.Logo && course.Name && (
@@ -71,11 +71,11 @@ export default async function WorkshopPage() {
               <div>
                 <h2 className="text-xl font-display">{course.Title}</h2>
 
-                <hr className="w-full my-2 border-t-2 border-gray-175" />
+                <hr className="w-full my-2 border-t-2 border-outer_space-175" />
                 <p className="text-base">{course.Description}</p>
                 <Link
                   href={`/workshops/${course.Slug}`}
-                  className="inline-block px-4 py-2 mt-4 text-gray-800 hover:text-gray-100 bg-cocoa_brown-200 hover:bg-cocoa_brown-900"
+                  className="inline-block px-4 py-2 mt-4 text-outer_space-800 hover:text-outer_space-100 bg-azure_radiance-200 hover:bg-azure_radiance-900"
                 >
                   Get More Info
                 </Link>

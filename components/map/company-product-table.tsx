@@ -15,8 +15,8 @@ export function CompanyProductTable({ products }: ProductTableProps) {
       {products.map((product, idx) => (
         <div
           key={idx}
-          className={`bg-white text-gray-700 ${
-            idx % 2 === 1 ? "bg-gray-100" : ""
+          className={`bg-white text-outer_space-700 ${
+            idx % 2 === 1 ? "bg-outer_space-100" : ""
           }`}
         >
           <hr className="border-collapse border-brand-600" />

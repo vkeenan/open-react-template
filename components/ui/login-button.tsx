@@ -20,7 +20,7 @@ export default function LoginButton() {
       <div className="flex items-center justify-between">
         <Menu as="div" className="relative ml-3">
           <div>
-            <Menu.Button className="flex text-sm no-underline text-cocoa_brown-200 hover:text-cocoa_brown-800">
+            <Menu.Button className="flex text-sm no-underline text-azure_radiance-200 hover:text-azure_radiance-800">
               <span className="sr-only">Open user menu</span>
               {session ? (
                 userImage ? (
@@ -51,13 +51,13 @@ export default function LoginButton() {
             <Menu.Items className="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               {session ? (
                 <>
-                  <div className="block w-full px-4 py-2 text-sm text-left text-gray-700">
+                  <div className="block w-full px-4 py-2 text-sm text-left text-outer_space-700">
                     Signed in as {session.user?.email}
                   </div>
                   <Menu.Item
                     as="button"
                     onClick={() => signOut()}
-                    className="block w-full px-4 py-2 text-sm text-left text-gray-700 bg-gray-100 hover:text-gray-100 hover:bg-gray-700"
+                    className="block w-full px-4 py-2 text-sm text-left text-outer_space-700 bg-outer_space-100 hover:text-outer_space-100 hover:bg-outer_space-700"
                   >
                     Sign out
                   </Menu.Item>
@@ -67,14 +67,14 @@ export default function LoginButton() {
                   <Menu.Item
                     as="button"
                     onClick={() => signIn()}
-                    className="block w-full px-4 py-2 text-sm text-left text-gray-700 bg-gray-100 hover:text-gray-100 hover:bg-gray-700"
+                    className="block w-full px-4 py-2 text-sm text-left text-outer_space-700 bg-outer_space-100 hover:text-outer_space-100 hover:bg-outer_space-700"
                   >
                     Sign In
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     href="/sign-up"
-                    className="block w-full px-4 py-2 text-sm text-left text-gray-700 bg-gray-100 hover:text-gray-100 hover:bg-gray-700"
+                    className="block w-full px-4 py-2 text-sm text-left text-outer_space-700 bg-outer_space-100 hover:text-outer_space-100 hover:bg-outer_space-700"
                   >
                     Sign Up
                   </Menu.Item>

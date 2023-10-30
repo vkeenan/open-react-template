@@ -76,13 +76,13 @@ export default async function TrackDetailRenderPage({ params }: any) {
   });
   logger.info(`👈TrackDetailRenderPage: ${track.Name}`);
   return (
-    <div className="container p-4 mx-auto bg-cocoa_brown-100">
+    <div className="container p-4 mx-auto bg-azure_radiance-100">
       <h1 className="mb-4 text-4xl text-center font-display">
         Work Different With Conference Tracks
       </h1>
       <h2 className="mb-4 text-xl text-center font-display">{track.Title}</h2>
       <p className="mb-2 text-center font-display">{track.Description}</p>
-      <hr className="mb-4 border-0 border-t-2 border-cocoa_brown-500" />
+      <hr className="mb-4 border-0 border-t-2 border-azure_radiance-500" />
       {track.ImageURL && (
         <div className="flex flex-col mb-8">
           <div className="w-full px-4">
