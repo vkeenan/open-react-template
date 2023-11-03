@@ -1,10 +1,7 @@
 import Link from "next/link";
-import { FaMapPin, FaRegClock, FaRegFolder } from "react-icons/fa";
-
-import { formatDate } from "@/lib/datetime";
-
-import { authorPathByName } from "@/services/author/get-author";
 import { categoryPathBySlug } from "@/services/post/get-blog-category";
+import { FaMapPin, FaRegClock, FaRegFolder } from "react-icons/fa";
+import { formatDate } from "@/lib/datetime";
 
 interface PostMetadataProps {
   author: any;

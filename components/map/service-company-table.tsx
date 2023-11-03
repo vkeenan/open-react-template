@@ -1,4 +1,4 @@
-import { ServiceClass } from "@/types";
+import { ServiceClass } from "@/types/service";
 import Link from "next/link";
 
 interface ServiceTableProps {

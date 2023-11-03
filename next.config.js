@@ -1,13 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
+  async redirects() {
+    return [
+      {
+        source: "/posts",
+        destination: "/posts/page/1",
+        permanent: true,
+      },
+    ];
   },
+  output: "standalone",
   images: {
     remotePatterns: [
       {

@@ -1,4 +1,4 @@
-import { ProductClass } from "@/types";
+import { ProductClass } from "@/types/product";
 import Link from "next/link";
 
 interface ProductTableProps {

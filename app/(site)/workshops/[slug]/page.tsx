@@ -1,6 +1,6 @@
 import { logger } from "@/lib/logger";
 import cn from "classnames";
-import { Metadata } from "@/types/metadata";
+// import { Metadata } from "@/types/metadata";
 import { getAllCourses, getCourseBySlug } from "@/services/course/get-course";
 import Image from "next/image";
 import styles from "@/app/css/post-body.module.css";

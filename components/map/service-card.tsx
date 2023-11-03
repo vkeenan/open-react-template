@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ServiceClass } from "@/types";
+import { ServiceClass } from "@/types/service";
 
 export function ServiceCard(service: ServiceClass) {
   return (
@@ -18,7 +18,7 @@ export function ServiceCard(service: ServiceClass) {
               <Link href={`/map/service/${service.Slug}`}>
                 <Image
                   fill
-                  alt={service.ImageAltText}
+                  alt={service.ImageAltText || service.Name}
                   src={service.ImageURL}
                   sizes="100vw, 100vh"
                   className="object-scale-down"

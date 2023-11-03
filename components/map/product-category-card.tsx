@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CategoryClass } from "@/types";
+import { CategoryClass } from "@/types/category";
 
 export function ProductCategoryCard(category: CategoryClass) {
   return (
