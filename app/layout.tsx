@@ -1,7 +1,7 @@
 import "@/app/css/style.css";
 import { getServerSession } from "next-auth";
 import { Quicksand, Oswald } from "next/font/google";
-import GoogleAnalytics from "@/components/google-analytics";
+import GoogleAnalytics from "@/components/ui/google-analytics";
 import Script from "next/script";
 import SessionProvider from "@/components/ui/session-provider";
 
