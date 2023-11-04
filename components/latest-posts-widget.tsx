@@ -1,9 +1,7 @@
 import { getRecentPosts } from "@/services/post/get-recent-posts";
-import { PostCardSm } from "./post-card-sm";
-import { logger } from "../lib/logger";
+import { PostCardSm } from "./posts/post-card-sm";
 
 export async function LatestPostsWidget() {
-  logger.debug("⚠️ LatestPostsWidget: top");
   const NUM_POSTS = 5;
   const { posts: recentPosts } = await getRecentPosts({
     count: NUM_POSTS,

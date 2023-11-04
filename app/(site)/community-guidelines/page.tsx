@@ -3,6 +3,14 @@ import Link from "next/link";
 import { CoverImage, PostTitle, PostMetadata } from "@/components/posts";
 import { getJsonSchema } from "@/services/site/get-json-schema";
 import { getPageByUri } from "@/services/page/get-page-by-uri";
+import { defaultMetadata } from "@/data/site-metadata";
+
+let siteSettings = defaultMetadata;
+siteSettings.title = siteSettings.title + " - Terms of Service";
+
+export async function generateMetadata() {
+  return siteSettings;
+}
 
 export default async function TermsPage() {
   const pageResult = await getPageByUri("/community-guidelines/");

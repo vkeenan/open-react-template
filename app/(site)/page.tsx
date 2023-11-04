@@ -1,7 +1,7 @@
-import Hero from "@/components/hero";
-import Why from "@/components/why";
-import How from "@/components/how";
-import Early from "@/components/early";
+import Hero from "@/components/landing/hero";
+import Why from "@/components/landing/why";
+import How from "@/components/landing/how";
+import Early from "@/components/landing/early";
 import { defaultMetadata } from "@/data/site-metadata";
 
 export async function generateMetadata() {
