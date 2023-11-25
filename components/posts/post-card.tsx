@@ -20,15 +20,17 @@ export function PostCard({
           href={"/posts/" + slug}
           className="w-full h-auto max-w-full mx-auto hover:opacity-90"
         >
-          <Suspense fallback={<Skeleton height={"100%"} />}>
-            <Image
-              width={featuredImage.mediaDetails.width}
-              height={featuredImage.mediaDetails.height}
-              src={featuredImage.sourceUrl}
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 30vw, 20vw"
-              alt={featuredImage.altText}
-            />
-          </Suspense>
+          {featuredImage && (
+            <Suspense fallback={<Skeleton height={"100%"} />}>
+              <Image
+                width={featuredImage.mediaDetails.width}
+                height={featuredImage.mediaDetails.height}
+                src={featuredImage.sourceUrl}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 30vw, 20vw"
+                alt={featuredImage.altText}
+              />
+            </Suspense>
+          )}
         </Link>
         <header className="flex items-center justify-between p-2 font-semibold leading-none bg-brand-50 text-azure_radiance-900 hover:bg-brand-900 hover:text-azure_radiance-50 md:p-4">
           <Link href={"/posts/category/" + categories[0].slug}>

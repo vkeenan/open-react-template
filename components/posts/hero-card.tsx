@@ -12,16 +12,18 @@ export function HeroCard({ heroPost }: any) {
         href={"/posts/" + heroPost.slug}
         className="w-full h-auto max-w-full px-3 py-3 mx-auto shadow-brand-900 drop-shadow-2xl hover:opacity-90"
       >
-        <Suspense fallback={<Skeleton height={"100%"} />}>
-          <Image
-            width={heroPost.featuredImage.mediaDetails.width}
-            height={heroPost.featuredImage.mediaDetails.height}
-            src={heroPost.featuredImage.sourceUrl}
-            sizes="(max-width: 640px) 100vw, 75vw"
-            alt="Image description"
-            priority={true}
-          />
-        </Suspense>
+        {heroPost.featuredImage && (
+          <Suspense fallback={<Skeleton height={"100%"} />}>
+            <Image
+              width={heroPost.featuredImage.mediaDetails.width}
+              height={heroPost.featuredImage.mediaDetails.height}
+              src={heroPost.featuredImage.sourceUrl}
+              sizes="(max-width: 640px) 100vw, 75vw"
+              alt="Image description"
+              priority={true}
+            />
+          </Suspense>
+        )}
       </Link>
       <div className="flex flex-col justify-start p-6">
         <Link
@@ -48,7 +50,7 @@ export function HeroCard({ heroPost }: any) {
         </a>
         <Link
           href={"/posts/" + heroPost.slug}
-          className="text-outer_space-800 uppercase hover:text-black"
+          className="uppercase text-outer_space-800 hover:text-black"
         >
           Continue Reading
         </Link>

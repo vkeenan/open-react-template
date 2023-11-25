@@ -29,6 +29,7 @@ export class UserClass {
   APIGatewayUser: string = '';
   APIKey: string = '';
   Auth0UserID: string = '';
+  Biography: string = '';
   CommunityNickname: string = '';
   CompanyName: string = '';
   ContactID: string = '';
@@ -55,6 +56,7 @@ export class UserClass {
   Provider: string = '';
   SenderEmail: string = '';
   SenderName: string = '';
+  Slug: string = '';
   SmallPhotoURL: string = '';
   Status: string = '';
   TenantID: string = '';
@@ -88,6 +90,7 @@ export class UserAuthClass {
   AccountID?: string = '';
   AccessToken?: string = '';
   APIKey?: string = '';
+  Biography?: string = '';
   CompanyName?: string = '';
   ContactID?: string = '';
   Email: string = '';

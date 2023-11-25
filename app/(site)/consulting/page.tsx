@@ -12,8 +12,8 @@ export default async function ConsultingPage() {
   return (
     <>
       <div className="px-4 py-8 mb-4 bg-azure_radiance-100">
-        <h1 className="mb-4 text-3xl text-center font-display">
-          Work Different With AI Consultants
+        <h1 className="mb-4 text-4xl text-center font-display">
+          Work Different With AI Consulting Service Providers
         </h1>
         <div className="flex flex-col items-center mb-8 md:flex-row">
           <div className="w-full px-4 md:w-1/2">

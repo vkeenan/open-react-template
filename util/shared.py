@@ -23,7 +23,7 @@ cursor = db.cursor()
 # Load OpenAI API key from .env file
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-model = 'gpt-4'
+model = 'gpt-4-1106-preview'
 
 taxonomy = """
 The hierarchical taxonomy for classifying articles in enterprise IT and AI consists of the following top-level and secondary categories: 

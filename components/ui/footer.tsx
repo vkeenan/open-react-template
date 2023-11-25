@@ -25,11 +25,11 @@ export default function Footer() {
 
             {/* Description block */}
             <div className="text-center md:text-left">
-              <p className="text-outer_space-400">
+              <p className="text-outer_space-100">
                 Work Different With AI is a community of like-minded people who
                 want to Work Different With AI!
               </p>
-              <p className="mt-5 text-outer_space-400">
+              <p className="mt-5 text-outer_space-100">
                 Come join us as we explore together how to Work Different With
                 AI.
               </p>
@@ -44,7 +44,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/workshops/ceo-ai-workshop"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     For Corporate Leaders
                   </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/workshops/isv-ai-workshop"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     For Independent Software Vendors
                   </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/workshops/consultant-ai-workshop"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     For Enterprise Consultancies
                   </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/unlocking-value-with-peps"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     Prompt Engineering Platforms
                   </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/the-power-of-etps"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     Executive Thinking Partners
                   </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ai-data-safety"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     AI Data Safety
                   </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ethical-ai"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     Ethical AI
                   </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/compassionate-ai"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     Compassionate AI
                   </Link>
@@ -116,7 +116,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/ai-risk-management"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     AI Risk Management
                   </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/scaling-ai"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     Scaling AI
                   </Link>
@@ -132,7 +132,7 @@ export default function Footer() {
                 <li className="mb-1">
                   <Link
                     href="/tracks/industry-specific-ai"
-                    className="text-outer_space-400 transition duration-150 ease-in-out hover:text-outer_space-100"
+                    className="transition duration-150 ease-in-out text-outer_space-100 hover:text-gold-500"
                   >
                     AI for Industry
                   </Link>
@@ -147,7 +147,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://twitter.com/workdiffwithai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out rounded-full bg-outer_space-800 text-apple-600 hover:text-gold-500 hover:bg-apple-600"
                   aria-label="Twitter"
                 >
                   <svg
@@ -162,7 +162,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="https://github.com/workdifferentwithai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out rounded-full bg-outer_space-800 text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
                   aria-label="Github"
                 >
                   <svg
@@ -177,7 +177,7 @@ export default function Footer() {
               <li className="ml-4">
                 <Link
                   href="https://www.linkedin.com/company/work-different-with-ai"
-                  className="flex items-center justify-center transition duration-150 ease-in-out bg-outer_space-800 rounded-full text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
+                  className="flex items-center justify-center transition duration-150 ease-in-out rounded-full bg-outer_space-800 text-apple-600 hover:text-outer_space-100 hover:bg-apple-600"
                   aria-label="Linkedin"
                 >
                   <svg
@@ -192,7 +192,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="mr-4 text-sm text-outer_space-400">
+            <div className="mr-4 text-sm text-outer_space-100">
               &copy; {new Date().getFullYear()} by Vernon Keenan. All rights
               reserved.
             </div>

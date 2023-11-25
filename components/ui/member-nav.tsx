@@ -27,6 +27,14 @@ export function MemberNav() {
           </li>
           <li>
             <Link
+              href="/home/account"
+              className="flex items-center px-4 pt-2 pb-4 -my-2 text-outer_space-700 bg-outer_space-300 hover:text-outer_space-200 hover:bg-outer_space-800"
+            >
+              Account Management
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/home/help"
               className="flex items-center px-4 pt-2 pb-4 -my-2 text-outer_space-700 bg-outer_space-300 hover:text-outer_space-200 hover:bg-outer_space-800"
             >
