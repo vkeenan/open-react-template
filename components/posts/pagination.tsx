@@ -5,8 +5,6 @@ import {
 } from "react-icons/bi";
 import { TbDots as Dots } from "react-icons/tb";
 
-import config from "../../package.json";
-
 const MAX_NUM_PAGES = 9;
 
 interface PaginationProps {
