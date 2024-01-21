@@ -101,40 +101,47 @@ def enrich_post(post_title, post_content):
     # Create summary
     messages.append(
         {"role": "user",
-         "content": f"Write a short summary of the previous text."})
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=messages,
-    )
-    description = response.choices[0].message['content'].strip()
-    print(f"Summary: {description}")
-
-    # Create SEO description
-    messages.append(
-        {"role": "user",
-         "content": f"Write an SEO-friendly summary of the previous text in less than 15 words or 160 characters."})
+         "content": f"Write a one-paragraph summary of the previous text."})
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
     )
     summary = response.choices[0].message['content'].strip()
-    print(f"SEO Description: {summary}")
+    summary = summary.replace('"', '')  # remove double quotes
+    print(f"Summary: {summary}")
 
-    # Create articleSection
+    # Create SEO description
     messages.append(
-        {"role": "user", "content": f"Please classify this article based on the hierarchical taxonomy of enterprise IT and AI topics. First, identify the top-level category and then the secondary category if applicable. When responding, only respond in this format without further commentary. Only respond in this format: "'Primary Category; Secondary Category'". Here is the taxonomy: {taxonomy}"})
+        {"role": "user",
+         "content": f"Write an SEO-friendly description of the previous text in less than 25 words or 200 characters."})
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
     )
-    articleSection = response.choices[0].message['content'].strip()
-    print(f"articleSection: {articleSection}")
+    description = response.choices[0].message['content'].strip()
+    description = description.replace('"', '')  # remove double quotes
+    print(f"SEO Description: {description}")
 
+    # Create articleSection
+    messages.append(
+        {"role": "user", "content": f"Classify this article based on the hierarchical taxonomy of enterprise IT and AI topics. First, identify the top-level category and then the secondary category if applicable. When responding, only respond in this format without further commentary. Only respond in this format: "'Primary Category`; `Secondary Category'", where `Primary Category` and `Secondary Category` are template placeholders only. Here is the taxonomy: {taxonomy}"})
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+    )
+    classification = response.choices[0].message['content'].strip()
+    print(f"classification: {classification}")
+    primary_classification, secondary_classification = classification.split(
+        ';')
+    primary_classification = primary_classification.strip()
+    secondary_classification = secondary_classification.strip()
+    print(f"articleSection: {secondary_classification}")
     result = {
-        "articleSection": articleSection,
-        "summary": summary,
-        "keywords": keywords,
+        "articleSection": secondary_classification,
+        "classification": classification,
         "description": description,
-        "extractedText": clean_content
+        "extractedText": clean_content,
+        "keywords": keywords,
+        "summary": summary,
     }
     return result

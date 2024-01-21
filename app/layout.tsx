@@ -12,7 +12,7 @@ const quicksand = Quicksand({
 const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"] });
 
 export const metadata = {
-  title: "WorkDifferenetWithAI.com",
+  title: "WorkDifferentWithAI.com",
   description: "Work Differenet With AI",
 };
 

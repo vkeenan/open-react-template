@@ -6,5 +6,5 @@ import styles from "@/styles/post-body.module.css";
 export const dynamic = "force-static";
 
 export default async function IndustryMapStaticPage() {
-  return <p>hello, world</p>;
+  return <p>Welcome to the Work Different With AI Map!</p>;
 }
