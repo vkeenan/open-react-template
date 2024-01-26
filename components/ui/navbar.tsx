@@ -109,7 +109,7 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 flex flex-col w-56 mt-2 space-y-3 origin-top-right divide-y divide-outer_space-100 rounded-md shadow-lg bg-azure_radiance-600 bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute right-0 flex flex-col w-56 mt-2 space-y-3 origin-top-right divide-y rounded-md shadow-lg divide-outer_space-100 bg-azure_radiance-600 bg-opacity-80 ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="px-1 py-1 ">
                   {item.sub.map((sub) => {
                     return (
@@ -150,9 +150,9 @@ function MenuBar({ menuOpen, toggleMenu }: any) {
               <FaSearch size={22} />
             </button>
           </div> */}
-          <div className="mr-2">
+          {/* <div className="mr-2">
             <LoginButton />
-          </div>
+          </div> */}
           <button
             type="button"
             onClick={toggleMenu}
